@@ -1,0 +1,4 @@
+MO lcd_core NULL "../../Documents and Settings/Administrator/Desktop/calc_project/lcd_core.v" vlg67/lcd__core.bin 1354238682
+MO calc_project_top NULL "../../Documents and Settings/Administrator/Desktop/calc_project/calc_project_top.v" vlg2F/calc__project__top.bin 1354238682
+MO main_calc_cu NULL "../../Documents and Settings/Administrator/Desktop/calc_project/main_calc_cu.v" vlg7E/main__calc__cu.bin 1354238682
+MO ee201_debouncer NULL "../../Documents and Settings/Administrator/Desktop/calc_project/ee201_debounce_DPB_SCEN_CCEN_MCEN.v" vlg1F/ee201__debouncer.bin 1354238682

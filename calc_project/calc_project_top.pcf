@@ -1,0 +1,257 @@
+//! **************************************************************************
+// Written by: Map O.61xd on Thu Nov 29 19:17:31 2012
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "Ca" LOCATE = SITE "T17" LEVEL 1;
+COMP "Cb" LOCATE = SITE "T18" LEVEL 1;
+COMP "Cc" LOCATE = SITE "U17" LEVEL 1;
+COMP "Cd" LOCATE = SITE "U18" LEVEL 1;
+COMP "Ce" LOCATE = SITE "M14" LEVEL 1;
+COMP "Cf" LOCATE = SITE "N14" LEVEL 1;
+COMP "Cg" LOCATE = SITE "L14" LEVEL 1;
+COMP "Dp" LOCATE = SITE "M13" LEVEL 1;
+COMP "An0" LOCATE = SITE "N16" LEVEL 1;
+COMP "An1" LOCATE = SITE "N15" LEVEL 1;
+COMP "An2" LOCATE = SITE "P18" LEVEL 1;
+COMP "An3" LOCATE = SITE "P17" LEVEL 1;
+COMP "Ld0" LOCATE = SITE "U16" LEVEL 1;
+COMP "Ld1" LOCATE = SITE "V16" LEVEL 1;
+COMP "Ld2" LOCATE = SITE "U15" LEVEL 1;
+COMP "Ld3" LOCATE = SITE "V15" LEVEL 1;
+COMP "Ld4" LOCATE = SITE "M11" LEVEL 1;
+COMP "Ld5" LOCATE = SITE "N11" LEVEL 1;
+COMP "Ld6" LOCATE = SITE "R11" LEVEL 1;
+COMP "Ld7" LOCATE = SITE "T11" LEVEL 1;
+COMP "Sw0" LOCATE = SITE "T10" LEVEL 1;
+COMP "Sw1" LOCATE = SITE "T9" LEVEL 1;
+COMP "Sw2" LOCATE = SITE "V9" LEVEL 1;
+COMP "Sw3" LOCATE = SITE "M8" LEVEL 1;
+COMP "Sw4" LOCATE = SITE "N8" LEVEL 1;
+COMP "Sw5" LOCATE = SITE "U8" LEVEL 1;
+COMP "Sw6" LOCATE = SITE "V8" LEVEL 1;
+COMP "Sw7" LOCATE = SITE "T5" LEVEL 1;
+COMP "ClkPort" LOCATE = SITE "V10" LEVEL 1;
+COMP "FlashCS" LOCATE = SITE "L17" LEVEL 1;
+COMP "BtnC" LOCATE = SITE "B8" LEVEL 1;
+COMP "BtnD" LOCATE = SITE "C9" LEVEL 1;
+COMP "BtnL" LOCATE = SITE "C4" LEVEL 1;
+COMP "BtnR" LOCATE = SITE "D9" LEVEL 1;
+COMP "BtnU" LOCATE = SITE "A8" LEVEL 1;
+COMP "LCD_e" LOCATE = SITE "K3" LEVEL 1;
+COMP "MemOE" LOCATE = SITE "L18" LEVEL 1;
+COMP "MemWR" LOCATE = SITE "M16" LEVEL 1;
+COMP "RamCS" LOCATE = SITE "L15" LEVEL 1;
+COMP "LCD_data<0>" LOCATE = SITE "T12" LEVEL 1;
+COMP "LCD_data<1>" LOCATE = SITE "V12" LEVEL 1;
+COMP "LCD_data<2>" LOCATE = SITE "N10" LEVEL 1;
+COMP "LCD_data<3>" LOCATE = SITE "P11" LEVEL 1;
+COMP "LCD_data<4>" LOCATE = SITE "M10" LEVEL 1;
+COMP "LCD_data<5>" LOCATE = SITE "N9" LEVEL 1;
+COMP "LCD_data<6>" LOCATE = SITE "U11" LEVEL 1;
+COMP "LCD_data<7>" LOCATE = SITE "V11" LEVEL 1;
+COMP "LCD_bl" LOCATE = SITE "K5" LEVEL 1;
+COMP "LCD_rs" LOCATE = SITE "J3" LEVEL 1;
+COMP "LCD_rw" LOCATE = SITE "J1" LEVEL 1;
+COMP "QuadSpiFlashCS" LOCATE = SITE "V3" LEVEL 1;
+TIMEGRP sys_clk_pin = BEL "DIV_CLK_0" BEL "DIV_CLK_1" BEL "DIV_CLK_2" BEL
+        "DIV_CLK_3" BEL "DIV_CLK_4" BEL "DIV_CLK_5" BEL "DIV_CLK_6" BEL
+        "DIV_CLK_7" BEL "DIV_CLK_8" BEL "DIV_CLK_9" BEL "DIV_CLK_10" BEL
+        "DIV_CLK_11" BEL "DIV_CLK_12" BEL "DIV_CLK_13" BEL "DIV_CLK_14" BEL
+        "DIV_CLK_15" BEL "DIV_CLK_16" BEL "DIV_CLK_17" BEL "DIV_CLK_18" BEL
+        "BUFGP1/BUFG" BEL "ee201_debouncer_L/state_FSM_FFd1" BEL
+        "ee201_debouncer_L/state_FSM_FFd2" BEL
+        "ee201_debouncer_L/state_FSM_FFd3" BEL
+        "ee201_debouncer_L/state_FSM_FFd4" BEL
+        "ee201_debouncer_L/state_FSM_FFd5" BEL
+        "ee201_debouncer_L/state_FSM_FFd6" BEL
+        "ee201_debouncer_L/MCEN_count_3" BEL "ee201_debouncer_L/MCEN_count_2"
+        BEL "ee201_debouncer_L/MCEN_count_1" BEL
+        "ee201_debouncer_L/MCEN_count_0" BEL
+        "ee201_debouncer_L/debounce_count_23" BEL
+        "ee201_debouncer_L/debounce_count_22" BEL
+        "ee201_debouncer_L/debounce_count_21" BEL
+        "ee201_debouncer_L/debounce_count_20" BEL
+        "ee201_debouncer_L/debounce_count_19" BEL
+        "ee201_debouncer_L/debounce_count_18" BEL
+        "ee201_debouncer_L/debounce_count_17" BEL
+        "ee201_debouncer_L/debounce_count_16" BEL
+        "ee201_debouncer_L/debounce_count_15" BEL
+        "ee201_debouncer_L/debounce_count_14" BEL
+        "ee201_debouncer_L/debounce_count_13" BEL
+        "ee201_debouncer_L/debounce_count_12" BEL
+        "ee201_debouncer_L/debounce_count_11" BEL
+        "ee201_debouncer_L/debounce_count_10" BEL
+        "ee201_debouncer_L/debounce_count_9" BEL
+        "ee201_debouncer_L/debounce_count_8" BEL
+        "ee201_debouncer_L/debounce_count_7" BEL
+        "ee201_debouncer_L/debounce_count_6" BEL
+        "ee201_debouncer_L/debounce_count_5" BEL
+        "ee201_debouncer_L/debounce_count_4" BEL
+        "ee201_debouncer_L/debounce_count_3" BEL
+        "ee201_debouncer_L/debounce_count_2" BEL
+        "ee201_debouncer_L/debounce_count_1" BEL
+        "ee201_debouncer_L/debounce_count_0" BEL
+        "ee201_debouncer_R/state_FSM_FFd1" BEL
+        "ee201_debouncer_R/state_FSM_FFd2" BEL
+        "ee201_debouncer_R/state_FSM_FFd3" BEL
+        "ee201_debouncer_R/state_FSM_FFd4" BEL
+        "ee201_debouncer_R/state_FSM_FFd5" BEL
+        "ee201_debouncer_R/state_FSM_FFd6" BEL
+        "ee201_debouncer_R/MCEN_count_3" BEL "ee201_debouncer_R/MCEN_count_2"
+        BEL "ee201_debouncer_R/MCEN_count_1" BEL
+        "ee201_debouncer_R/MCEN_count_0" BEL
+        "ee201_debouncer_R/debounce_count_23" BEL
+        "ee201_debouncer_R/debounce_count_22" BEL
+        "ee201_debouncer_R/debounce_count_21" BEL
+        "ee201_debouncer_R/debounce_count_20" BEL
+        "ee201_debouncer_R/debounce_count_19" BEL
+        "ee201_debouncer_R/debounce_count_18" BEL
+        "ee201_debouncer_R/debounce_count_17" BEL
+        "ee201_debouncer_R/debounce_count_16" BEL
+        "ee201_debouncer_R/debounce_count_15" BEL
+        "ee201_debouncer_R/debounce_count_14" BEL
+        "ee201_debouncer_R/debounce_count_13" BEL
+        "ee201_debouncer_R/debounce_count_12" BEL
+        "ee201_debouncer_R/debounce_count_11" BEL
+        "ee201_debouncer_R/debounce_count_10" BEL
+        "ee201_debouncer_R/debounce_count_9" BEL
+        "ee201_debouncer_R/debounce_count_8" BEL
+        "ee201_debouncer_R/debounce_count_7" BEL
+        "ee201_debouncer_R/debounce_count_6" BEL
+        "ee201_debouncer_R/debounce_count_5" BEL
+        "ee201_debouncer_R/debounce_count_4" BEL
+        "ee201_debouncer_R/debounce_count_3" BEL
+        "ee201_debouncer_R/debounce_count_2" BEL
+        "ee201_debouncer_R/debounce_count_1" BEL
+        "ee201_debouncer_R/debounce_count_0" BEL
+        "ee201_debouncer_D/state_FSM_FFd1" BEL
+        "ee201_debouncer_D/state_FSM_FFd2" BEL
+        "ee201_debouncer_D/state_FSM_FFd3" BEL
+        "ee201_debouncer_D/state_FSM_FFd4" BEL
+        "ee201_debouncer_D/state_FSM_FFd5" BEL
+        "ee201_debouncer_D/state_FSM_FFd6" BEL
+        "ee201_debouncer_D/MCEN_count_3" BEL "ee201_debouncer_D/MCEN_count_2"
+        BEL "ee201_debouncer_D/MCEN_count_1" BEL
+        "ee201_debouncer_D/MCEN_count_0" BEL
+        "ee201_debouncer_D/debounce_count_23" BEL
+        "ee201_debouncer_D/debounce_count_22" BEL
+        "ee201_debouncer_D/debounce_count_21" BEL
+        "ee201_debouncer_D/debounce_count_20" BEL
+        "ee201_debouncer_D/debounce_count_19" BEL
+        "ee201_debouncer_D/debounce_count_18" BEL
+        "ee201_debouncer_D/debounce_count_17" BEL
+        "ee201_debouncer_D/debounce_count_16" BEL
+        "ee201_debouncer_D/debounce_count_15" BEL
+        "ee201_debouncer_D/debounce_count_14" BEL
+        "ee201_debouncer_D/debounce_count_13" BEL
+        "ee201_debouncer_D/debounce_count_12" BEL
+        "ee201_debouncer_D/debounce_count_11" BEL
+        "ee201_debouncer_D/debounce_count_10" BEL
+        "ee201_debouncer_D/debounce_count_9" BEL
+        "ee201_debouncer_D/debounce_count_8" BEL
+        "ee201_debouncer_D/debounce_count_7" BEL
+        "ee201_debouncer_D/debounce_count_6" BEL
+        "ee201_debouncer_D/debounce_count_5" BEL
+        "ee201_debouncer_D/debounce_count_4" BEL
+        "ee201_debouncer_D/debounce_count_3" BEL
+        "ee201_debouncer_D/debounce_count_2" BEL
+        "ee201_debouncer_D/debounce_count_1" BEL
+        "ee201_debouncer_D/debounce_count_0" BEL
+        "ee201_debouncer_C/state_FSM_FFd1" BEL
+        "ee201_debouncer_C/state_FSM_FFd2" BEL
+        "ee201_debouncer_C/state_FSM_FFd3" BEL
+        "ee201_debouncer_C/state_FSM_FFd4" BEL
+        "ee201_debouncer_C/state_FSM_FFd5" BEL
+        "ee201_debouncer_C/state_FSM_FFd6" BEL
+        "ee201_debouncer_C/MCEN_count_3" BEL "ee201_debouncer_C/MCEN_count_2"
+        BEL "ee201_debouncer_C/MCEN_count_1" BEL
+        "ee201_debouncer_C/MCEN_count_0" BEL
+        "ee201_debouncer_C/debounce_count_23" BEL
+        "ee201_debouncer_C/debounce_count_22" BEL
+        "ee201_debouncer_C/debounce_count_21" BEL
+        "ee201_debouncer_C/debounce_count_20" BEL
+        "ee201_debouncer_C/debounce_count_19" BEL
+        "ee201_debouncer_C/debounce_count_18" BEL
+        "ee201_debouncer_C/debounce_count_17" BEL
+        "ee201_debouncer_C/debounce_count_16" BEL
+        "ee201_debouncer_C/debounce_count_15" BEL
+        "ee201_debouncer_C/debounce_count_14" BEL
+        "ee201_debouncer_C/debounce_count_13" BEL
+        "ee201_debouncer_C/debounce_count_12" BEL
+        "ee201_debouncer_C/debounce_count_11" BEL
+        "ee201_debouncer_C/debounce_count_10" BEL
+        "ee201_debouncer_C/debounce_count_9" BEL
+        "ee201_debouncer_C/debounce_count_8" BEL
+        "ee201_debouncer_C/debounce_count_7" BEL
+        "ee201_debouncer_C/debounce_count_6" BEL
+        "ee201_debouncer_C/debounce_count_5" BEL
+        "ee201_debouncer_C/debounce_count_4" BEL
+        "ee201_debouncer_C/debounce_count_3" BEL
+        "ee201_debouncer_C/debounce_count_2" BEL
+        "ee201_debouncer_C/debounce_count_1" BEL
+        "ee201_debouncer_C/debounce_count_0" BEL "uut/clkCount_6" BEL
+        "uut/clkCount_5" BEL "uut/clkCount_4" BEL "uut/clkCount_3" BEL
+        "uut/clkCount_2" BEL "uut/clkCount_1" BEL "uut/clkCount_0" BEL
+        "core_uut/state_FSM_FFd1" BEL "core_uut/state_FSM_FFd2" BEL
+        "core_uut/state_FSM_FFd3" BEL "core_uut/state_FSM_FFd4" BEL
+        "core_uut/state_FSM_FFd5" BEL "core_uut/state_FSM_FFd6" BEL
+        "core_uut/state_FSM_FFd7" BEL "core_uut/state_FSM_FFd8" BEL
+        "core_uut/state_FSM_FFd9" BEL "core_uut/state_FSM_FFd10" BEL
+        "core_uut/state_FSM_FFd11" BEL "core_uut/state_FSM_FFd12" BEL
+        "core_uut/state_FSM_FFd13" BEL "core_uut/state_FSM_FFd14" BEL
+        "core_uut/state_FSM_FFd15" BEL "core_uut/textOut_254" BEL
+        "core_uut/textOut_253" BEL "core_uut/textOut_252" BEL
+        "core_uut/textOut_251" BEL "core_uut/textOut_249" BEL
+        "core_uut/textOut_245" BEL "core_uut/textOut_244" BEL
+        "core_uut/textOut_243" BEL "core_uut/textOut_242" BEL
+        "core_uut/textOut_240" BEL "core_uut/textOut_236" BEL
+        "core_uut/textOut_235" BEL "core_uut/textOut_234" BEL
+        "core_uut/textOut_233" BEL "core_uut/textOut_227" BEL
+        "core_uut/textOut_226" BEL "core_uut/textOut_220" BEL
+        "core_uut/textOut_219" BEL "core_uut/textOut_218" BEL
+        "core_uut/textOut_217" BEL "core_uut/textOut_216" BEL
+        "core_uut/textOut_211" BEL "core_uut/textOut_209" BEL
+        "core_uut/textOut_208" BEL "core_uut/textOut_204" BEL
+        "core_uut/textOut_203" BEL "core_uut/textOut_195" BEL
+        "core_uut/textOut_193" BEL "core_uut/textOut_192" BEL
+        "core_uut/textOut_188" BEL "core_uut/textOut_187" BEL
+        "core_uut/textOut_186" BEL "core_uut/textOut_185" BEL
+        "core_uut/textOut_179" BEL "core_uut/textOut_178" BEL
+        "core_uut/textOut_172" BEL "core_uut/textOut_171" BEL
+        "core_uut/textOut_164" BEL "core_uut/textOut_160" BEL
+        "core_uut/textOut_155" BEL "core_uut/textOut_154" BEL
+        "core_uut/textOut_152" BEL "core_uut/textOut_148" BEL
+        "core_uut/textOut_145" BEL "core_uut/textOut_144" BEL
+        "core_uut/textOut_138" BEL "core_uut/textOut_136" BEL
+        "core_uut/textOut_132" BEL "core_uut/textOut_130" BEL
+        "core_uut/textOut_124" BEL "core_uut/textOut_123" BEL
+        "core_uut/textOut_121" BEL "core_uut/textOut_120" BEL
+        "core_uut/textOut_117" BEL "core_uut/textOut_115" BEL
+        "core_uut/textOut_114" BEL "core_uut/textOut_108" BEL
+        "core_uut/textOut_107" BEL "core_uut/textOut_100" BEL
+        "core_uut/textOut_99" BEL "core_uut/textOut_98" BEL
+        "core_uut/textOut_96" BEL "core_uut/textOut_92" BEL
+        "core_uut/textOut_91" BEL "core_uut/textOut_90" BEL
+        "core_uut/textOut_89" BEL "core_uut/textOut_84" BEL
+        "core_uut/textOut_83" BEL "core_uut/textOut_77" BEL
+        "core_uut/textOut_75" BEL "core_uut/textOut_67" BEL
+        "core_uut/textOut_65" BEL "core_uut/textOut_60" BEL
+        "core_uut/textOut_59" BEL "core_uut/textOut_58" BEL
+        "core_uut/textOut_56" BEL "core_uut/textOut_51" BEL
+        "core_uut/textOut_49" BEL "core_uut/textOut_48" BEL
+        "core_uut/textOut_43" BEL "core_uut/textOut_41" BEL
+        "core_uut/textOut_40" BEL "core_uut/textOut_38" BEL
+        "core_uut/textOut_36" BEL "core_uut/textOut_35" BEL
+        "core_uut/textOut_33" BEL "core_uut/textOut_28" BEL
+        "core_uut/textOut_27" BEL "core_uut/textOut_26" BEL
+        "core_uut/textOut_24" BEL "core_uut/textOut_18" BEL
+        "core_uut/textOut_17" BEL "core_uut/textOut_11" BEL
+        "core_uut/textOut_10" BEL "core_uut/add_module/state_FSM_FFd1" BEL
+        "core_uut/add_module/state_FSM_FFd2" BEL
+        "core_uut/add_module/textOut_193" BEL
+        "core_uut/add_module/textOut_192" BEL "core_uut/add_module/done" BEL
+        "uut/oneUSClk";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+SCHEMATIC END;
+

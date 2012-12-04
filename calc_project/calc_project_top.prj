@@ -1,0 +1,5 @@
+verilog work "../../Documents and Settings/Administrator/Desktop/calc_project/add_module.v"
+verilog work "../../Documents and Settings/Administrator/Desktop/calc_project/main_calc_cu.v"
+verilog work "../../Documents and Settings/Administrator/Desktop/calc_project/lcd_core.v"
+verilog work "../../Documents and Settings/Administrator/Desktop/calc_project/ee201_debounce_DPB_SCEN_CCEN_MCEN.v"
+verilog work "../../Documents and Settings/Administrator/Desktop/calc_project/calc_project_top.v"
