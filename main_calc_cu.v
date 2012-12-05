@@ -20,7 +20,7 @@ output sel1, sel2, sel3, sel4, sel5, sel6, sel7;
 output add, sub, div, mult, gcd, isprime, sqrt, done;
 //--text
 /*output [31:0] textOut [7:0];*/
-output reg [8*32:0] textOut ;
+output reg [8*32:0] textOut;
 reg [15:0] line1 [7:0];
 reg [15:0] line2 [7:0];
 
@@ -30,12 +30,17 @@ reg [7:0] num1, num2;
 
 reg [14:0] state;
 
+//Variables for each submodule
+wire [8*32:0] textOut_Add;
+wire done_Add;
+
 //assign state outputs to the state register
 assign {sel1, sel2, sel3, sel4, sel5, sel6, sel7, add, sub, div, mult, gcd, isprime, sqrt, done} = state;
 
 //assign number outputs to the num1 and 2 reg
 assign num1_out = num1;
 assign num2_out = num2;
+
 
 
 localparam
@@ -56,6 +61,7 @@ SQRT 	= 15'b000000000000010,
 DONE 	= 15'b000000000000001;
 
 
+add_module add_uut(.Clk(Clk), .data_in(dataInBus), .reset(state==SEL1), .enable(state==ADD), .textOut(textOut_Add), .next(btc), .done(done_Add));
 //assign textOut = {line1, line2};
 
 always @(posedge Clk, posedge Reset) 
@@ -108,7 +114,7 @@ always @(posedge Clk, posedge Reset)
 					
 				
 		         // RTL operations in the Data Path 
-					textOut = "*Add Sub Div Mlt GCD isPrme Sqrt";
+					textOut = " Add*Sub Div Mlt GCD isPrme Sqrt";
 				 /*line1 <= " Add*Sub Div Mlt";
 				 line2 <= " GCD isPrme Sqrt";*/
 	          end
@@ -125,7 +131,7 @@ always @(posedge Clk, posedge Reset)
 					state <= SEL4;
 		         
 		         // RTL operations in the Data Path
-					textOut = "*Add Sub Div Mlt GCD isPrme Sqrt";
+					textOut = " Add Sub*Div Mlt GCD isPrme Sqrt";
 						/*
 				 line1 <= " Add Sub*Div Mlt";
 				 line2 <= " GCD isPrme Sqrt";*/
@@ -142,7 +148,7 @@ always @(posedge Clk, posedge Reset)
 				else if (btr)
 					state <= SEL1;
 		         // RTL operations in the Data Path
-					textOut = "*Add Sub Div Mlt GCD isPrme Sqrt";
+					textOut = " Add Sub Div*Mlt GCD isPrme Sqrt";
 					/*
 				 line1 <= " Add Sub Div*Mlt";
 				 line2 <= " GCD isPrme Sqrt";*/
@@ -160,7 +166,7 @@ always @(posedge Clk, posedge Reset)
 				else if (btr)
 					state <= SEL6;
 		         // RTL operations in the Data Path
-					textOut = "*Add Sub Div Mlt GCD isPrme Sqrt";
+					textOut = " Add Sub Div Mlt*GCD isPrme Sqrt";
 					/*
 				 line1 <= " Add Sub Div Mlt";
 				 line2 <= "*GCD isPrme Sqrt";		*/		 
@@ -178,7 +184,7 @@ always @(posedge Clk, posedge Reset)
 				else if (btr)
 					state <= SEL7; 
 		         // RTL operations in the Data Path 
-					textOut = "*Add Sub Div Mlt GCD isPrme Sqrt";
+					textOut = " Add Sub Div Mlt GCD*isPrme Sqrt";
 					/*
 				 line1 <= " Add Sub Div Mlt";
 				 line2 <= " GCD*isPrme Sqrt";*/
@@ -195,7 +201,7 @@ always @(posedge Clk, posedge Reset)
 					state <= SEL5;
 		         // state transitions in the control unit
 		         // RTL operations in the Data Path
-					textOut = "*Add Sub Div Mlt GCD isPrme Sqrt";
+					textOut = " Add Sub Div Mlt GCD isPrme*Sqrt";
 					/*
 				 line1 <= " Add Sub Div Mlt";
 				 line2 <= " GCD isPrme*Sqrt";*/
@@ -206,10 +212,14 @@ always @(posedge Clk, posedge Reset)
 		         // state transitions in the control unit
 					
 		         // RTL operations in the Data Path 
-					textOut = "ADD state                       ";
+					//textOut = "ADD state                       ";
 								//just for testing these random numbers
 					num1 <= 8'h0A;
 					num2 <= 8'hDD;
+					
+					textOut = textOut_Add;
+					if (done_Add && btc)
+						state <= SEL1;
 	          end 
 			SUB	: 
 	          begin
