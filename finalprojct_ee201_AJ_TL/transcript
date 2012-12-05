@@ -1,0 +1,34 @@
+# Reading C:/modeltech64_10.1/tcl/vsim/pref.tcl 
+# //  ModelSim SE-64 10.1 Dec  5 2011 
+# //
+# //  Copyright 1991-2011 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# do {main_calc_cu.fdo} 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim SE-64 vlog 10.1 Compiler 2011.12 Dec  5 2011
+# -- Compiling module main_calc_cu
+# 
+# Top level modules:
+# 	main_calc_cu
+# Model Technology ModelSim SE-64 vlog 10.1 Compiler 2011.12 Dec  5 2011
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# vsim -L xilinxcorelib_ver -L unisims_ver -L secureip -lib work -voptargs=\"+acc\" -t 1ps work.main_calc_cu glbl 
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# ** Note: (vopt-143) Recognized 1 FSM in module "main_calc_cu".
+# 
+# Loading work.main_calc_cu(fast)
+# Loading work.glbl(fast)
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+#  

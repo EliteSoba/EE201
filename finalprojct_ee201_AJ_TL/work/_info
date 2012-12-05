@@ -1,0 +1,94 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Modelsim_projects\ee201\finalproject\project_files\finalprojct_ee201_AJ_TL
+T_opt
+V>l>hR0UGhd@<918JeR4=70
+04 16 4 work calc_project_top fast 0
+Z1 04 4 4 work glbl fast 0
+=1-0090f5bb6133-50b5c9f2-ee-2714
+Z2 o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L secureip +acc
+n@_opt
+Z3 OL;O;10.1;51
+Z4 dC:\Modelsim_projects\ee201\finalproject\project_files\finalprojct_ee201_AJ_TL
+T_opt1
+VS8W@lC=1HcE`AmEIZRLEV3
+04 12 4 work main_calc_cu fast 0
+R1
+=1-0090f5bb6133-50b5ca42-ee-2244
+R2
+n@_opt1
+R3
+vcalc_project_top
+IA9ULf4KRJS8EWP1oa2WYl0
+VC0WHF?P@oM9jYX7Te0BmQ1
+R4
+w1354090635
+8../calc_project_top.v
+F../calc_project_top.v
+L0 8
+Z5 OL;L;10.1;51
+r1
+31
+Z6 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s100 Hgc=SRPk2ECP6O[>G?WUV3
+!s108 1354090992.478000
+!s107 ../calc_project_top.v|
+!s90 -reportprogress|300|../calc_project_top.v|
+!i10b 1
+!s85 0
+vee201_debouncer
+I`M`HL;j9m<^=be:z;biRL1
+Vbb<4>bX0F:^54mz2lPDA31
+R4
+w1266843840
+8../ee201_debounce_DPB_SCEN_CCEN_MCEN.v
+F../ee201_debounce_DPB_SCEN_CCEN_MCEN.v
+L0 91
+R5
+r1
+31
+R6
+!s100 fX]0n7mLkPNL4W_mGQTfX2
+!s108 1354090992.358000
+!s107 ../ee201_debounce_DPB_SCEN_CCEN_MCEN.v|
+!s90 -reportprogress|300|../ee201_debounce_DPB_SCEN_CCEN_MCEN.v|
+!i10b 1
+!s85 0
+vglbl
+!s100 iU?KY@Vm^ibNkUiOGIChA3
+I_HnChG<D0B6oX2@hOo5Bb0
+VM[9mS]S:KA1i4VeCMX35[3
+R4
+w1308630577
+8C:/Xilinx/13.2/ISE_DS/ISE//verilog/src/glbl.v
+FC:/Xilinx/13.2/ISE_DS/ISE//verilog/src/glbl.v
+L0 5
+R5
+r1
+31
+!s90 -reportprogress|300|C:/Xilinx/13.2/ISE_DS/ISE//verilog/src/glbl.v|
+R6
+!i10b 1
+!s85 0
+!s108 1354091073.738000
+!s107 C:/Xilinx/13.2/ISE_DS/ISE//verilog/src/glbl.v|
+vmain_calc_cu
+!s100 <19D0C_W2M[050NclJkZa3
+Il@>oj:IzozFkdRkloHA[O0
+Vhhc8J1e5ICMB@[e0aKZ8M0
+R4
+w1354090699
+8../main_calc_cu.v
+F../main_calc_cu.v
+L0 5
+R5
+r1
+31
+!s90 -reportprogress|300|../main_calc_cu.v|
+R6
+!s108 1354091073.588000
+!s107 ../main_calc_cu.v|
+!i10b 1
+!s85 0

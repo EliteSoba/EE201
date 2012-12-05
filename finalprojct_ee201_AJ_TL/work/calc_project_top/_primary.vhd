@@ -1,0 +1,45 @@
+library verilog;
+use verilog.vl_types.all;
+entity calc_project_top is
+    port(
+        ClkPort         : in     vl_logic;
+        MemOE           : out    vl_logic;
+        MemWR           : out    vl_logic;
+        RamCS           : out    vl_logic;
+        FlashCS         : out    vl_logic;
+        QuadSpiFlashCS  : out    vl_logic;
+        Sw7             : in     vl_logic;
+        Sw6             : in     vl_logic;
+        Sw5             : in     vl_logic;
+        Sw4             : in     vl_logic;
+        Sw3             : in     vl_logic;
+        Sw2             : in     vl_logic;
+        Sw1             : in     vl_logic;
+        Sw0             : in     vl_logic;
+        BtnC            : in     vl_logic;
+        BtnD            : in     vl_logic;
+        BtnR            : in     vl_logic;
+        BtnL            : in     vl_logic;
+        BtnU            : in     vl_logic;
+        Ld0             : out    vl_logic;
+        Ld1             : out    vl_logic;
+        Ld2             : out    vl_logic;
+        Ld3             : out    vl_logic;
+        Ld4             : out    vl_logic;
+        Ld5             : out    vl_logic;
+        Ld6             : out    vl_logic;
+        Ld7             : out    vl_logic;
+        An0             : out    vl_logic;
+        An1             : out    vl_logic;
+        An2             : out    vl_logic;
+        An3             : out    vl_logic;
+        Ca              : out    vl_logic;
+        Cb              : out    vl_logic;
+        Cc              : out    vl_logic;
+        Cd              : out    vl_logic;
+        Ce              : out    vl_logic;
+        Cf              : out    vl_logic;
+        Cg              : out    vl_logic;
+        Dp              : out    vl_logic
+    );
+end calc_project_top;

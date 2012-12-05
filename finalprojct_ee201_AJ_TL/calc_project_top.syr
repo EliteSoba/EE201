@@ -1,0 +1,877 @@
+Release 13.2 - xst O.61xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Reading design: calc_project_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "calc_project_top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "calc_project_top"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : calc_project_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file \"C:\Modelsim_projects\ee201\finalproject\project_files\main_calc_cu.v\" into library work
+Parsing module <main_calc_cu>.
+Analyzing Verilog file \"C:\Modelsim_projects\ee201\finalproject\project_files\ee201_debounce_DPB_SCEN_CCEN_MCEN.v\" into library work
+Parsing module <ee201_debouncer>.
+Analyzing Verilog file \"C:\Modelsim_projects\ee201\finalproject\project_files\calc_project_top.v\" into library work
+Parsing module <calc_project_top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <calc_project_top>.
+
+Elaborating module <main_calc_cu>.
+WARNING:HDLCompiler:413 - "C:\Modelsim_projects\ee201\finalproject\project_files\main_calc_cu.v" Line 71: Result of 255-bit expression is truncated to fit in 249-bit target.
+WARNING:HDLCompiler:413 - "C:\Modelsim_projects\ee201\finalproject\project_files\main_calc_cu.v" Line 93: Result of 254-bit expression is truncated to fit in 249-bit target.
+WARNING:HDLCompiler:413 - "C:\Modelsim_projects\ee201\finalproject\project_files\main_calc_cu.v" Line 111: Result of 254-bit expression is truncated to fit in 249-bit target.
+WARNING:HDLCompiler:413 - "C:\Modelsim_projects\ee201\finalproject\project_files\main_calc_cu.v" Line 128: Result of 254-bit expression is truncated to fit in 249-bit target.
+WARNING:HDLCompiler:413 - "C:\Modelsim_projects\ee201\finalproject\project_files\main_calc_cu.v" Line 145: Result of 254-bit expression is truncated to fit in 249-bit target.
+WARNING:HDLCompiler:413 - "C:\Modelsim_projects\ee201\finalproject\project_files\main_calc_cu.v" Line 163: Result of 254-bit expression is truncated to fit in 249-bit target.
+WARNING:HDLCompiler:413 - "C:\Modelsim_projects\ee201\finalproject\project_files\main_calc_cu.v" Line 181: Result of 254-bit expression is truncated to fit in 249-bit target.
+WARNING:HDLCompiler:413 - "C:\Modelsim_projects\ee201\finalproject\project_files\main_calc_cu.v" Line 198: Result of 254-bit expression is truncated to fit in 249-bit target.
+WARNING:HDLCompiler:413 - "C:\Modelsim_projects\ee201\finalproject\project_files\main_calc_cu.v" Line 208: Result of 255-bit expression is truncated to fit in 249-bit target.
+WARNING:HDLCompiler:1308 - "C:\Modelsim_projects\ee201\finalproject\project_files\main_calc_cu.v" Line 80: Found full_case directive in module main_calc_cu. Use of full_case directives may cause differences between RTL and post-synthesis simulation
+
+Elaborating module <BUFGP>.
+
+Elaborating module <BUF>.
+
+Elaborating module <ee201_debouncer(N_dc=24)>.
+WARNING:HDLCompiler:413 - "C:\Modelsim_projects\ee201\finalproject\project_files\ee201_debounce_DPB_SCEN_CCEN_MCEN.v" Line 145: Result of 32-bit expression is truncated to fit in 24-bit target.
+WARNING:HDLCompiler:413 - "C:\Modelsim_projects\ee201\finalproject\project_files\ee201_debounce_DPB_SCEN_CCEN_MCEN.v" Line 162: Result of 25-bit expression is truncated to fit in 24-bit target.
+WARNING:HDLCompiler:413 - "C:\Modelsim_projects\ee201\finalproject\project_files\ee201_debounce_DPB_SCEN_CCEN_MCEN.v" Line 175: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Modelsim_projects\ee201\finalproject\project_files\ee201_debounce_DPB_SCEN_CCEN_MCEN.v" Line 181: Result of 25-bit expression is truncated to fit in 24-bit target.
+WARNING:HDLCompiler:413 - "C:\Modelsim_projects\ee201\finalproject\project_files\ee201_debounce_DPB_SCEN_CCEN_MCEN.v" Line 195: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Modelsim_projects\ee201\finalproject\project_files\ee201_debounce_DPB_SCEN_CCEN_MCEN.v" Line 201: Result of 25-bit expression is truncated to fit in 24-bit target.
+WARNING:HDLCompiler:413 - "C:\Modelsim_projects\ee201\finalproject\project_files\ee201_debounce_DPB_SCEN_CCEN_MCEN.v" Line 236: Result of 25-bit expression is truncated to fit in 24-bit target.
+WARNING:HDLCompiler:1127 - "C:\Modelsim_projects\ee201\finalproject\project_files\calc_project_top.v" Line 137: Assignment to SCEN_BtnU ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Modelsim_projects\ee201\finalproject\project_files\calc_project_top.v" Line 210: Assignment to LCD_bl ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Modelsim_projects\ee201\finalproject\project_files\calc_project_top.v" Line 272: Assignment to data32 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Modelsim_projects\ee201\finalproject\project_files\calc_project_top.v" Line 271: Assignment to data24 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Modelsim_projects\ee201\finalproject\project_files\calc_project_top.v" Line 270: Assignment to data16 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Modelsim_projects\ee201\finalproject\project_files\calc_project_top.v" Line 269: Assignment to data8 ignored, since the identifier is never used
+WARNING:HDLCompiler:552 - "C:\Modelsim_projects\ee201\finalproject\project_files\calc_project_top.v" Line 83: Input port btu is not connected on this instance
+WARNING:Xst:2972 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 136. All outputs of instance <ee201_debouncer_U> of block <ee201_debouncer> are unconnected in block <calc_project_top>. Underlying logic will be removed.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <calc_project_top>.
+    Related source file is "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v".
+WARNING:Xst:2898 - Port 'btu', unconnected in block instance 'core_uut', is tied to GND.
+INFO:Xst:3210 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 83: Output port <textOut> of the instance <core_uut> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 134: Output port <DPB> of the instance <ee201_debouncer_L> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 134: Output port <MCEN> of the instance <ee201_debouncer_L> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 134: Output port <CCEN> of the instance <ee201_debouncer_L> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 136: Output port <DPB> of the instance <ee201_debouncer_U> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 136: Output port <SCEN> of the instance <ee201_debouncer_U> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 136: Output port <MCEN> of the instance <ee201_debouncer_U> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 136: Output port <CCEN> of the instance <ee201_debouncer_U> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 138: Output port <DPB> of the instance <ee201_debouncer_R> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 138: Output port <MCEN> of the instance <ee201_debouncer_R> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 138: Output port <CCEN> of the instance <ee201_debouncer_R> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 140: Output port <DPB> of the instance <ee201_debouncer_D> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 140: Output port <MCEN> of the instance <ee201_debouncer_D> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 140: Output port <CCEN> of the instance <ee201_debouncer_D> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 142: Output port <DPB> of the instance <ee201_debouncer_C> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 142: Output port <MCEN> of the instance <ee201_debouncer_C> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 142: Output port <CCEN> of the instance <ee201_debouncer_C> is unconnected or connected to loadless signal.
+    Found 27-bit register for signal <DIV_CLK>.
+    Found 27-bit adder for signal <DIV_CLK[26]_GND_1_o_add_1_OUT> created at line 121.
+    Found 16x8-bit Read Only RAM for signal <SSD_CATHODES>
+    Found 1-bit 4-to-1 multiplexer for signal <SSD<3>> created at line 182.
+    Found 1-bit 4-to-1 multiplexer for signal <SSD<2>> created at line 182.
+    Found 1-bit 4-to-1 multiplexer for signal <SSD<1>> created at line 182.
+    Found 1-bit 4-to-1 multiplexer for signal <SSD<0>> created at line 182.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  27 D-type flip-flop(s).
+	inferred   4 Multiplexer(s).
+Unit <calc_project_top> synthesized.
+
+Synthesizing Unit <main_calc_cu>.
+    Related source file is "c:/modelsim_projects/ee201/finalproject/project_files/main_calc_cu.v".
+WARNING:Xst:647 - Input <dataInBus<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <btu> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit register for signal <num1>.
+    Found 8-bit register for signal <num2>.
+    Found 249-bit register for signal <textOut>.
+    Found 15-bit register for signal <state>.
+INFO:Xst:1799 - State 000000000000001 is never reached in FSM <state>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 15                                             |
+    | Transitions        | 42                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 28                                             |
+    | Clock              | Clk (rising_edge)                              |
+    | Reset              | Reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 100000000000000                                |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred 265 D-type flip-flop(s).
+	inferred   1 Finite State Machine(s).
+Unit <main_calc_cu> synthesized.
+
+Synthesizing Unit <ee201_debouncer>.
+    Related source file is "c:/modelsim_projects/ee201/finalproject/project_files/ee201_debounce_dpb_scen_ccen_mcen.v".
+        N_dc = 24
+    Set property "fsm_encoding = user" for signal <state>.
+    Found 6-bit register for signal <state>.
+    Found 24-bit register for signal <debounce_count>.
+    Found 4-bit register for signal <MCEN_count>.
+    Found finite state machine <FSM_1> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 9                                              |
+    | Transitions        | 20                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 13                                             |
+    | Clock              | CLK (rising_edge)                              |
+    | Reset              | RESET (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 000000                                         |
+    | Encoding           | user                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 24-bit adder for signal <debounce_count[23]_GND_6_o_add_2_OUT> created at line 162.
+    Found 4-bit adder for signal <MCEN_count[3]_GND_6_o_add_5_OUT> created at line 175.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  28 D-type flip-flop(s).
+	inferred   1 Finite State Machine(s).
+Unit <ee201_debouncer> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 16x8-bit single-port Read Only RAM                    : 1
+# Adders/Subtractors                                   : 9
+ 24-bit adder                                          : 4
+ 27-bit adder                                          : 1
+ 4-bit adder                                           : 4
+# Registers                                            : 12
+ 24-bit register                                       : 4
+ 249-bit register                                      : 1
+ 27-bit register                                       : 1
+ 4-bit register                                        : 4
+ 8-bit register                                        : 2
+# Multiplexers                                         : 4
+ 1-bit 4-to-1 multiplexer                              : 4
+# FSMs                                                 : 5
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <num1_1> in Unit <core_uut> is equivalent to the following 5 FFs/Latches, which will be removed : <num1_3> <num2_2> <num2_3> <num2_6> <num2_7> 
+INFO:Xst:2261 - The FF/Latch <num1_4> in Unit <core_uut> is equivalent to the following 3 FFs/Latches, which will be removed : <num1_5> <num1_6> <num1_7> 
+INFO:Xst:2261 - The FF/Latch <num2_0> in Unit <core_uut> is equivalent to the following FF/Latch, which will be removed : <num2_4> 
+INFO:Xst:2261 - The FF/Latch <num1_0> in Unit <core_uut> is equivalent to the following 3 FFs/Latches, which will be removed : <num1_2> <num2_1> <num2_5> 
+WARNING:Xst:1710 - FF/Latch <num1_0> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <num1_1> (without init value) has a constant value of 1 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <calc_project_top>.
+The following registers are absorbed into counter <DIV_CLK>: 1 register on signal <DIV_CLK>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_SSD_CATHODES> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <SSD>           |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <Dp>            |          |
+    -----------------------------------------------------------------------
+Unit <calc_project_top> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 16x8-bit single-port distributed Read Only RAM        : 1
+# Adders/Subtractors                                   : 8
+ 24-bit adder                                          : 4
+ 4-bit adder                                           : 4
+# Counters                                             : 1
+ 27-bit up counter                                     : 1
+# Registers                                            : 377
+ Flip-Flops                                            : 377
+# Multiplexers                                         : 4
+ 1-bit 4-to-1 multiplexer                              : 4
+# FSMs                                                 : 5
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <textOut_199> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_192> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_191> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_185> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_183> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_177> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_176> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_175> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_170> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_167> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_163> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_159> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_155> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_154> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_151> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_148> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_145> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_143> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_137> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_136> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_135> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_129> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <num2_7> (without init value) has a constant value of 1 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <num2_6> (without init value) has a constant value of 1 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <num2_5> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <num2_3> (without init value) has a constant value of 1 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <num2_2> (without init value) has a constant value of 1 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <num2_1> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <num1_3> (without init value) has a constant value of 1 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <num1_2> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <num1_1> (without init value) has a constant value of 1 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <num1_0> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_247> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_241> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_239> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_233> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_232> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_231> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_225> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_224> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_223> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_218> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_215> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_207> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_201> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_64> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_63> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_58> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_56> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_55> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_49> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_47> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_41> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_39> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_34> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_33> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_32> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_31> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_26> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_23> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_18> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_17> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_15> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_10> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_8> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_7> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_1> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_0> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_128> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_127> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_122> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_121> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_120> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_119> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_111> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_106> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_103> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_97> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_96> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_95> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_90> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_89> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_88> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_87> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_82> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_81> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_79> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_74> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_71> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_66> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_65> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <num1_4> in Unit <main_calc_cu> is equivalent to the following 3 FFs/Latches, which will be removed : <num1_5> <num1_6> <num1_7> 
+INFO:Xst:2261 - The FF/Latch <num2_0> in Unit <main_calc_cu> is equivalent to the following FF/Latch, which will be removed : <num2_4> 
+Optimizing FSM <ee201_debouncer_C/FSM_1> on signal <state[1:6]> with user encoding.
+Optimizing FSM <ee201_debouncer_D/FSM_1> on signal <state[1:6]> with user encoding.
+Optimizing FSM <ee201_debouncer_R/FSM_1> on signal <state[1:6]> with user encoding.
+Optimizing FSM <ee201_debouncer_L/FSM_1> on signal <state[1:6]> with user encoding.
+--------------------
+ State  | Encoding
+--------------------
+ 000000 | 000000
+ 000001 | 000001
+ 111100 | 111100
+ 100000 | 100000
+ 101100 | 101100
+ 100100 | 100100
+ 101101 | 101101
+ 100001 | 100001
+ 100010 | 100010
+--------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <core_uut/FSM_0> on signal <state[1:14]> with one-hot encoding.
+-----------------------------------
+ State           | Encoding
+-----------------------------------
+ 100000000000000 | 00000000000001
+ 010000000000000 | 00000000000010
+ 001000000000000 | 00000000000100
+ 000100000000000 | 00000000001000
+ 000010000000000 | 00000000010000
+ 000001000000000 | 00000000100000
+ 000000100000000 | 00000001000000
+ 000000010000000 | 00000010000000
+ 000000001000000 | 00000100000000
+ 000000000100000 | 00001000000000
+ 000000000010000 | 00010000000000
+ 000000000001000 | 00100000000000
+ 000000000000100 | 01000000000000
+ 000000000000010 | 10000000000000
+ 000000000000001 | unreached
+-----------------------------------
+WARNING:Xst:2677 - Node <DIV_CLK_19> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <DIV_CLK_20> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <DIV_CLK_21> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <DIV_CLK_22> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <DIV_CLK_23> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <DIV_CLK_24> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <DIV_CLK_25> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <DIV_CLK_26> of sequential type is unconnected in block <calc_project_top>.
+
+Optimizing unit <calc_project_top> ...
+
+Optimizing unit <ee201_debouncer> ...
+
+Optimizing unit <main_calc_cu> ...
+WARNING:Xst:2677 - Node <core_uut/textOut_248> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_246> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_245> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_244> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_243> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_242> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_240> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_238> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_237> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_236> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_235> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_234> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_230> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_229> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_228> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_227> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_226> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_222> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_221> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_220> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_219> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_217> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_216> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_214> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_213> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_212> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_211> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_210> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_209> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_208> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_206> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_205> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_204> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_203> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_202> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_200> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_198> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_197> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_196> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_195> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_194> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_193> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_190> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_189> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_188> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_187> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_186> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_184> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_182> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_181> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_180> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_179> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_178> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_174> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_173> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_172> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_171> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_169> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_168> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_166> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_165> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_164> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_162> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_161> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_160> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_158> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_157> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_156> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_153> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_152> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_150> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_149> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_147> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_146> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_144> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_142> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_141> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_140> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_139> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_138> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_134> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_133> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_132> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_131> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_130> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_126> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_125> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_124> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_123> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_118> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_117> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_116> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_115> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_114> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_113> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_112> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_110> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_109> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_108> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_107> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_105> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_104> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_102> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_101> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_100> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_99> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_98> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_94> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_93> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_92> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_91> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_86> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_85> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_84> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_83> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_80> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_78> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_77> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_76> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_75> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_73> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_72> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_70> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_69> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_68> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_67> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_62> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_61> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_60> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_59> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_57> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_54> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_53> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_52> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_51> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_50> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_48> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_46> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_45> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_44> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_43> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_42> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_40> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_38> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_37> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_36> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_35> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_30> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_29> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_28> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_27> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_25> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_24> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_22> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_21> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_20> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_19> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_16> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_14> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_13> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_12> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_11> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_9> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_6> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_5> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_4> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_3> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_2> of sequential type is unconnected in block <calc_project_top>.
+INFO:Xst:3203 - The FF/Latch <core_uut/num2_0> in Unit <calc_project_top> is the opposite to the following FF/Latch, which will be removed : <core_uut/num1_4> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block calc_project_top, actual ratio is 4.
+FlipFlop ee201_debouncer_C/state_FSM_FFd4 has been replicated 2 time(s)
+FlipFlop ee201_debouncer_C/state_FSM_FFd6 has been replicated 2 time(s)
+FlipFlop ee201_debouncer_D/state_FSM_FFd4 has been replicated 2 time(s)
+FlipFlop ee201_debouncer_D/state_FSM_FFd6 has been replicated 2 time(s)
+FlipFlop ee201_debouncer_L/state_FSM_FFd4 has been replicated 2 time(s)
+FlipFlop ee201_debouncer_L/state_FSM_FFd6 has been replicated 2 time(s)
+FlipFlop ee201_debouncer_R/state_FSM_FFd4 has been replicated 2 time(s)
+FlipFlop ee201_debouncer_R/state_FSM_FFd6 has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 186
+ Flip-Flops                                            : 186
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : calc_project_top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 549
+#      BUF                         : 1
+#      GND                         : 1
+#      INV                         : 5
+#      LUT1                        : 110
+#      LUT2                        : 7
+#      LUT3                        : 17
+#      LUT4                        : 14
+#      LUT5                        : 130
+#      LUT6                        : 38
+#      MUXCY                       : 110
+#      VCC                         : 1
+#      XORCY                       : 115
+# FlipFlops/Latches                : 186
+#      FD                          : 112
+#      FDC                         : 73
+#      FDP                         : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 30
+#      IBUF                        : 5
+#      OBUF                        : 25
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             186  out of  18224     1%  
+ Number of Slice LUTs:                  321  out of   9112     3%  
+    Number used as Logic:               321  out of   9112     3%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    337
+   Number with an unused Flip Flop:     151  out of    337    44%  
+   Number with an unused LUT:            16  out of    337     4%  
+   Number of fully used LUT-FF pairs:   170  out of    337    50%  
+   Number of unique control sets:         2
+
+IO Utilization: 
+ Number of IOs:                          39
+ Number of bonded IOBs:                  31  out of    232    13%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+ClkPort                            | BUFGP                  | 186   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.028ns (Maximum Frequency: 330.240MHz)
+   Minimum input arrival time before clock: 4.504ns
+   Maximum output required time after clock: 4.913ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ClkPort'
+  Clock period: 3.028ns (frequency: 330.240MHz)
+  Total number of paths / destination ports: 2789 / 186
+-------------------------------------------------------------------------
+Delay:               3.028ns (Levels of Logic = 26)
+  Source:            ee201_debouncer_L/debounce_count_0 (FF)
+  Destination:       ee201_debouncer_L/debounce_count_23 (FF)
+  Source Clock:      ClkPort rising
+  Destination Clock: ClkPort rising
+
+  Data Path: ee201_debouncer_L/debounce_count_0 to ee201_debouncer_L/debounce_count_23
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.616  ee201_debouncer_L/debounce_count_0 (ee201_debouncer_L/debounce_count_0)
+     INV:I->O              1   0.206   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_lut<0>_INV_0 (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<0> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<1> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<2> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<3> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<4> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<5> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<6> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<7> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<8> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<9> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<10> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<11> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<12> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<13> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<14> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<15> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<16> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<17> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<18> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<19> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<20> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<21> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<21>)
+     MUXCY:CI->O           0   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<22> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<22>)
+     XORCY:CI->O           1   0.180   0.684  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_xor<23> (ee201_debouncer_L/debounce_count[23]_GND_6_o_add_2_OUT<23>)
+     LUT5:I3->O            1   0.203   0.000  ee201_debouncer_L/state[5]_GND_6_o_select_29_OUT<23>1 (ee201_debouncer_L/state[5]_GND_6_o_select_29_OUT<23>)
+     FD:D                      0.102          ee201_debouncer_L/debounce_count_23
+    ----------------------------------------
+    Total                      3.028ns (1.728ns logic, 1.300ns route)
+                                       (57.1% logic, 42.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'ClkPort'
+  Total number of paths / destination ports: 126 / 114
+-------------------------------------------------------------------------
+Offset:              4.504ns (Levels of Logic = 2)
+  Source:            BtnU (PAD)
+  Destination:       DIV_CLK_0 (FF)
+  Destination Clock: ClkPort rising
+
+  Data Path: BtnU to DIV_CLK_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  BtnU_IBUF (BtnU_IBUF)
+     BUF:I->O             74   0.568   1.705  BUF2 (Reset)
+     FDC:CLR                   0.430          DIV_CLK_0
+    ----------------------------------------
+    Total                      4.504ns (2.220ns logic, 2.284ns route)
+                                       (49.3% logic, 50.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ClkPort'
+  Total number of paths / destination ports: 48 / 16
+-------------------------------------------------------------------------
+Offset:              4.913ns (Levels of Logic = 2)
+  Source:            DIV_CLK_18 (FF)
+  Destination:       Cd (PAD)
+  Source Clock:      ClkPort rising
+
+  Data Path: DIV_CLK_18 to Cd
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             11   0.447   1.111  DIV_CLK_18 (DIV_CLK_18)
+     LUT3:I0->O            1   0.205   0.579  Mram_SSD_CATHODES111 (Cg_OBUF)
+     OBUF:I->O                 2.571          Cg_OBUF (Cg)
+    ----------------------------------------
+    Total                      4.913ns (3.223ns logic, 1.690ns route)
+                                       (65.6% logic, 34.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock ClkPort
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+ClkPort        |    3.028|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.80 secs
+ 
+--> 
+
+Total memory usage is 251752 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  297 (   0 filtered)
+Number of infos    :   26 (   0 filtered)
+

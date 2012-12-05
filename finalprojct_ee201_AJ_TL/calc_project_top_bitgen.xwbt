@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Modelsim_projects\ee201\finalproject\project_files\finalprojct_ee201_AJ_TL\calc_project_top.ncd
+OUTFILE=C:\Modelsim_projects\ee201\finalproject\project_files\finalprojct_ee201_AJ_TL\calc_project_top.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Modelsim_projects\ee201\finalproject\project_files\finalprojct_ee201_AJ_TL
+LICENSE=WebPack
+USER_INFO=209824229_0_0_931

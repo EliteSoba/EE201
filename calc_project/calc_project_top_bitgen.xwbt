@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=C:\Xilinx_projects\calc_project\calc_project_top.ncd
-OUTFILE=C:\Xilinx_projects\calc_project\calc_project_top.bit
-FAMILY=Spartan6
-PART=xc6slx16-3csg324
-WORKINGDIR=C:\Xilinx_projects\calc_project
-LICENSE=ISE
-USER_INFO=174127445_174127446_209847101_221

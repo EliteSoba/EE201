@@ -1,0 +1,16 @@
+Release 13.2 - WebTalk (O.61xd)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Project Information
+--------------------
+ProjectID=089C7B124EDF49419FFD8999534D813F
+ProjectIteration=10
+
+WebTalk Summary
+----------------
+INFO:WebTalk:1 - WebTalk is enabled because you are using a WebPACK license.
+
+INFO:WebTalk:9 - WebTalk Install setting is OFF.
+INFO:WebTalk:6 - WebTalk User setting is ON.
+
+INFO:WebTalk:4 - C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/usage_statistics_webtalk.html WebTalk report has been successfully sent to Xilinx on 2012-11-28T00:51:03.  For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/13.2/ISE_DS/ISE/data/reports/webtalk_introduction.html

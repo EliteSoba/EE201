@@ -1,0 +1,73 @@
+xst -intstyle ise -ifn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.xst" -ofn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.syr" 
+xst -intstyle ise -ifn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.xst" -ofn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.syr" 
+xst -intstyle ise -ifn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.xst" -ofn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.syr" 
+xst -intstyle ise -ifn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.xst" -ofn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.syr" 
+xst -intstyle ise -ifn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.xst" -ofn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.syr" 
+xst -intstyle ise -ifn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.xst" -ofn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.syr" 
+xst -intstyle ise -ifn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.xst" -ofn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.syr" 
+xst -intstyle ise -ifn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.xst" -ofn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.syr" 
+xst -intstyle ise -ifn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.xst" -ofn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.syr" 
+xst -intstyle ise -ifn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.xst" -ofn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.syr" 
+xst -intstyle ise -ifn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.xst" -ofn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Modelsim_projects/ee201/finalproject/project_files/calc_project_top.ucf -p xc6slx16-csg324-3 calc_project_top.ngc calc_project_top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o calc_project_top_map.ncd calc_project_top.ngd calc_project_top.pcf 
+par -w -intstyle ise -ol high -mt off calc_project_top_map.ncd calc_project_top.ncd calc_project_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml calc_project_top.twx calc_project_top.ncd -o calc_project_top.twr calc_project_top.pcf 
+bitgen -intstyle ise -f calc_project_top.ut calc_project_top.ncd 
+xst -intstyle ise -ifn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.xst" -ofn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Modelsim_projects/ee201/finalproject/project_files/calc_project_top.ucf -p xc6slx16-csg324-3 calc_project_top.ngc calc_project_top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o calc_project_top_map.ncd calc_project_top.ngd calc_project_top.pcf 
+par -w -intstyle ise -ol high -mt off calc_project_top_map.ncd calc_project_top.ncd calc_project_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml calc_project_top.twx calc_project_top.ncd -o calc_project_top.twr calc_project_top.pcf 
+bitgen -intstyle ise -f calc_project_top.ut calc_project_top.ncd 
+xst -intstyle ise -ifn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.xst" -ofn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.syr" 
+xst -intstyle ise -ifn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.xst" -ofn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Modelsim_projects/ee201/finalproject/project_files/calc_project_top.ucf -p xc6slx16-csg324-3 calc_project_top.ngc calc_project_top.ngd  
+xst -intstyle ise -ifn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.xst" -ofn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Modelsim_projects/ee201/finalproject/project_files/calc_project_top.ucf -p xc6slx16-csg324-3 calc_project_top.ngc calc_project_top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o calc_project_top_map.ncd calc_project_top.ngd calc_project_top.pcf 
+par -w -intstyle ise -ol high -mt off calc_project_top_map.ncd calc_project_top.ncd calc_project_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml calc_project_top.twx calc_project_top.ncd -o calc_project_top.twr calc_project_top.pcf 
+bitgen -intstyle ise -f calc_project_top.ut calc_project_top.ncd 
+xst -intstyle ise -ifn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.xst" -ofn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.syr" 
+xst -intstyle ise -ifn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.xst" -ofn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.syr" 
+xst -intstyle ise -ifn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.xst" -ofn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Modelsim_projects/ee201/finalproject/project_files/calc_project_top.ucf -p xc6slx16-csg324-3 calc_project_top.ngc calc_project_top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o calc_project_top_map.ncd calc_project_top.ngd calc_project_top.pcf 
+par -w -intstyle ise -ol high -mt off calc_project_top_map.ncd calc_project_top.ncd calc_project_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml calc_project_top.twx calc_project_top.ncd -o calc_project_top.twr calc_project_top.pcf 
+bitgen -intstyle ise -f calc_project_top.ut calc_project_top.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Modelsim_projects/ee201/finalproject/project_files/calc_project_top.ucf -p xc6slx16-csg324-3 calc_project_top.ngc calc_project_top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o calc_project_top_map.ncd calc_project_top.ngd calc_project_top.pcf 
+par -w -intstyle ise -ol high -mt off calc_project_top_map.ncd calc_project_top.ncd calc_project_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml calc_project_top.twx calc_project_top.ncd -o calc_project_top.twr calc_project_top.pcf 
+bitgen -intstyle ise -f calc_project_top.ut calc_project_top.ncd 
+xst -intstyle ise -ifn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.xst" -ofn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Modelsim_projects/ee201/finalproject/project_files/calc_project_top.ucf -p xc6slx16-csg324-3 calc_project_top.ngc calc_project_top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o calc_project_top_map.ncd calc_project_top.ngd calc_project_top.pcf 
+par -w -intstyle ise -ol high -mt off calc_project_top_map.ncd calc_project_top.ncd calc_project_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml calc_project_top.twx calc_project_top.ncd -o calc_project_top.twr calc_project_top.pcf 
+xst -intstyle ise -ifn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.xst" -ofn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.syr" 
+xst -intstyle ise -ifn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.xst" -ofn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Modelsim_projects/ee201/finalproject/project_files/calc_project_top.ucf -p xc6slx16-csg324-3 calc_project_top.ngc calc_project_top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o calc_project_top_map.ncd calc_project_top.ngd calc_project_top.pcf 
+par -w -intstyle ise -ol high -mt off calc_project_top_map.ncd calc_project_top.ncd calc_project_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml calc_project_top.twx calc_project_top.ncd -o calc_project_top.twr calc_project_top.pcf 
+bitgen -intstyle ise -f calc_project_top.ut calc_project_top.ncd 
+xst -intstyle ise -ifn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.xst" -ofn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Modelsim_projects/ee201/finalproject/project_files/calc_project_top.ucf -p xc6slx16-csg324-3 calc_project_top.ngc calc_project_top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o calc_project_top_map.ncd calc_project_top.ngd calc_project_top.pcf 
+par -w -intstyle ise -ol high -mt off calc_project_top_map.ncd calc_project_top.ncd calc_project_top.pcf 
+bitgen -intstyle ise -f calc_project_top.ut calc_project_top.ncd 
+xst -intstyle ise -ifn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.xst" -ofn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Modelsim_projects/ee201/finalproject/project_files/calc_project_top.ucf -p xc6slx16-csg324-3 calc_project_top.ngc calc_project_top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o calc_project_top_map.ncd calc_project_top.ngd calc_project_top.pcf 
+par -w -intstyle ise -ol high -mt off calc_project_top_map.ncd calc_project_top.ncd calc_project_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml calc_project_top.twx calc_project_top.ncd -o calc_project_top.twr calc_project_top.pcf 
+bitgen -intstyle ise -f calc_project_top.ut calc_project_top.ncd 
+xst -intstyle ise -ifn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.xst" -ofn "C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/calc_project_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Modelsim_projects/ee201/finalproject/project_files/calc_project_top.ucf -p xc6slx16-csg324-3 calc_project_top.ngc calc_project_top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o calc_project_top_map.ncd calc_project_top.ngd calc_project_top.pcf 
+par -w -intstyle ise -ol high -mt off calc_project_top_map.ncd calc_project_top.ncd calc_project_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml calc_project_top.twx calc_project_top.ncd -o calc_project_top.twr calc_project_top.pcf 
+bitgen -intstyle ise -f calc_project_top.ut calc_project_top.ncd 

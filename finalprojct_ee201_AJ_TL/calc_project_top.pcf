@@ -1,0 +1,207 @@
+//! **************************************************************************
+// Written by: Map O.61xd on Wed Nov 28 00:50:32 2012
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "Ca" LOCATE = SITE "T17" LEVEL 1;
+COMP "Cb" LOCATE = SITE "T18" LEVEL 1;
+COMP "Cc" LOCATE = SITE "U17" LEVEL 1;
+COMP "Cd" LOCATE = SITE "U18" LEVEL 1;
+COMP "Ce" LOCATE = SITE "M14" LEVEL 1;
+COMP "Cf" LOCATE = SITE "N14" LEVEL 1;
+COMP "Cg" LOCATE = SITE "L14" LEVEL 1;
+COMP "Dp" LOCATE = SITE "M13" LEVEL 1;
+COMP "An0" LOCATE = SITE "N16" LEVEL 1;
+COMP "An1" LOCATE = SITE "N15" LEVEL 1;
+COMP "An2" LOCATE = SITE "P18" LEVEL 1;
+COMP "An3" LOCATE = SITE "P17" LEVEL 1;
+COMP "Ld0" LOCATE = SITE "U16" LEVEL 1;
+COMP "Ld1" LOCATE = SITE "V16" LEVEL 1;
+COMP "Ld2" LOCATE = SITE "U15" LEVEL 1;
+COMP "Ld3" LOCATE = SITE "V15" LEVEL 1;
+COMP "Ld4" LOCATE = SITE "M11" LEVEL 1;
+COMP "Ld5" LOCATE = SITE "N11" LEVEL 1;
+COMP "Ld6" LOCATE = SITE "R11" LEVEL 1;
+COMP "Ld7" LOCATE = SITE "T11" LEVEL 1;
+COMP "Sw0" LOCATE = SITE "T10" LEVEL 1;
+COMP "Sw1" LOCATE = SITE "T9" LEVEL 1;
+COMP "Sw2" LOCATE = SITE "V9" LEVEL 1;
+COMP "Sw3" LOCATE = SITE "M8" LEVEL 1;
+COMP "Sw4" LOCATE = SITE "N8" LEVEL 1;
+COMP "Sw5" LOCATE = SITE "U8" LEVEL 1;
+COMP "Sw6" LOCATE = SITE "V8" LEVEL 1;
+COMP "Sw7" LOCATE = SITE "T5" LEVEL 1;
+COMP "ClkPort" LOCATE = SITE "V10" LEVEL 1;
+COMP "FlashCS" LOCATE = SITE "L17" LEVEL 1;
+COMP "BtnC" LOCATE = SITE "B8" LEVEL 1;
+COMP "BtnD" LOCATE = SITE "C9" LEVEL 1;
+COMP "BtnL" LOCATE = SITE "C4" LEVEL 1;
+COMP "BtnR" LOCATE = SITE "D9" LEVEL 1;
+COMP "BtnU" LOCATE = SITE "A8" LEVEL 1;
+COMP "MemOE" LOCATE = SITE "L18" LEVEL 1;
+COMP "MemWR" LOCATE = SITE "M16" LEVEL 1;
+COMP "RamCS" LOCATE = SITE "L15" LEVEL 1;
+COMP "QuadSpiFlashCS" LOCATE = SITE "V3" LEVEL 1;
+TIMEGRP sys_clk_pin = BEL "DIV_CLK_0" BEL "DIV_CLK_1" BEL "DIV_CLK_2" BEL
+        "DIV_CLK_3" BEL "DIV_CLK_4" BEL "DIV_CLK_5" BEL "DIV_CLK_6" BEL
+        "DIV_CLK_7" BEL "DIV_CLK_8" BEL "DIV_CLK_9" BEL "DIV_CLK_10" BEL
+        "DIV_CLK_11" BEL "DIV_CLK_12" BEL "DIV_CLK_13" BEL "DIV_CLK_14" BEL
+        "DIV_CLK_15" BEL "DIV_CLK_16" BEL "DIV_CLK_17" BEL "DIV_CLK_18" BEL
+        "BUFGP1/BUFG" BEL "ee201_debouncer_L/state_FSM_FFd1" BEL
+        "ee201_debouncer_L/state_FSM_FFd2" BEL
+        "ee201_debouncer_L/state_FSM_FFd3" BEL
+        "ee201_debouncer_L/state_FSM_FFd4" BEL
+        "ee201_debouncer_L/state_FSM_FFd5" BEL
+        "ee201_debouncer_L/state_FSM_FFd6" BEL
+        "ee201_debouncer_L/MCEN_count_3" BEL "ee201_debouncer_L/MCEN_count_2"
+        BEL "ee201_debouncer_L/MCEN_count_1" BEL
+        "ee201_debouncer_L/MCEN_count_0" BEL
+        "ee201_debouncer_L/debounce_count_23" BEL
+        "ee201_debouncer_L/debounce_count_22" BEL
+        "ee201_debouncer_L/debounce_count_21" BEL
+        "ee201_debouncer_L/debounce_count_20" BEL
+        "ee201_debouncer_L/debounce_count_19" BEL
+        "ee201_debouncer_L/debounce_count_18" BEL
+        "ee201_debouncer_L/debounce_count_17" BEL
+        "ee201_debouncer_L/debounce_count_16" BEL
+        "ee201_debouncer_L/debounce_count_15" BEL
+        "ee201_debouncer_L/debounce_count_14" BEL
+        "ee201_debouncer_L/debounce_count_13" BEL
+        "ee201_debouncer_L/debounce_count_12" BEL
+        "ee201_debouncer_L/debounce_count_11" BEL
+        "ee201_debouncer_L/debounce_count_10" BEL
+        "ee201_debouncer_L/debounce_count_9" BEL
+        "ee201_debouncer_L/debounce_count_8" BEL
+        "ee201_debouncer_L/debounce_count_7" BEL
+        "ee201_debouncer_L/debounce_count_6" BEL
+        "ee201_debouncer_L/debounce_count_5" BEL
+        "ee201_debouncer_L/debounce_count_4" BEL
+        "ee201_debouncer_L/debounce_count_3" BEL
+        "ee201_debouncer_L/debounce_count_2" BEL
+        "ee201_debouncer_L/debounce_count_1" BEL
+        "ee201_debouncer_L/debounce_count_0" BEL
+        "ee201_debouncer_R/state_FSM_FFd1" BEL
+        "ee201_debouncer_R/state_FSM_FFd2" BEL
+        "ee201_debouncer_R/state_FSM_FFd3" BEL
+        "ee201_debouncer_R/state_FSM_FFd4" BEL
+        "ee201_debouncer_R/state_FSM_FFd5" BEL
+        "ee201_debouncer_R/state_FSM_FFd6" BEL
+        "ee201_debouncer_R/MCEN_count_3" BEL "ee201_debouncer_R/MCEN_count_2"
+        BEL "ee201_debouncer_R/MCEN_count_1" BEL
+        "ee201_debouncer_R/MCEN_count_0" BEL
+        "ee201_debouncer_R/debounce_count_23" BEL
+        "ee201_debouncer_R/debounce_count_22" BEL
+        "ee201_debouncer_R/debounce_count_21" BEL
+        "ee201_debouncer_R/debounce_count_20" BEL
+        "ee201_debouncer_R/debounce_count_19" BEL
+        "ee201_debouncer_R/debounce_count_18" BEL
+        "ee201_debouncer_R/debounce_count_17" BEL
+        "ee201_debouncer_R/debounce_count_16" BEL
+        "ee201_debouncer_R/debounce_count_15" BEL
+        "ee201_debouncer_R/debounce_count_14" BEL
+        "ee201_debouncer_R/debounce_count_13" BEL
+        "ee201_debouncer_R/debounce_count_12" BEL
+        "ee201_debouncer_R/debounce_count_11" BEL
+        "ee201_debouncer_R/debounce_count_10" BEL
+        "ee201_debouncer_R/debounce_count_9" BEL
+        "ee201_debouncer_R/debounce_count_8" BEL
+        "ee201_debouncer_R/debounce_count_7" BEL
+        "ee201_debouncer_R/debounce_count_6" BEL
+        "ee201_debouncer_R/debounce_count_5" BEL
+        "ee201_debouncer_R/debounce_count_4" BEL
+        "ee201_debouncer_R/debounce_count_3" BEL
+        "ee201_debouncer_R/debounce_count_2" BEL
+        "ee201_debouncer_R/debounce_count_1" BEL
+        "ee201_debouncer_R/debounce_count_0" BEL
+        "ee201_debouncer_D/state_FSM_FFd1" BEL
+        "ee201_debouncer_D/state_FSM_FFd2" BEL
+        "ee201_debouncer_D/state_FSM_FFd3" BEL
+        "ee201_debouncer_D/state_FSM_FFd4" BEL
+        "ee201_debouncer_D/state_FSM_FFd5" BEL
+        "ee201_debouncer_D/state_FSM_FFd6" BEL
+        "ee201_debouncer_D/MCEN_count_3" BEL "ee201_debouncer_D/MCEN_count_2"
+        BEL "ee201_debouncer_D/MCEN_count_1" BEL
+        "ee201_debouncer_D/MCEN_count_0" BEL
+        "ee201_debouncer_D/debounce_count_23" BEL
+        "ee201_debouncer_D/debounce_count_22" BEL
+        "ee201_debouncer_D/debounce_count_21" BEL
+        "ee201_debouncer_D/debounce_count_20" BEL
+        "ee201_debouncer_D/debounce_count_19" BEL
+        "ee201_debouncer_D/debounce_count_18" BEL
+        "ee201_debouncer_D/debounce_count_17" BEL
+        "ee201_debouncer_D/debounce_count_16" BEL
+        "ee201_debouncer_D/debounce_count_15" BEL
+        "ee201_debouncer_D/debounce_count_14" BEL
+        "ee201_debouncer_D/debounce_count_13" BEL
+        "ee201_debouncer_D/debounce_count_12" BEL
+        "ee201_debouncer_D/debounce_count_11" BEL
+        "ee201_debouncer_D/debounce_count_10" BEL
+        "ee201_debouncer_D/debounce_count_9" BEL
+        "ee201_debouncer_D/debounce_count_8" BEL
+        "ee201_debouncer_D/debounce_count_7" BEL
+        "ee201_debouncer_D/debounce_count_6" BEL
+        "ee201_debouncer_D/debounce_count_5" BEL
+        "ee201_debouncer_D/debounce_count_4" BEL
+        "ee201_debouncer_D/debounce_count_3" BEL
+        "ee201_debouncer_D/debounce_count_2" BEL
+        "ee201_debouncer_D/debounce_count_1" BEL
+        "ee201_debouncer_D/debounce_count_0" BEL
+        "ee201_debouncer_C/state_FSM_FFd1" BEL
+        "ee201_debouncer_C/state_FSM_FFd2" BEL
+        "ee201_debouncer_C/state_FSM_FFd3" BEL
+        "ee201_debouncer_C/state_FSM_FFd4" BEL
+        "ee201_debouncer_C/state_FSM_FFd5" BEL
+        "ee201_debouncer_C/state_FSM_FFd6" BEL
+        "ee201_debouncer_C/MCEN_count_3" BEL "ee201_debouncer_C/MCEN_count_2"
+        BEL "ee201_debouncer_C/MCEN_count_1" BEL
+        "ee201_debouncer_C/MCEN_count_0" BEL
+        "ee201_debouncer_C/debounce_count_23" BEL
+        "ee201_debouncer_C/debounce_count_22" BEL
+        "ee201_debouncer_C/debounce_count_21" BEL
+        "ee201_debouncer_C/debounce_count_20" BEL
+        "ee201_debouncer_C/debounce_count_19" BEL
+        "ee201_debouncer_C/debounce_count_18" BEL
+        "ee201_debouncer_C/debounce_count_17" BEL
+        "ee201_debouncer_C/debounce_count_16" BEL
+        "ee201_debouncer_C/debounce_count_15" BEL
+        "ee201_debouncer_C/debounce_count_14" BEL
+        "ee201_debouncer_C/debounce_count_13" BEL
+        "ee201_debouncer_C/debounce_count_12" BEL
+        "ee201_debouncer_C/debounce_count_11" BEL
+        "ee201_debouncer_C/debounce_count_10" BEL
+        "ee201_debouncer_C/debounce_count_9" BEL
+        "ee201_debouncer_C/debounce_count_8" BEL
+        "ee201_debouncer_C/debounce_count_7" BEL
+        "ee201_debouncer_C/debounce_count_6" BEL
+        "ee201_debouncer_C/debounce_count_5" BEL
+        "ee201_debouncer_C/debounce_count_4" BEL
+        "ee201_debouncer_C/debounce_count_3" BEL
+        "ee201_debouncer_C/debounce_count_2" BEL
+        "ee201_debouncer_C/debounce_count_1" BEL
+        "ee201_debouncer_C/debounce_count_0" BEL "core_uut/state_FSM_FFd2" BEL
+        "core_uut/state_FSM_FFd3" BEL "core_uut/state_FSM_FFd1" BEL
+        "core_uut/state_FSM_FFd4" BEL "core_uut/state_FSM_FFd5" BEL
+        "core_uut/state_FSM_FFd6" BEL "core_uut/state_FSM_FFd7" BEL
+        "core_uut/state_FSM_FFd9" BEL "core_uut/state_FSM_FFd10" BEL
+        "core_uut/state_FSM_FFd8" BEL "core_uut/state_FSM_FFd11" BEL
+        "core_uut/state_FSM_FFd12" BEL "core_uut/state_FSM_FFd13" BEL
+        "core_uut/state_FSM_FFd14" BEL "core_uut/num2_0" BEL
+        "ee201_debouncer_L/state_FSM_FFd6_1" BEL
+        "ee201_debouncer_R/state_FSM_FFd6_1" BEL
+        "ee201_debouncer_D/state_FSM_FFd6_1" BEL
+        "ee201_debouncer_C/state_FSM_FFd6_1" BEL
+        "ee201_debouncer_L/state_FSM_FFd4_1" BEL
+        "ee201_debouncer_R/state_FSM_FFd4_1" BEL
+        "ee201_debouncer_D/state_FSM_FFd4_1" BEL
+        "ee201_debouncer_C/state_FSM_FFd4_1" BEL
+        "ee201_debouncer_L/state_FSM_FFd6_2" BEL
+        "ee201_debouncer_R/state_FSM_FFd6_2" BEL
+        "ee201_debouncer_D/state_FSM_FFd6_2" BEL
+        "ee201_debouncer_C/state_FSM_FFd6_2" BEL
+        "ee201_debouncer_L/state_FSM_FFd4_2" BEL
+        "ee201_debouncer_R/state_FSM_FFd4_2" BEL
+        "ee201_debouncer_D/state_FSM_FFd4_2" BEL
+        "ee201_debouncer_C/state_FSM_FFd4_2";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+SCHEMATIC END;
+
