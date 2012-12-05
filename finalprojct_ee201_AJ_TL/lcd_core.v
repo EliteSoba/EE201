@@ -312,9 +312,9 @@ module lcd_core (clk, reset, lcd_data, lcd_e, lcd_rs, lcd_rw, data_f1, data_f2, 
 		endcase	
 	end					
 	
-	assign lcd_rs = LCD_CMDS[9];
-	assign lcd_rw = LCD_CMDS[8];
-	assign lcd_data = LCD_CMDS[7:0];
+	assign LCD_rs = LCD_CMDS[9];
+	assign LCD_rw = LCD_CMDS[8];
+	assign LCD_data = LCD_CMDS[7:0];
 	assign usclk = stCur;
 	
 	always @ (stCur)

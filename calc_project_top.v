@@ -11,7 +11,7 @@ module calc_project_top(ClkPort,
 								BtnC, BtnD, BtnR, BtnL, BtnU,
 								Ld0, Ld1, Ld2, Ld3, Ld4, Ld5, Ld6, Ld7,
 								/* LCD SIGNALS */
-								/*LCD_data, LCD_e, LCD_rs, LCD_rw, LCD_bl,*/
+								LCD_data, LCD_e, LCD_rs, LCD_rw, LCD_bl,
 								/*  */								
 								An0, An1, An2, An3,
 								Ca, Cb, Cc, Cd, Ce, Cf, Cg, 
@@ -32,8 +32,8 @@ module calc_project_top(ClkPort,
 	// LEDs
 	output 	Ld0, Ld1, Ld2, Ld3, Ld4, Ld5, Ld6, Ld7;
 	// LCD outputs
-	/*output [7:0] LCD_data;
-	output LCD_e, LCD_rs, LCD_rw, LCD_bl;*/
+	output [7:0] LCD_data;
+	output LCD_e, LCD_rs, LCD_rw, LCD_bl;
 	/****UNCOMMENT ABOVE WHEN LCD USED *********/
 	// SSD Outputs
 	output 	Cg, Cf, Ce, Cd, Cc, Cb, Ca, Dp;
@@ -59,7 +59,7 @@ module calc_project_top(ClkPort,
 	wire sel1, sel2, sel3, sel4, sel5, sel6, sel7;
 	
 	//text wire from core to LCD
-	wire [8*31:0] textToLCD;
+	wire [8*32:0] textToLCD;
 	
 // to produce divided clock
 	reg [26:0]	DIV_CLK;
@@ -270,7 +270,7 @@ module calc_project_top(ClkPort,
 				   data9, data10, data11, data12, data13, data14, data15, data16,
 					data17, data18, data19, data20, data21, data22, data23, data24,
 					data25, data26, data27, data28, data29, data30, data31, data32}  = (textToLCD);
-	/*				
+				
 	// Instantiate the Unit Under Test (UUT)
 	lcd_core uut (
 		.clk(board_clk), 
@@ -285,7 +285,7 @@ module calc_project_top(ClkPort,
 		.data_s3(data19), .data_s4(data20), .data_s5(data21),.data_s6(data22), .data_s7(data23), .data_s8(data24),
 		.data_s9(data25), .data_s10(data26), .data_s11(data27), .data_s12(data28), .data_s13(data29), .data_s14(data30),
 		.data_s15(data31), .data_s16(data32)
-	);*/
+	);
 	
 
 	

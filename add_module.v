@@ -21,7 +21,7 @@
 module add(data_in, textOut, next, done);
 	input [7:0] data_in;
 	input next;
-	output [8*31:0] textOut;
+	output [8*32:0] textOut;
 	output done;
 	
 endmodule

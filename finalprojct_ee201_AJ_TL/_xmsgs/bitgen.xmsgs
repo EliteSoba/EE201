@@ -29,5 +29,68 @@
 <msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">Sw7_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
 </msg>
 
+<msg type="error" file="PhysDesignRules" num="368" delta="old" >The signal &lt;<arg fmt="%s" index="1">LCD_data&lt;0&gt;_OBUF</arg>&gt; is incomplete. The signal is not driven by any source pin in the design.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="368" delta="old" >The signal &lt;<arg fmt="%s" index="1">LCD_data&lt;1&gt;_OBUF</arg>&gt; is incomplete. The signal is not driven by any source pin in the design.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="368" delta="old" >The signal &lt;<arg fmt="%s" index="1">LCD_data&lt;2&gt;_OBUF</arg>&gt; is incomplete. The signal is not driven by any source pin in the design.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="368" delta="old" >The signal &lt;<arg fmt="%s" index="1">LCD_data&lt;3&gt;_OBUF</arg>&gt; is incomplete. The signal is not driven by any source pin in the design.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="368" delta="old" >The signal &lt;<arg fmt="%s" index="1">LCD_data&lt;4&gt;_OBUF</arg>&gt; is incomplete. The signal is not driven by any source pin in the design.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="368" delta="old" >The signal &lt;<arg fmt="%s" index="1">LCD_data&lt;5&gt;_OBUF</arg>&gt; is incomplete. The signal is not driven by any source pin in the design.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="368" delta="old" >The signal &lt;<arg fmt="%s" index="1">LCD_data&lt;6&gt;_OBUF</arg>&gt; is incomplete. The signal is not driven by any source pin in the design.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="368" delta="old" >The signal &lt;<arg fmt="%s" index="1">LCD_data&lt;7&gt;_OBUF</arg>&gt; is incomplete. The signal is not driven by any source pin in the design.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="368" delta="old" >The signal &lt;<arg fmt="%s" index="1">LCD_rs_OBUF</arg>&gt; is incomplete. The signal is not driven by any source pin in the design.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="368" delta="old" >The signal &lt;<arg fmt="%s" index="1">LCD_rw_OBUF</arg>&gt; is incomplete. The signal is not driven by any source pin in the design.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="10" delta="old" >The network &lt;<arg fmt="%s" index="1">LCD_data&lt;0&gt;_OBUF</arg>&gt; is completely unrouted.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="10" delta="old" >The network &lt;<arg fmt="%s" index="1">LCD_data&lt;1&gt;_OBUF</arg>&gt; is completely unrouted.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="10" delta="old" >The network &lt;<arg fmt="%s" index="1">LCD_data&lt;2&gt;_OBUF</arg>&gt; is completely unrouted.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="10" delta="old" >The network &lt;<arg fmt="%s" index="1">LCD_data&lt;3&gt;_OBUF</arg>&gt; is completely unrouted.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="10" delta="old" >The network &lt;<arg fmt="%s" index="1">LCD_data&lt;4&gt;_OBUF</arg>&gt; is completely unrouted.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="10" delta="old" >The network &lt;<arg fmt="%s" index="1">LCD_data&lt;5&gt;_OBUF</arg>&gt; is completely unrouted.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="10" delta="old" >The network &lt;<arg fmt="%s" index="1">LCD_data&lt;6&gt;_OBUF</arg>&gt; is completely unrouted.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="10" delta="old" >The network &lt;<arg fmt="%s" index="1">LCD_data&lt;7&gt;_OBUF</arg>&gt; is completely unrouted.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="10" delta="old" >The network &lt;<arg fmt="%s" index="1">LCD_rs_OBUF</arg>&gt; is completely unrouted.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="10" delta="old" >The network &lt;<arg fmt="%s" index="1">LCD_rw_OBUF</arg>&gt; is completely unrouted.
+</msg>
+
+<msg type="error" file="Bitgen" num="25" delta="old" >DRC detected <arg fmt="%d" index="1">20</arg> errors and <arg fmt="%d" index="2">8</arg> warnings.  Please see the previously displayed individual error or warning messages for more details.
+</msg>
+
 </messages>
 

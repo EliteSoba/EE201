@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map O.61xd on Wed Nov 28 00:50:32 2012
+// Written by: Map O.61xd on Tue Dec 04 21:22:38 2012
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -38,9 +38,21 @@ COMP "BtnD" LOCATE = SITE "C9" LEVEL 1;
 COMP "BtnL" LOCATE = SITE "C4" LEVEL 1;
 COMP "BtnR" LOCATE = SITE "D9" LEVEL 1;
 COMP "BtnU" LOCATE = SITE "A8" LEVEL 1;
+COMP "LCD_e" LOCATE = SITE "K3" LEVEL 1;
 COMP "MemOE" LOCATE = SITE "L18" LEVEL 1;
 COMP "MemWR" LOCATE = SITE "M16" LEVEL 1;
 COMP "RamCS" LOCATE = SITE "L15" LEVEL 1;
+COMP "LCD_data<0>" LOCATE = SITE "T12" LEVEL 1;
+COMP "LCD_data<1>" LOCATE = SITE "V12" LEVEL 1;
+COMP "LCD_data<2>" LOCATE = SITE "N10" LEVEL 1;
+COMP "LCD_data<3>" LOCATE = SITE "P11" LEVEL 1;
+COMP "LCD_data<4>" LOCATE = SITE "M10" LEVEL 1;
+COMP "LCD_data<5>" LOCATE = SITE "N9" LEVEL 1;
+COMP "LCD_data<6>" LOCATE = SITE "U11" LEVEL 1;
+COMP "LCD_data<7>" LOCATE = SITE "V11" LEVEL 1;
+COMP "LCD_bl" LOCATE = SITE "K5" LEVEL 1;
+COMP "LCD_rs" LOCATE = SITE "J3" LEVEL 1;
+COMP "LCD_rw" LOCATE = SITE "J1" LEVEL 1;
 COMP "QuadSpiFlashCS" LOCATE = SITE "V3" LEVEL 1;
 TIMEGRP sys_clk_pin = BEL "DIV_CLK_0" BEL "DIV_CLK_1" BEL "DIV_CLK_2" BEL
         "DIV_CLK_3" BEL "DIV_CLK_4" BEL "DIV_CLK_5" BEL "DIV_CLK_6" BEL
@@ -178,30 +190,17 @@ TIMEGRP sys_clk_pin = BEL "DIV_CLK_0" BEL "DIV_CLK_1" BEL "DIV_CLK_2" BEL
         "ee201_debouncer_C/debounce_count_3" BEL
         "ee201_debouncer_C/debounce_count_2" BEL
         "ee201_debouncer_C/debounce_count_1" BEL
-        "ee201_debouncer_C/debounce_count_0" BEL "core_uut/state_FSM_FFd2" BEL
-        "core_uut/state_FSM_FFd3" BEL "core_uut/state_FSM_FFd1" BEL
-        "core_uut/state_FSM_FFd4" BEL "core_uut/state_FSM_FFd5" BEL
-        "core_uut/state_FSM_FFd6" BEL "core_uut/state_FSM_FFd7" BEL
-        "core_uut/state_FSM_FFd9" BEL "core_uut/state_FSM_FFd10" BEL
-        "core_uut/state_FSM_FFd8" BEL "core_uut/state_FSM_FFd11" BEL
-        "core_uut/state_FSM_FFd12" BEL "core_uut/state_FSM_FFd13" BEL
-        "core_uut/state_FSM_FFd14" BEL "core_uut/num2_0" BEL
-        "ee201_debouncer_L/state_FSM_FFd6_1" BEL
-        "ee201_debouncer_R/state_FSM_FFd6_1" BEL
-        "ee201_debouncer_D/state_FSM_FFd6_1" BEL
-        "ee201_debouncer_C/state_FSM_FFd6_1" BEL
-        "ee201_debouncer_L/state_FSM_FFd4_1" BEL
-        "ee201_debouncer_R/state_FSM_FFd4_1" BEL
-        "ee201_debouncer_D/state_FSM_FFd4_1" BEL
-        "ee201_debouncer_C/state_FSM_FFd4_1" BEL
-        "ee201_debouncer_L/state_FSM_FFd6_2" BEL
-        "ee201_debouncer_R/state_FSM_FFd6_2" BEL
-        "ee201_debouncer_D/state_FSM_FFd6_2" BEL
-        "ee201_debouncer_C/state_FSM_FFd6_2" BEL
-        "ee201_debouncer_L/state_FSM_FFd4_2" BEL
-        "ee201_debouncer_R/state_FSM_FFd4_2" BEL
-        "ee201_debouncer_D/state_FSM_FFd4_2" BEL
-        "ee201_debouncer_C/state_FSM_FFd4_2";
+        "ee201_debouncer_C/debounce_count_0" BEL "uut/clkCount_6" BEL
+        "uut/clkCount_5" BEL "uut/clkCount_4" BEL "uut/clkCount_3" BEL
+        "uut/clkCount_2" BEL "uut/clkCount_1" BEL "uut/clkCount_0" BEL
+        "core_uut/state_FSM_FFd2" BEL "core_uut/state_FSM_FFd3" BEL
+        "core_uut/state_FSM_FFd1" BEL "core_uut/state_FSM_FFd4" BEL
+        "core_uut/state_FSM_FFd5" BEL "core_uut/state_FSM_FFd6" BEL
+        "core_uut/state_FSM_FFd7" BEL "core_uut/state_FSM_FFd9" BEL
+        "core_uut/state_FSM_FFd10" BEL "core_uut/state_FSM_FFd8" BEL
+        "core_uut/state_FSM_FFd11" BEL "core_uut/state_FSM_FFd12" BEL
+        "core_uut/state_FSM_FFd13" BEL "core_uut/state_FSM_FFd14" BEL
+        "core_uut/num2_0" BEL "uut/oneUSClk";
 TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
 SCHEMATIC END;
 

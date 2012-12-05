@@ -20,7 +20,7 @@ output sel1, sel2, sel3, sel4, sel5, sel6, sel7;
 output add, sub, div, mult, gcd, isprime, sqrt, done;
 //--text
 /*output [31:0] textOut [7:0];*/
-output reg [8*31:0] textOut ;
+output reg [8*32:0] textOut ;
 reg [15:0] line1 [7:0];
 reg [15:0] line2 [7:0];
 

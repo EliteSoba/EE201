@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2012-11-27T23:49:34</DateModified>
+  <DateModified>2012-12-04T21:12:38</DateModified>
   <ModuleName>calc_project_top</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL/iseconfig/calc_project_top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Modelsim_projects/ee201/finalproject/project_files/finalprojct_ee201_AJ_TL</ImplementationReportsDirectory>
+  <SummaryTimeStamp>2012-12-04T20:51:42</SummaryTimeStamp>
+  <SavedFilePath>C:/Users/Tobias/Documents/GitHub/EE201/finalprojct_ee201_AJ_TL/iseconfig/calc_project_top.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/Tobias/Documents/GitHub/EE201/finalprojct_ee201_AJ_TL\</ImplementationReportsDirectory>
   <DateInitialized>2012-11-27T23:49:33</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

@@ -4,13 +4,13 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: calc_project_top.prj
 
@@ -106,11 +106,13 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file \"C:\Modelsim_projects\ee201\finalproject\project_files\main_calc_cu.v\" into library work
+Analyzing Verilog file \"C:\Users\Tobias\Documents\GitHub\EE201\main_calc_cu.v\" into library work
 Parsing module <main_calc_cu>.
-Analyzing Verilog file \"C:\Modelsim_projects\ee201\finalproject\project_files\ee201_debounce_DPB_SCEN_CCEN_MCEN.v\" into library work
+Analyzing Verilog file \"C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v\" into library work
+Parsing module <lcd_core>.
+Analyzing Verilog file \"C:\Users\Tobias\Documents\GitHub\EE201\ee201_debounce_DPB_SCEN_CCEN_MCEN.v\" into library work
 Parsing module <ee201_debouncer>.
-Analyzing Verilog file \"C:\Modelsim_projects\ee201\finalproject\project_files\calc_project_top.v\" into library work
+Analyzing Verilog file \"C:\Users\Tobias\Documents\GitHub\EE201\calc_project_top.v\" into library work
 Parsing module <calc_project_top>.
 
 =========================================================================
@@ -120,62 +122,90 @@ Parsing module <calc_project_top>.
 Elaborating module <calc_project_top>.
 
 Elaborating module <main_calc_cu>.
-WARNING:HDLCompiler:413 - "C:\Modelsim_projects\ee201\finalproject\project_files\main_calc_cu.v" Line 71: Result of 255-bit expression is truncated to fit in 249-bit target.
-WARNING:HDLCompiler:413 - "C:\Modelsim_projects\ee201\finalproject\project_files\main_calc_cu.v" Line 93: Result of 254-bit expression is truncated to fit in 249-bit target.
-WARNING:HDLCompiler:413 - "C:\Modelsim_projects\ee201\finalproject\project_files\main_calc_cu.v" Line 111: Result of 254-bit expression is truncated to fit in 249-bit target.
-WARNING:HDLCompiler:413 - "C:\Modelsim_projects\ee201\finalproject\project_files\main_calc_cu.v" Line 128: Result of 254-bit expression is truncated to fit in 249-bit target.
-WARNING:HDLCompiler:413 - "C:\Modelsim_projects\ee201\finalproject\project_files\main_calc_cu.v" Line 145: Result of 254-bit expression is truncated to fit in 249-bit target.
-WARNING:HDLCompiler:413 - "C:\Modelsim_projects\ee201\finalproject\project_files\main_calc_cu.v" Line 163: Result of 254-bit expression is truncated to fit in 249-bit target.
-WARNING:HDLCompiler:413 - "C:\Modelsim_projects\ee201\finalproject\project_files\main_calc_cu.v" Line 181: Result of 254-bit expression is truncated to fit in 249-bit target.
-WARNING:HDLCompiler:413 - "C:\Modelsim_projects\ee201\finalproject\project_files\main_calc_cu.v" Line 198: Result of 254-bit expression is truncated to fit in 249-bit target.
-WARNING:HDLCompiler:413 - "C:\Modelsim_projects\ee201\finalproject\project_files\main_calc_cu.v" Line 208: Result of 255-bit expression is truncated to fit in 249-bit target.
-WARNING:HDLCompiler:1308 - "C:\Modelsim_projects\ee201\finalproject\project_files\main_calc_cu.v" Line 80: Found full_case directive in module main_calc_cu. Use of full_case directives may cause differences between RTL and post-synthesis simulation
+WARNING:HDLCompiler:1308 - "C:\Users\Tobias\Documents\GitHub\EE201\main_calc_cu.v" Line 80: Found full_case directive in module main_calc_cu. Use of full_case directives may cause differences between RTL and post-synthesis simulation
 
 Elaborating module <BUFGP>.
 
 Elaborating module <BUF>.
 
 Elaborating module <ee201_debouncer(N_dc=24)>.
-WARNING:HDLCompiler:413 - "C:\Modelsim_projects\ee201\finalproject\project_files\ee201_debounce_DPB_SCEN_CCEN_MCEN.v" Line 145: Result of 32-bit expression is truncated to fit in 24-bit target.
-WARNING:HDLCompiler:413 - "C:\Modelsim_projects\ee201\finalproject\project_files\ee201_debounce_DPB_SCEN_CCEN_MCEN.v" Line 162: Result of 25-bit expression is truncated to fit in 24-bit target.
-WARNING:HDLCompiler:413 - "C:\Modelsim_projects\ee201\finalproject\project_files\ee201_debounce_DPB_SCEN_CCEN_MCEN.v" Line 175: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "C:\Modelsim_projects\ee201\finalproject\project_files\ee201_debounce_DPB_SCEN_CCEN_MCEN.v" Line 181: Result of 25-bit expression is truncated to fit in 24-bit target.
-WARNING:HDLCompiler:413 - "C:\Modelsim_projects\ee201\finalproject\project_files\ee201_debounce_DPB_SCEN_CCEN_MCEN.v" Line 195: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "C:\Modelsim_projects\ee201\finalproject\project_files\ee201_debounce_DPB_SCEN_CCEN_MCEN.v" Line 201: Result of 25-bit expression is truncated to fit in 24-bit target.
-WARNING:HDLCompiler:413 - "C:\Modelsim_projects\ee201\finalproject\project_files\ee201_debounce_DPB_SCEN_CCEN_MCEN.v" Line 236: Result of 25-bit expression is truncated to fit in 24-bit target.
-WARNING:HDLCompiler:1127 - "C:\Modelsim_projects\ee201\finalproject\project_files\calc_project_top.v" Line 137: Assignment to SCEN_BtnU ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Modelsim_projects\ee201\finalproject\project_files\calc_project_top.v" Line 210: Assignment to LCD_bl ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Modelsim_projects\ee201\finalproject\project_files\calc_project_top.v" Line 272: Assignment to data32 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Modelsim_projects\ee201\finalproject\project_files\calc_project_top.v" Line 271: Assignment to data24 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Modelsim_projects\ee201\finalproject\project_files\calc_project_top.v" Line 270: Assignment to data16 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Modelsim_projects\ee201\finalproject\project_files\calc_project_top.v" Line 269: Assignment to data8 ignored, since the identifier is never used
-WARNING:HDLCompiler:552 - "C:\Modelsim_projects\ee201\finalproject\project_files\calc_project_top.v" Line 83: Input port btu is not connected on this instance
-WARNING:Xst:2972 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 136. All outputs of instance <ee201_debouncer_U> of block <ee201_debouncer> are unconnected in block <calc_project_top>. Underlying logic will be removed.
+WARNING:HDLCompiler:413 - "C:\Users\Tobias\Documents\GitHub\EE201\ee201_debounce_DPB_SCEN_CCEN_MCEN.v" Line 145: Result of 32-bit expression is truncated to fit in 24-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Tobias\Documents\GitHub\EE201\ee201_debounce_DPB_SCEN_CCEN_MCEN.v" Line 162: Result of 25-bit expression is truncated to fit in 24-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Tobias\Documents\GitHub\EE201\ee201_debounce_DPB_SCEN_CCEN_MCEN.v" Line 175: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Tobias\Documents\GitHub\EE201\ee201_debounce_DPB_SCEN_CCEN_MCEN.v" Line 181: Result of 25-bit expression is truncated to fit in 24-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Tobias\Documents\GitHub\EE201\ee201_debounce_DPB_SCEN_CCEN_MCEN.v" Line 195: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Tobias\Documents\GitHub\EE201\ee201_debounce_DPB_SCEN_CCEN_MCEN.v" Line 201: Result of 25-bit expression is truncated to fit in 24-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Tobias\Documents\GitHub\EE201\ee201_debounce_DPB_SCEN_CCEN_MCEN.v" Line 236: Result of 25-bit expression is truncated to fit in 24-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\Tobias\Documents\GitHub\EE201\calc_project_top.v" Line 137: Assignment to SCEN_BtnU ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "C:\Users\Tobias\Documents\GitHub\EE201\calc_project_top.v" Line 269: Result of 257-bit expression is truncated to fit in 256-bit target.
+
+Elaborating module <lcd_core>.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 94: Signal <data_f1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 95: Signal <data_f2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 96: Signal <data_f3> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 97: Signal <data_f4> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 98: Signal <data_f5> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 99: Signal <data_f6> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 100: Signal <data_f7> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 101: Signal <data_f8> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 102: Signal <data_f9> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 103: Signal <data_f10> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 104: Signal <data_f11> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 105: Signal <data_f12> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 106: Signal <data_f13> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 107: Signal <data_f14> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 108: Signal <data_f15> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 109: Signal <data_f16> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 115: Signal <data_s1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 116: Signal <data_s2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 117: Signal <data_s3> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 118: Signal <data_s4> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 119: Signal <data_s5> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 120: Signal <data_s6> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 121: Signal <data_s7> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 122: Signal <data_s8> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 123: Signal <data_s9> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 124: Signal <data_s10> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 125: Signal <data_s11> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 126: Signal <data_s12> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 127: Signal <data_s13> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 128: Signal <data_s14> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 129: Signal <data_s15> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 130: Signal <data_s16> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:1127 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 315: Assignment to LCD_rs ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 316: Assignment to LCD_rw ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 317: Result of 8-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 317: Assignment to LCD_data ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 318: Result of 10-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 318: Assignment to usclk ignored, since the identifier is never used
+WARNING:HDLCompiler:634 - "C:\Users\Tobias\Documents\GitHub\EE201\calc_project_top.v" Line 277: Net <reset> does not have a driver.
+WARNING:HDLCompiler:552 - "C:\Users\Tobias\Documents\GitHub\EE201\calc_project_top.v" Line 83: Input port btu is not connected on this instance
+WARNING:Xst:2972 - "c:/users/tobias/documents/github/ee201/calc_project_top.v" line 136. All outputs of instance <ee201_debouncer_U> of block <ee201_debouncer> are unconnected in block <calc_project_top>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <calc_project_top>.
-    Related source file is "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v".
+    Related source file is "c:/users/tobias/documents/github/ee201/calc_project_top.v".
 WARNING:Xst:2898 - Port 'btu', unconnected in block instance 'core_uut', is tied to GND.
-INFO:Xst:3210 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 83: Output port <textOut> of the instance <core_uut> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 134: Output port <DPB> of the instance <ee201_debouncer_L> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 134: Output port <MCEN> of the instance <ee201_debouncer_L> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 134: Output port <CCEN> of the instance <ee201_debouncer_L> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 136: Output port <DPB> of the instance <ee201_debouncer_U> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 136: Output port <SCEN> of the instance <ee201_debouncer_U> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 136: Output port <MCEN> of the instance <ee201_debouncer_U> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 136: Output port <CCEN> of the instance <ee201_debouncer_U> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 138: Output port <DPB> of the instance <ee201_debouncer_R> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 138: Output port <MCEN> of the instance <ee201_debouncer_R> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 138: Output port <CCEN> of the instance <ee201_debouncer_R> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 140: Output port <DPB> of the instance <ee201_debouncer_D> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 140: Output port <MCEN> of the instance <ee201_debouncer_D> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 140: Output port <CCEN> of the instance <ee201_debouncer_D> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 142: Output port <DPB> of the instance <ee201_debouncer_C> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 142: Output port <MCEN> of the instance <ee201_debouncer_C> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_project_top.v" line 142: Output port <CCEN> of the instance <ee201_debouncer_C> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/tobias/documents/github/ee201/calc_project_top.v" line 134: Output port <DPB> of the instance <ee201_debouncer_L> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/tobias/documents/github/ee201/calc_project_top.v" line 134: Output port <MCEN> of the instance <ee201_debouncer_L> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/tobias/documents/github/ee201/calc_project_top.v" line 134: Output port <CCEN> of the instance <ee201_debouncer_L> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/tobias/documents/github/ee201/calc_project_top.v" line 136: Output port <DPB> of the instance <ee201_debouncer_U> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/tobias/documents/github/ee201/calc_project_top.v" line 136: Output port <SCEN> of the instance <ee201_debouncer_U> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/tobias/documents/github/ee201/calc_project_top.v" line 136: Output port <MCEN> of the instance <ee201_debouncer_U> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/tobias/documents/github/ee201/calc_project_top.v" line 136: Output port <CCEN> of the instance <ee201_debouncer_U> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/tobias/documents/github/ee201/calc_project_top.v" line 138: Output port <DPB> of the instance <ee201_debouncer_R> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/tobias/documents/github/ee201/calc_project_top.v" line 138: Output port <MCEN> of the instance <ee201_debouncer_R> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/tobias/documents/github/ee201/calc_project_top.v" line 138: Output port <CCEN> of the instance <ee201_debouncer_R> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/tobias/documents/github/ee201/calc_project_top.v" line 140: Output port <DPB> of the instance <ee201_debouncer_D> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/tobias/documents/github/ee201/calc_project_top.v" line 140: Output port <MCEN> of the instance <ee201_debouncer_D> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/tobias/documents/github/ee201/calc_project_top.v" line 140: Output port <CCEN> of the instance <ee201_debouncer_D> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/tobias/documents/github/ee201/calc_project_top.v" line 142: Output port <DPB> of the instance <ee201_debouncer_C> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/tobias/documents/github/ee201/calc_project_top.v" line 142: Output port <MCEN> of the instance <ee201_debouncer_C> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/tobias/documents/github/ee201/calc_project_top.v" line 142: Output port <CCEN> of the instance <ee201_debouncer_C> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <reset> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 27-bit register for signal <DIV_CLK>.
     Found 27-bit adder for signal <DIV_CLK[26]_GND_1_o_add_1_OUT> created at line 121.
     Found 16x8-bit Read Only RAM for signal <SSD_CATHODES>
@@ -191,12 +221,12 @@ INFO:Xst:3210 - "c:/modelsim_projects/ee201/finalproject/project_files/calc_proj
 Unit <calc_project_top> synthesized.
 
 Synthesizing Unit <main_calc_cu>.
-    Related source file is "c:/modelsim_projects/ee201/finalproject/project_files/main_calc_cu.v".
+    Related source file is "c:/users/tobias/documents/github/ee201/main_calc_cu.v".
 WARNING:Xst:647 - Input <dataInBus<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <btu> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 8-bit register for signal <num1>.
     Found 8-bit register for signal <num2>.
-    Found 249-bit register for signal <textOut>.
+    Found 257-bit register for signal <textOut>.
     Found 15-bit register for signal <state>.
 INFO:Xst:1799 - State 000000000000001 is never reached in FSM <state>.
     Found finite state machine <FSM_0> for signal <state>.
@@ -213,12 +243,12 @@ INFO:Xst:1799 - State 000000000000001 is never reached in FSM <state>.
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
     Summary:
-	inferred 265 D-type flip-flop(s).
+	inferred 273 D-type flip-flop(s).
 	inferred   1 Finite State Machine(s).
 Unit <main_calc_cu> synthesized.
 
 Synthesizing Unit <ee201_debouncer>.
-    Related source file is "c:/modelsim_projects/ee201/finalproject/project_files/ee201_debounce_dpb_scen_ccen_mcen.v".
+    Related source file is "c:/users/tobias/documents/github/ee201/ee201_debounce_dpb_scen_ccen_mcen.v".
         N_dc = 24
     Set property "fsm_encoding = user" for signal <state>.
     Found 6-bit register for signal <state>.
@@ -245,23 +275,94 @@ Synthesizing Unit <ee201_debouncer>.
 	inferred   1 Finite State Machine(s).
 Unit <ee201_debouncer> synthesized.
 
+Synthesizing Unit <lcd_core>.
+    Related source file is "c:/users/tobias/documents/github/ee201/finalprojct_ee201_aj_tl/lcd_core.v".
+        stFunctionSet = 10'b0000000001
+        stDisplayCtrlSet = 10'b0000000010
+        stDisplayClear = 10'b0000000100
+        stPowerOn_Delay = 10'b0000001000
+        stFunctionSet_Delay = 10'b0000010000
+        stDisplayCtrlSet_Delay = 10'b0000100000
+        stDisplayClear_Delay = 10'b0001000000
+        stInitDne = 10'b0010000000
+        stActWr = 10'b0100000000
+        stCharDelay = 10'b1000000000
+WARNING:Xst:647 - Input <data_f1<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_f2<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_f3<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_f4<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_f5<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_f6<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_f7<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_f8<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_f9<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_f10<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_f11<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_f12<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_f13<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_f14<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_f15<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_f16<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_s1<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_s2<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_s3<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_s4<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_s5<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_s6<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_s7<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_s8<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_s9<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_s10<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_s11<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_s12<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_s13<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_s14<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_s15<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_s16<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 7-bit register for signal <clkCount>.
+    Found 17-bit register for signal <count>.
+    Found 1-bit register for signal <delayOK>.
+    Found 1-bit register for signal <oneUSClk>.
+    Found 10-bit register for signal <stCur>.
+    Found 7-bit adder for signal <clkCount[6]_GND_7_o_add_40_OUT> created at line 155.
+    Found 17-bit adder for signal <count[16]_GND_7_o_add_44_OUT> created at line 171.
+    Found 17-bit comparator lessequal for signal <n0012> created at line 182
+    Found 17-bit comparator lessequal for signal <n0020> created at line 188
+    Found 17-bit comparator lessequal for signal <n0024> created at line 190
+    HDL ADVISOR - Describing an operational reset or an explicit power-up state for register <stCur> would allow inference of a finite state machine and as consequence better performance and smaller area.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  36 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <lcd_core> synthesized.
+
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 1
  16x8-bit single-port Read Only RAM                    : 1
-# Adders/Subtractors                                   : 9
+# Adders/Subtractors                                   : 11
+ 17-bit adder                                          : 1
  24-bit adder                                          : 4
  27-bit adder                                          : 1
  4-bit adder                                           : 4
-# Registers                                            : 12
+ 7-bit adder                                           : 1
+# Registers                                            : 17
+ 1-bit register                                        : 2
+ 10-bit register                                       : 1
+ 17-bit register                                       : 1
  24-bit register                                       : 4
- 249-bit register                                      : 1
+ 257-bit register                                      : 1
  27-bit register                                       : 1
  4-bit register                                        : 4
+ 7-bit register                                        : 1
  8-bit register                                        : 2
-# Multiplexers                                         : 4
+# Comparators                                          : 3
+ 17-bit comparator lessequal                           : 3
+# Multiplexers                                         : 7
+ 1-bit 2-to-1 multiplexer                              : 3
  1-bit 4-to-1 multiplexer                              : 4
 # FSMs                                                 : 5
 
@@ -271,12 +372,10 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-INFO:Xst:2261 - The FF/Latch <num1_1> in Unit <core_uut> is equivalent to the following 5 FFs/Latches, which will be removed : <num1_3> <num2_2> <num2_3> <num2_6> <num2_7> 
-INFO:Xst:2261 - The FF/Latch <num1_4> in Unit <core_uut> is equivalent to the following 3 FFs/Latches, which will be removed : <num1_5> <num1_6> <num1_7> 
-INFO:Xst:2261 - The FF/Latch <num2_0> in Unit <core_uut> is equivalent to the following FF/Latch, which will be removed : <num2_4> 
-INFO:Xst:2261 - The FF/Latch <num1_0> in Unit <core_uut> is equivalent to the following 3 FFs/Latches, which will be removed : <num1_2> <num2_1> <num2_5> 
+INFO:Xst:2261 - The FF/Latch <num1_1> in Unit <core_uut> is equivalent to the following 7 FFs/Latches, which will be removed : <num1_3> <num2_0> <num2_2> <num2_3> <num2_4> <num2_6> <num2_7> 
+INFO:Xst:2261 - The FF/Latch <num1_0> in Unit <core_uut> is equivalent to the following 7 FFs/Latches, which will be removed : <num1_2> <num1_4> <num1_5> <num1_6> <num1_7> <num2_1> <num2_5> 
 WARNING:Xst:1710 - FF/Latch <num1_0> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <num1_1> (without init value) has a constant value of 1 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <num1<7:4>> (without init value) have a constant value of 0 in block <main_calc_cu>.
 
 Synthesizing (advanced) Unit <calc_project_top>.
 The following registers are absorbed into counter <DIV_CLK>: 1 register on signal <DIV_CLK>.
@@ -293,6 +392,11 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_SSD_CATHODES> will be implemented on
     -----------------------------------------------------------------------
 Unit <calc_project_top> synthesized (advanced).
 
+Synthesizing (advanced) Unit <lcd_core>.
+The following registers are absorbed into counter <clkCount>: 1 register on signal <clkCount>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <lcd_core> synthesized (advanced).
+
 =========================================================================
 Advanced HDL Synthesis Report
 
@@ -302,11 +406,16 @@ Macro Statistics
 # Adders/Subtractors                                   : 8
  24-bit adder                                          : 4
  4-bit adder                                           : 4
-# Counters                                             : 1
+# Counters                                             : 3
+ 17-bit up counter                                     : 1
  27-bit up counter                                     : 1
-# Registers                                            : 377
- Flip-Flops                                            : 377
-# Multiplexers                                         : 4
+ 7-bit up counter                                      : 1
+# Registers                                            : 393
+ Flip-Flops                                            : 393
+# Comparators                                          : 3
+ 17-bit comparator lessequal                           : 3
+# Multiplexers                                         : 7
+ 1-bit 2-to-1 multiplexer                              : 3
  1-bit 4-to-1 multiplexer                              : 4
 # FSMs                                                 : 5
 
@@ -315,9 +424,7 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <textOut_199> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_192> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_191> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_191> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_185> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_183> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_177> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
@@ -337,16 +444,15 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_137> (witho
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_136> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_135> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_129> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <num2_7> (without init value) has a constant value of 1 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <num2_6> (without init value) has a constant value of 1 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <num2_5> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <num2_3> (without init value) has a constant value of 1 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <num2_2> (without init value) has a constant value of 1 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <num2_1> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <num1_3> (without init value) has a constant value of 1 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_128> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_127> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <num1_2> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <num1_1> (without init value) has a constant value of 1 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <num1_0> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <num2_5> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <num2_1> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_256> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_255> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_250> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_247> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_241> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_239> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
@@ -360,7 +466,8 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_218> (witho
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_215> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_207> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_201> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_64> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_199> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_192> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_63> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_58> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_56> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
@@ -383,8 +490,6 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_8> (without
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_7> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_1> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_0> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_128> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_127> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_122> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_121> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_120> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
@@ -406,8 +511,8 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_74> (withou
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_71> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_66> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_65> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <num1_4> in Unit <main_calc_cu> is equivalent to the following 3 FFs/Latches, which will be removed : <num1_5> <num1_6> <num1_7> 
-INFO:Xst:2261 - The FF/Latch <num2_0> in Unit <main_calc_cu> is equivalent to the following FF/Latch, which will be removed : <num2_4> 
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_64> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <num2_0> in Unit <main_calc_cu> is equivalent to the following 7 FFs/Latches, which will be removed : <num2_2> <num2_3> <num2_4> <num2_6> <num2_7> <num1_1> <num1_3> 
 Optimizing FSM <ee201_debouncer_C/FSM_1> on signal <state[1:6]> with user encoding.
 Optimizing FSM <ee201_debouncer_D/FSM_1> on signal <state[1:6]> with user encoding.
 Optimizing FSM <ee201_debouncer_R/FSM_1> on signal <state[1:6]> with user encoding.
@@ -459,7 +564,14 @@ Optimizing unit <calc_project_top> ...
 
 Optimizing unit <ee201_debouncer> ...
 
+Optimizing unit <lcd_core> ...
+
 Optimizing unit <main_calc_cu> ...
+WARNING:Xst:2677 - Node <core_uut/textOut_254> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_253> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_252> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_251> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:2677 - Node <core_uut/textOut_249> of sequential type is unconnected in block <calc_project_top>.
 WARNING:Xst:2677 - Node <core_uut/textOut_248> of sequential type is unconnected in block <calc_project_top>.
 WARNING:Xst:2677 - Node <core_uut/textOut_246> of sequential type is unconnected in block <calc_project_top>.
 WARNING:Xst:2677 - Node <core_uut/textOut_245> of sequential type is unconnected in block <calc_project_top>.
@@ -628,19 +740,10 @@ WARNING:Xst:2677 - Node <core_uut/textOut_5> of sequential type is unconnected i
 WARNING:Xst:2677 - Node <core_uut/textOut_4> of sequential type is unconnected in block <calc_project_top>.
 WARNING:Xst:2677 - Node <core_uut/textOut_3> of sequential type is unconnected in block <calc_project_top>.
 WARNING:Xst:2677 - Node <core_uut/textOut_2> of sequential type is unconnected in block <calc_project_top>.
-INFO:Xst:3203 - The FF/Latch <core_uut/num2_0> in Unit <calc_project_top> is the opposite to the following FF/Latch, which will be removed : <core_uut/num1_4> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block calc_project_top, actual ratio is 4.
-FlipFlop ee201_debouncer_C/state_FSM_FFd4 has been replicated 2 time(s)
-FlipFlop ee201_debouncer_C/state_FSM_FFd6 has been replicated 2 time(s)
-FlipFlop ee201_debouncer_D/state_FSM_FFd4 has been replicated 2 time(s)
-FlipFlop ee201_debouncer_D/state_FSM_FFd6 has been replicated 2 time(s)
-FlipFlop ee201_debouncer_L/state_FSM_FFd4 has been replicated 2 time(s)
-FlipFlop ee201_debouncer_L/state_FSM_FFd6 has been replicated 2 time(s)
-FlipFlop ee201_debouncer_R/state_FSM_FFd4 has been replicated 2 time(s)
-FlipFlop ee201_debouncer_R/state_FSM_FFd6 has been replicated 2 time(s)
+Found area constraint ratio of 100 (+ 5) on block calc_project_top, actual ratio is 5.
 
 Final Macro Processing ...
 
@@ -648,8 +751,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 186
- Flip-Flops                                            : 186
+# Registers                                            : 206
+ Flip-Flops                                            : 206
 
 =========================================================================
 
@@ -672,28 +775,30 @@ Top Level Output File Name         : calc_project_top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 549
+# BELS                             : 641
 #      BUF                         : 1
 #      GND                         : 1
-#      INV                         : 5
-#      LUT1                        : 110
-#      LUT2                        : 7
-#      LUT3                        : 17
-#      LUT4                        : 14
-#      LUT5                        : 130
-#      LUT6                        : 38
-#      MUXCY                       : 110
+#      INV                         : 7
+#      LUT1                        : 126
+#      LUT2                        : 13
+#      LUT3                        : 22
+#      LUT4                        : 17
+#      LUT5                        : 136
+#      LUT6                        : 59
+#      MUXCY                       : 126
 #      VCC                         : 1
-#      XORCY                       : 115
-# FlipFlops/Latches                : 186
-#      FD                          : 112
-#      FDC                         : 73
+#      XORCY                       : 132
+# FlipFlops/Latches                : 206
+#      FD                          : 124
+#      FDC                         : 57
 #      FDP                         : 1
-# Clock Buffers                    : 1
+#      FDR                         : 24
+# Clock Buffers                    : 2
+#      BUFG                        : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 30
+# IO Buffers                       : 32
 #      IBUF                        : 5
-#      OBUF                        : 25
+#      OBUF                        : 27
 
 Device utilization summary:
 ---------------------------
@@ -702,23 +807,23 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             186  out of  18224     1%  
- Number of Slice LUTs:                  321  out of   9112     3%  
-    Number used as Logic:               321  out of   9112     3%  
+ Number of Slice Registers:             206  out of  18224     1%  
+ Number of Slice LUTs:                  380  out of   9112     4%  
+    Number used as Logic:               380  out of   9112     4%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    337
-   Number with an unused Flip Flop:     151  out of    337    44%  
-   Number with an unused LUT:            16  out of    337     4%  
-   Number of fully used LUT-FF pairs:   170  out of    337    50%  
-   Number of unique control sets:         2
+ Number of LUT Flip Flop pairs used:    380
+   Number with an unused Flip Flop:     174  out of    380    45%  
+   Number with an unused LUT:             0  out of    380     0%  
+   Number of fully used LUT-FF pairs:   206  out of    380    54%  
+   Number of unique control sets:         5
 
 IO Utilization: 
- Number of IOs:                          39
- Number of bonded IOBs:                  31  out of    232    13%  
+ Number of IOs:                          51
+ Number of bonded IOBs:                  33  out of    232    14%  
 
 Specific Feature Utilization:
- Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
 
 ---------------------------
 Partition Resource Summary:
@@ -741,7 +846,8 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-ClkPort                            | BUFGP                  | 186   |
+ClkPort                            | BUFGP                  | 178   |
+uut/oneUSClk                       | BUFG                   | 28    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -752,9 +858,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 3.028ns (Maximum Frequency: 330.240MHz)
-   Minimum input arrival time before clock: 4.504ns
-   Maximum output required time after clock: 4.913ns
+   Minimum period: 4.637ns (Maximum Frequency: 215.638MHz)
+   Minimum input arrival time before clock: 4.399ns
+   Maximum output required time after clock: 7.427ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -763,56 +869,57 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'ClkPort'
-  Clock period: 3.028ns (frequency: 330.240MHz)
-  Total number of paths / destination ports: 2789 / 186
+  Clock period: 3.643ns (frequency: 274.462MHz)
+  Total number of paths / destination ports: 2690 / 185
 -------------------------------------------------------------------------
-Delay:               3.028ns (Levels of Logic = 26)
-  Source:            ee201_debouncer_L/debounce_count_0 (FF)
-  Destination:       ee201_debouncer_L/debounce_count_23 (FF)
+Delay:               3.643ns (Levels of Logic = 2)
+  Source:            ee201_debouncer_L/state_FSM_FFd6 (FF)
+  Destination:       ee201_debouncer_L/state_FSM_FFd4 (FF)
   Source Clock:      ClkPort rising
   Destination Clock: ClkPort rising
 
-  Data Path: ee201_debouncer_L/debounce_count_0 to ee201_debouncer_L/debounce_count_23
+  Data Path: ee201_debouncer_L/state_FSM_FFd6 to ee201_debouncer_L/state_FSM_FFd4
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               2   0.447   0.616  ee201_debouncer_L/debounce_count_0 (ee201_debouncer_L/debounce_count_0)
-     INV:I->O              1   0.206   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_lut<0>_INV_0 (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_lut<0>)
-     MUXCY:S->O            1   0.172   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<0> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<0>)
-     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<1> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<1>)
-     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<2> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<2>)
-     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<3> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<3>)
-     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<4> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<4>)
-     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<5> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<5>)
-     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<6> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<6>)
-     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<7> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<7>)
-     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<8> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<8>)
-     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<9> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<9>)
-     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<10> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<10>)
-     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<11> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<11>)
-     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<12> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<12>)
-     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<13> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<13>)
-     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<14> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<14>)
-     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<15> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<15>)
-     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<16> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<16>)
-     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<17> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<17>)
-     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<18> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<18>)
-     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<19> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<19>)
-     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<20> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<20>)
-     MUXCY:CI->O           1   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<21> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<21>)
-     MUXCY:CI->O           0   0.019   0.000  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<22> (ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_cy<22>)
-     XORCY:CI->O           1   0.180   0.684  ee201_debouncer_L/Madd_debounce_count[23]_GND_6_o_add_2_OUT_xor<23> (ee201_debouncer_L/debounce_count[23]_GND_6_o_add_2_OUT<23>)
-     LUT5:I3->O            1   0.203   0.000  ee201_debouncer_L/state[5]_GND_6_o_select_29_OUT<23>1 (ee201_debouncer_L/state[5]_GND_6_o_select_29_OUT<23>)
-     FD:D                      0.102          ee201_debouncer_L/debounce_count_23
+     FDC:C->Q             37   0.447   1.727  ee201_debouncer_L/state_FSM_FFd6 (ee201_debouncer_L/state_FSM_FFd6)
+     LUT6:I0->O            2   0.203   0.961  ee201_debouncer_L/state_FSM_FFd4-In211 (ee201_debouncer_L/state_FSM_FFd4-In21)
+     LUT6:I1->O            1   0.203   0.000  ee201_debouncer_L/state_FSM_FFd4-In1 (ee201_debouncer_L/state_FSM_FFd4-In)
+     FDC:D                     0.102          ee201_debouncer_L/state_FSM_FFd4
     ----------------------------------------
-    Total                      3.028ns (1.728ns logic, 1.300ns route)
-                                       (57.1% logic, 42.9% route)
+    Total                      3.643ns (0.955ns logic, 2.688ns route)
+                                       (26.2% logic, 73.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'uut/oneUSClk'
+  Clock period: 4.637ns (frequency: 215.638MHz)
+  Total number of paths / destination ports: 458 / 45
+-------------------------------------------------------------------------
+Delay:               4.637ns (Levels of Logic = 4)
+  Source:            uut/stCur_9 (FF)
+  Destination:       uut/delayOK (FF)
+  Source Clock:      uut/oneUSClk rising
+  Destination Clock: uut/oneUSClk rising
+
+  Data Path: uut/stCur_9 to uut/delayOK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               9   0.447   1.058  uut/stCur_9 (uut/stCur_9)
+     LUT3:I0->O            2   0.205   0.721  uut/stCur[9]_GND_7_o_equal_52_o<9>21 (uut/stCur[9]_GND_7_o_equal_52_o<9>2)
+     LUT6:I4->O            4   0.203   0.912  uut/stCur[9]_GND_7_o_equal_54_o<9>1 (uut/stCur[9]_GND_7_o_equal_54_o)
+     LUT6:I3->O            1   0.205   0.580  uut/Mmux_stCur[9]_PWR_6_o_MUX_84_o15 (uut/stCur[9]_PWR_6_o_MUX_84_o)
+     LUT6:I5->O            1   0.205   0.000  uut/delayOK_rstpot (uut/delayOK_rstpot)
+     FD:D                      0.102          uut/delayOK
+    ----------------------------------------
+    Total                      4.637ns (1.367ns logic, 3.270ns route)
+                                       (29.5% logic, 70.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'ClkPort'
-  Total number of paths / destination ports: 126 / 114
+  Total number of paths / destination ports: 86 / 82
 -------------------------------------------------------------------------
-Offset:              4.504ns (Levels of Logic = 2)
+Offset:              4.399ns (Levels of Logic = 2)
   Source:            BtnU (PAD)
   Destination:       DIV_CLK_0 (FF)
   Destination Clock: ClkPort rising
@@ -822,31 +929,54 @@ Offset:              4.504ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             1   1.222   0.579  BtnU_IBUF (BtnU_IBUF)
-     BUF:I->O             74   0.568   1.705  BUF2 (Reset)
+     BUF:I->O             58   0.568   1.600  BUF2 (Reset)
      FDC:CLR                   0.430          DIV_CLK_0
     ----------------------------------------
-    Total                      4.504ns (2.220ns logic, 2.284ns route)
-                                       (49.3% logic, 50.7% route)
+    Total                      4.399ns (2.220ns logic, 2.179ns route)
+                                       (50.5% logic, 49.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'ClkPort'
-  Total number of paths / destination ports: 48 / 16
+  Total number of paths / destination ports: 42 / 14
 -------------------------------------------------------------------------
-Offset:              4.913ns (Levels of Logic = 2)
-  Source:            DIV_CLK_18 (FF)
-  Destination:       Cd (PAD)
+Offset:              4.804ns (Levels of Logic = 2)
+  Source:            core_uut/state_FSM_FFd12 (FF)
+  Destination:       Ld1 (PAD)
   Source Clock:      ClkPort rising
 
-  Data Path: DIV_CLK_18 to Cd
+  Data Path: core_uut/state_FSM_FFd12 to Ld1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q             11   0.447   1.111  DIV_CLK_18 (DIV_CLK_18)
-     LUT3:I0->O            1   0.205   0.579  Mram_SSD_CATHODES111 (Cg_OBUF)
-     OBUF:I->O                 2.571          Cg_OBUF (Cg)
+     FDC:C->Q              7   0.447   1.002  core_uut/state_FSM_FFd12 (core_uut/state_FSM_FFd12)
+     LUT4:I1->O            1   0.205   0.579  Ld11 (Ld1_OBUF)
+     OBUF:I->O                 2.571          Ld1_OBUF (Ld1)
     ----------------------------------------
-    Total                      4.913ns (3.223ns logic, 1.690ns route)
-                                       (65.6% logic, 34.4% route)
+    Total                      4.804ns (3.223ns logic, 1.581ns route)
+                                       (67.1% logic, 32.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'uut/oneUSClk'
+  Total number of paths / destination ports: 30 / 1
+-------------------------------------------------------------------------
+Offset:              7.427ns (Levels of Logic = 5)
+  Source:            uut/stCur_4 (FF)
+  Destination:       LCD_e (PAD)
+  Source Clock:      uut/oneUSClk rising
+
+  Data Path: uut/stCur_4 to LCD_e
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               6   0.447   0.973  uut/stCur_4 (uut/stCur_4)
+     LUT3:I0->O            7   0.205   0.774  uut/stCur[9]_GND_7_o_equal_92_o<9>11 (uut/stCur[9]_GND_7_o_equal_92_o<9>1)
+     LUT5:I4->O            4   0.205   0.684  uut/stCur[9]_GND_7_o_equal_87_o<9>11 (uut/stCur[9]_GND_7_o_equal_87_o<9>1)
+     LUT4:I3->O            1   0.205   0.580  uut/stCur[9]_GND_7_o_equal_95_o<9>1 (uut/stCur[9]_GND_7_o_equal_95_o)
+     LUT6:I5->O            1   0.205   0.579  uut/lcd_e1 (LCD_e_OBUF)
+     OBUF:I->O                 2.571          LCD_e_OBUF (LCD_e)
+    ----------------------------------------
+    Total                      7.427ns (3.838ns logic, 3.589ns route)
+                                       (51.7% logic, 48.3% route)
 
 =========================================================================
 
@@ -858,20 +988,28 @@ Clock to Setup on destination clock ClkPort
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-ClkPort        |    3.028|         |         |         |
+ClkPort        |    3.643|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock uut/oneUSClk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+uut/oneUSClk   |    4.637|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 8.80 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.36 secs
  
 --> 
 
-Total memory usage is 251752 kilobytes
+Total memory usage is 252740 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  297 (   0 filtered)
-Number of infos    :   26 (   0 filtered)
+Number of warnings :  358 (   0 filtered)
+Number of infos    :   21 (   0 filtered)
 

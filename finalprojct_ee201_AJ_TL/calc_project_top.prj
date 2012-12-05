@@ -1,3 +1,4 @@
 verilog work "../main_calc_cu.v"
+verilog work "lcd_core.v"
 verilog work "../ee201_debounce_DPB_SCEN_CCEN_MCEN.v"
 verilog work "../calc_project_top.v"
