@@ -1,7 +1,7 @@
 Release 13.2 Drc O.61xd (nt64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-Wed Dec 05 02:55:13 2012
+Wed Dec 05 03:19:05 2012
 
 drc -z calc_project_top.ncd calc_project_top.pcf
 

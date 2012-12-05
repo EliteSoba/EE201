@@ -5,7 +5,7 @@
 // 
 // Create Date:    01:01:03 11/28/2012 
 // Design Name: 
-// Module Name:    add_module 
+// Module Name:    mult_module 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
@@ -18,7 +18,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module add_module(Clk, data_in, reset, enable, textOut, next, done);
+module mult_module(Clk, data_in, reset, enable, textOut, next, done);
 	input Clk;
 	input [7:0] data_in;
 	input reset;
@@ -27,7 +27,7 @@ module add_module(Clk, data_in, reset, enable, textOut, next, done);
 	
 	output reg [8*32:0] textOut;
 	output reg done;
-	reg [7:0] data_out;
+	reg [15:0] data_out;
 	
 	reg [7:0] input_A, input_B;
 	
@@ -56,7 +56,7 @@ module add_module(Clk, data_in, reset, enable, textOut, next, done);
 					case (state)
 						START:
 						begin
-							textOut = "Addition        Adds 2 Numbers  ";
+							textOut = "Multiplication  *'s 2 Numbers   ";
 							input_A <= 0;
 							input_B <= 0;
 							done <= 0;
@@ -85,21 +85,21 @@ module add_module(Clk, data_in, reset, enable, textOut, next, done);
 						end
 						CALCULATE:
 						begin
-							data_out <= input_A + input_B;
-							textOut = {"Calculating...                 "};
+							data_out <= input_A * input_B;
+							textOut = "Calculating...                  ";
 							if (next)
 								state <= DONE;
 						end
 						DONE:
 						begin
-							textOut = {"The Sum is:     ", bin2x(data_out[7:4]), bin2x(data_out[3:0]), "              "};
+							textOut = {"The Product is: ", bin2x(data_out[15:12]), bin2x(data_out[11:8]), bin2x(data_out[7:4]), bin2x(data_out[3:0]), "            "};
 							done <= 1;
 						end
 					endcase
 				end
 			//end
 		end
-		
+	
 function [7:0] bin2x;
  input [3:0] data;
   begin

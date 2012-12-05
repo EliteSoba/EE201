@@ -5,7 +5,7 @@
 // 
 // Create Date:    01:01:03 11/28/2012 
 // Design Name: 
-// Module Name:    add_module 
+// Module Name:    subtract_module 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
@@ -92,7 +92,7 @@ module subtract_module(Clk, data_in, reset, enable, textOut, next, done);
 						end
 						DONE:
 						begin
-							textOut = {"The Diff is:   |", bin2x(data_out[7:4]), bin2x(data_out[3:0]), "              "};
+							textOut = {"The Diff is:    ", bin2x(data_out[7:4]), bin2x(data_out[3:0]), "              "};
 							done <= 1;
 						end
 					endcase
