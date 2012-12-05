@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map O.61xd on Tue Dec 04 21:22:38 2012
+// Written by: Map O.61xd on Tue Dec 04 22:48:05 2012
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -200,7 +200,52 @@ TIMEGRP sys_clk_pin = BEL "DIV_CLK_0" BEL "DIV_CLK_1" BEL "DIV_CLK_2" BEL
         "core_uut/state_FSM_FFd10" BEL "core_uut/state_FSM_FFd8" BEL
         "core_uut/state_FSM_FFd11" BEL "core_uut/state_FSM_FFd12" BEL
         "core_uut/state_FSM_FFd13" BEL "core_uut/state_FSM_FFd14" BEL
-        "core_uut/num2_0" BEL "uut/oneUSClk";
+        "core_uut/textOut_254" BEL "core_uut/textOut_253" BEL
+        "core_uut/textOut_252" BEL "core_uut/textOut_251" BEL
+        "core_uut/textOut_249" BEL "core_uut/textOut_244" BEL
+        "core_uut/textOut_243" BEL "core_uut/textOut_240" BEL
+        "core_uut/textOut_237" BEL "core_uut/textOut_236" BEL
+        "core_uut/textOut_235" BEL "core_uut/textOut_234" BEL
+        "core_uut/textOut_228" BEL "core_uut/textOut_227" BEL
+        "core_uut/textOut_222" BEL "core_uut/textOut_220" BEL
+        "core_uut/textOut_219" BEL "core_uut/textOut_213" BEL
+        "core_uut/textOut_211" BEL "core_uut/textOut_209" BEL
+        "core_uut/textOut_208" BEL "core_uut/textOut_204" BEL
+        "core_uut/textOut_203" BEL "core_uut/textOut_200" BEL
+        "core_uut/textOut_196" BEL "core_uut/textOut_195" BEL
+        "core_uut/textOut_193" BEL "core_uut/textOut_190" BEL
+        "core_uut/textOut_188" BEL "core_uut/textOut_187" BEL
+        "core_uut/textOut_181" BEL "core_uut/textOut_180" BEL
+        "core_uut/textOut_179" BEL "core_uut/textOut_172" BEL
+        "core_uut/textOut_169" BEL "core_uut/textOut_168" BEL
+        "core_uut/textOut_162" BEL "core_uut/textOut_161" BEL
+        "core_uut/textOut_160" BEL "core_uut/textOut_156" BEL
+        "core_uut/textOut_153" BEL "core_uut/textOut_152" BEL
+        "core_uut/textOut_149" BEL "core_uut/textOut_146" BEL
+        "core_uut/textOut_144" BEL "core_uut/textOut_140" BEL
+        "core_uut/textOut_138" BEL "core_uut/textOut_132" BEL
+        "core_uut/textOut_131" BEL "core_uut/textOut_124" BEL
+        "core_uut/textOut_123" BEL "core_uut/textOut_117" BEL
+        "core_uut/textOut_116" BEL "core_uut/textOut_115" BEL
+        "core_uut/textOut_112" BEL "core_uut/textOut_109" BEL
+        "core_uut/textOut_108" BEL "core_uut/textOut_107" BEL
+        "core_uut/textOut_104" BEL "core_uut/textOut_101" BEL
+        "core_uut/textOut_100" BEL "core_uut/textOut_99" BEL
+        "core_uut/textOut_92" BEL "core_uut/textOut_91" BEL
+        "core_uut/textOut_84" BEL "core_uut/textOut_83" BEL
+        "core_uut/textOut_80" BEL "core_uut/textOut_76" BEL
+        "core_uut/textOut_75" BEL "core_uut/textOut_72" BEL
+        "core_uut/textOut_69" BEL "core_uut/textOut_68" BEL
+        "core_uut/textOut_67" BEL "core_uut/textOut_60" BEL
+        "core_uut/textOut_59" BEL "core_uut/textOut_52" BEL
+        "core_uut/textOut_51" BEL "core_uut/textOut_48" BEL
+        "core_uut/textOut_44" BEL "core_uut/textOut_43" BEL
+        "core_uut/textOut_40" BEL "core_uut/textOut_36" BEL
+        "core_uut/textOut_35" BEL "core_uut/textOut_28" BEL
+        "core_uut/textOut_27" BEL "core_uut/textOut_24" BEL
+        "core_uut/textOut_20" BEL "core_uut/textOut_19" BEL
+        "core_uut/textOut_12" BEL "core_uut/textOut_11" BEL "core_uut/num2_0"
+        BEL "uut/oneUSClk";
 TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
 SCHEMATIC END;
 

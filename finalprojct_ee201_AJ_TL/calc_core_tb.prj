@@ -1,0 +1,2 @@
+verilog work "../main_calc_cu.v"
+verilog work "calc_core_tb.v"

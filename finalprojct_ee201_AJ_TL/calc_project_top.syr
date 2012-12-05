@@ -4,13 +4,13 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.23 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.23 secs
  
 --> Reading design: calc_project_top.prj
 
@@ -108,7 +108,7 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 Analyzing Verilog file \"C:\Users\Tobias\Documents\GitHub\EE201\main_calc_cu.v\" into library work
 Parsing module <main_calc_cu>.
-Analyzing Verilog file \"C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v\" into library work
+Analyzing Verilog file \"C:\Users\Tobias\Documents\GitHub\EE201\lcd_core.v\" into library work
 Parsing module <lcd_core>.
 Analyzing Verilog file \"C:\Users\Tobias\Documents\GitHub\EE201\ee201_debounce_DPB_SCEN_CCEN_MCEN.v\" into library work
 Parsing module <ee201_debouncer>.
@@ -140,44 +140,40 @@ WARNING:HDLCompiler:1127 - "C:\Users\Tobias\Documents\GitHub\EE201\calc_project_
 WARNING:HDLCompiler:413 - "C:\Users\Tobias\Documents\GitHub\EE201\calc_project_top.v" Line 269: Result of 257-bit expression is truncated to fit in 256-bit target.
 
 Elaborating module <lcd_core>.
-WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 94: Signal <data_f1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 95: Signal <data_f2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 96: Signal <data_f3> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 97: Signal <data_f4> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 98: Signal <data_f5> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 99: Signal <data_f6> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 100: Signal <data_f7> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 101: Signal <data_f8> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 102: Signal <data_f9> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 103: Signal <data_f10> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 104: Signal <data_f11> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 105: Signal <data_f12> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 106: Signal <data_f13> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 107: Signal <data_f14> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 108: Signal <data_f15> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 109: Signal <data_f16> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 115: Signal <data_s1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 116: Signal <data_s2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 117: Signal <data_s3> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 118: Signal <data_s4> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 119: Signal <data_s5> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 120: Signal <data_s6> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 121: Signal <data_s7> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 122: Signal <data_s8> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 123: Signal <data_s9> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 124: Signal <data_s10> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 125: Signal <data_s11> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 126: Signal <data_s12> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 127: Signal <data_s13> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 128: Signal <data_s14> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 129: Signal <data_s15> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 130: Signal <data_s16> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:1127 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 315: Assignment to LCD_rs ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 316: Assignment to LCD_rw ignored, since the identifier is never used
-WARNING:HDLCompiler:413 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 317: Result of 8-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:1127 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 317: Assignment to LCD_data ignored, since the identifier is never used
-WARNING:HDLCompiler:413 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 318: Result of 10-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:1127 - "C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\lcd_core.v" Line 318: Assignment to usclk ignored, since the identifier is never used
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\lcd_core.v" Line 94: Signal <data_f1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\lcd_core.v" Line 95: Signal <data_f2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\lcd_core.v" Line 96: Signal <data_f3> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\lcd_core.v" Line 97: Signal <data_f4> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\lcd_core.v" Line 98: Signal <data_f5> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\lcd_core.v" Line 99: Signal <data_f6> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\lcd_core.v" Line 100: Signal <data_f7> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\lcd_core.v" Line 101: Signal <data_f8> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\lcd_core.v" Line 102: Signal <data_f9> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\lcd_core.v" Line 103: Signal <data_f10> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\lcd_core.v" Line 104: Signal <data_f11> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\lcd_core.v" Line 105: Signal <data_f12> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\lcd_core.v" Line 106: Signal <data_f13> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\lcd_core.v" Line 107: Signal <data_f14> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\lcd_core.v" Line 108: Signal <data_f15> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\lcd_core.v" Line 109: Signal <data_f16> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\lcd_core.v" Line 115: Signal <data_s1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\lcd_core.v" Line 116: Signal <data_s2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\lcd_core.v" Line 117: Signal <data_s3> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\lcd_core.v" Line 118: Signal <data_s4> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\lcd_core.v" Line 119: Signal <data_s5> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\lcd_core.v" Line 120: Signal <data_s6> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\lcd_core.v" Line 121: Signal <data_s7> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\lcd_core.v" Line 122: Signal <data_s8> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\lcd_core.v" Line 123: Signal <data_s9> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\lcd_core.v" Line 124: Signal <data_s10> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\lcd_core.v" Line 125: Signal <data_s11> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\lcd_core.v" Line 126: Signal <data_s12> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\lcd_core.v" Line 127: Signal <data_s13> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\lcd_core.v" Line 128: Signal <data_s14> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\lcd_core.v" Line 129: Signal <data_s15> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Tobias\Documents\GitHub\EE201\lcd_core.v" Line 130: Signal <data_s16> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "C:\Users\Tobias\Documents\GitHub\EE201\lcd_core.v" Line 318: Result of 10-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\Tobias\Documents\GitHub\EE201\lcd_core.v" Line 318: Assignment to usclk ignored, since the identifier is never used
 WARNING:HDLCompiler:634 - "C:\Users\Tobias\Documents\GitHub\EE201\calc_project_top.v" Line 277: Net <reset> does not have a driver.
 WARNING:HDLCompiler:552 - "C:\Users\Tobias\Documents\GitHub\EE201\calc_project_top.v" Line 83: Input port btu is not connected on this instance
 WARNING:Xst:2972 - "c:/users/tobias/documents/github/ee201/calc_project_top.v" line 136. All outputs of instance <ee201_debouncer_U> of block <ee201_debouncer> are unconnected in block <calc_project_top>. Underlying logic will be removed.
@@ -276,7 +272,7 @@ Synthesizing Unit <ee201_debouncer>.
 Unit <ee201_debouncer> synthesized.
 
 Synthesizing Unit <lcd_core>.
-    Related source file is "c:/users/tobias/documents/github/ee201/finalprojct_ee201_aj_tl/lcd_core.v".
+    Related source file is "c:/users/tobias/documents/github/ee201/lcd_core.v".
         stFunctionSet = 10'b0000000001
         stDisplayCtrlSet = 10'b0000000010
         stDisplayClear = 10'b0000000100
@@ -287,54 +283,25 @@ Synthesizing Unit <lcd_core>.
         stInitDne = 10'b0010000000
         stActWr = 10'b0100000000
         stCharDelay = 10'b1000000000
-WARNING:Xst:647 - Input <data_f1<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <data_f2<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <data_f3<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <data_f4<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <data_f5<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <data_f6<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <data_f7<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <data_f8<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <data_f9<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <data_f10<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <data_f11<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <data_f12<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <data_f13<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <data_f14<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <data_f15<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <data_f16<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <data_s1<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <data_s2<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <data_s3<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <data_s4<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <data_s5<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <data_s6<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <data_s7<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <data_s8<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <data_s9<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <data_s10<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <data_s11<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <data_s12<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <data_s13<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <data_s14<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <data_s15<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <data_s16<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 7-bit register for signal <clkCount>.
     Found 17-bit register for signal <count>.
     Found 1-bit register for signal <delayOK>.
+    Found 8-bit register for signal <lcd_cmd_ptr>.
     Found 1-bit register for signal <oneUSClk>.
     Found 10-bit register for signal <stCur>.
     Found 7-bit adder for signal <clkCount[6]_GND_7_o_add_40_OUT> created at line 155.
     Found 17-bit adder for signal <count[16]_GND_7_o_add_44_OUT> created at line 171.
-    Found 17-bit comparator lessequal for signal <n0012> created at line 182
-    Found 17-bit comparator lessequal for signal <n0020> created at line 188
-    Found 17-bit comparator lessequal for signal <n0024> created at line 190
+    Found 8-bit adder for signal <lcd_cmd_ptr[7]_GND_7_o_add_60_OUT> created at line 205.
+    Found 10-bit 41-to-1 multiplexer for signal <_n0276> created at line 62.
+    Found 17-bit comparator lessequal for signal <n0052> created at line 182
+    Found 17-bit comparator lessequal for signal <n0060> created at line 188
+    Found 17-bit comparator lessequal for signal <n0064> created at line 190
     HDL ADVISOR - Describing an operational reset or an explicit power-up state for register <stCur> would allow inference of a finite state machine and as consequence better performance and smaller area.
     Summary:
-	inferred   2 Adder/Subtractor(s).
-	inferred  36 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred  44 D-type flip-flop(s).
 	inferred   3 Comparator(s).
-	inferred   3 Multiplexer(s).
+	inferred   5 Multiplexer(s).
 Unit <lcd_core> synthesized.
 
 =========================================================================
@@ -343,13 +310,14 @@ HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 1
  16x8-bit single-port Read Only RAM                    : 1
-# Adders/Subtractors                                   : 11
+# Adders/Subtractors                                   : 12
  17-bit adder                                          : 1
  24-bit adder                                          : 4
  27-bit adder                                          : 1
  4-bit adder                                           : 4
  7-bit adder                                           : 1
-# Registers                                            : 17
+ 8-bit adder                                           : 1
+# Registers                                            : 18
  1-bit register                                        : 2
  10-bit register                                       : 1
  17-bit register                                       : 1
@@ -358,12 +326,14 @@ Macro Statistics
  27-bit register                                       : 1
  4-bit register                                        : 4
  7-bit register                                        : 1
- 8-bit register                                        : 2
+ 8-bit register                                        : 3
 # Comparators                                          : 3
  17-bit comparator lessequal                           : 3
-# Multiplexers                                         : 7
+# Multiplexers                                         : 9
  1-bit 2-to-1 multiplexer                              : 3
  1-bit 4-to-1 multiplexer                              : 4
+ 10-bit 2-to-1 multiplexer                             : 1
+ 10-bit 41-to-1 multiplexer                            : 1
 # FSMs                                                 : 5
 
 =========================================================================
@@ -374,7 +344,91 @@ Macro Statistics
 
 INFO:Xst:2261 - The FF/Latch <num1_1> in Unit <core_uut> is equivalent to the following 7 FFs/Latches, which will be removed : <num1_3> <num2_0> <num2_2> <num2_3> <num2_4> <num2_6> <num2_7> 
 INFO:Xst:2261 - The FF/Latch <num1_0> in Unit <core_uut> is equivalent to the following 7 FFs/Latches, which will be removed : <num1_2> <num1_4> <num1_5> <num1_6> <num1_7> <num2_1> <num2_5> 
+WARNING:Xst:1710 - FF/Latch <textOut_177> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_176> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_175> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_170> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_167> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_163> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_159> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_155> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_154> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_151> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_148> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_145> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_143> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_137> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_136> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_135> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_129> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_128> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_127> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_122> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_121> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <num1_0> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_255> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_250> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_247> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_241> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_239> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_233> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_232> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_231> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_225> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_224> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_223> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_218> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_215> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_207> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_201> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_199> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_192> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_191> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_185> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_183> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_58> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_56> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_55> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_49> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_47> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_41> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_39> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_34> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_33> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_32> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_31> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_26> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_23> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_18> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_17> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_15> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_10> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_8> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_7> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_1> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_0> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_120> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_119> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_111> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_106> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_103> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_97> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_96> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_95> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_90> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_89> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_88> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_87> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_82> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_81> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_79> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_74> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_71> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_66> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_65> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_64> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_63> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <textOut_256> of sequential type is unconnected in block <core_uut>.
 WARNING:Xst:2404 -  FFs/Latches <num1<7:4>> (without init value) have a constant value of 0 in block <main_calc_cu>.
 
 Synthesizing (advanced) Unit <calc_project_top>.
@@ -395,6 +449,7 @@ Unit <calc_project_top> synthesized (advanced).
 Synthesizing (advanced) Unit <lcd_core>.
 The following registers are absorbed into counter <clkCount>: 1 register on signal <clkCount>.
 The following registers are absorbed into counter <count>: 1 register on signal <count>.
+The following registers are absorbed into counter <lcd_cmd_ptr>: 1 register on signal <lcd_cmd_ptr>.
 Unit <lcd_core> synthesized (advanced).
 
 =========================================================================
@@ -406,17 +461,20 @@ Macro Statistics
 # Adders/Subtractors                                   : 8
  24-bit adder                                          : 4
  4-bit adder                                           : 4
-# Counters                                             : 3
+# Counters                                             : 4
  17-bit up counter                                     : 1
  27-bit up counter                                     : 1
  7-bit up counter                                      : 1
+ 8-bit up counter                                      : 1
 # Registers                                            : 393
  Flip-Flops                                            : 393
 # Comparators                                          : 3
  17-bit comparator lessequal                           : 3
-# Multiplexers                                         : 7
+# Multiplexers                                         : 9
  1-bit 2-to-1 multiplexer                              : 3
  1-bit 4-to-1 multiplexer                              : 4
+ 10-bit 2-to-1 multiplexer                             : 1
+ 10-bit 41-to-1 multiplexer                            : 1
 # FSMs                                                 : 5
 
 =========================================================================
@@ -567,183 +625,43 @@ Optimizing unit <ee201_debouncer> ...
 Optimizing unit <lcd_core> ...
 
 Optimizing unit <main_calc_cu> ...
-WARNING:Xst:2677 - Node <core_uut/textOut_254> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_253> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_252> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_251> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_249> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_248> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_246> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_245> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_244> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_243> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_242> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_240> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_238> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_237> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_236> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_235> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_234> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_230> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_229> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_228> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_227> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_226> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_222> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_221> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_220> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_219> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_217> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_216> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_214> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_213> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_212> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_211> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_210> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_209> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_208> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_206> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_205> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_204> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_203> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_202> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_200> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_198> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_197> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_196> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_195> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_194> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_193> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_190> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_189> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_188> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_187> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_186> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_184> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_182> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_181> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_180> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_179> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_178> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_174> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_173> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_172> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_171> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_169> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_168> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_166> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_165> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_164> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_162> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_161> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_160> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_158> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_157> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_156> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_153> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_152> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_150> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_149> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_147> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_146> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_144> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_142> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_141> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_140> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_139> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_138> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_134> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_133> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_132> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_131> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_130> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_126> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_125> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_124> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_123> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_118> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_117> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_116> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_115> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_114> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_113> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_112> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_110> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_109> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_108> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_107> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_105> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_104> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_102> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_101> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_100> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_99> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_98> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_94> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_93> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_92> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_91> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_86> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_85> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_84> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_83> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_80> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_78> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_77> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_76> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_75> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_73> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_72> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_70> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_69> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_68> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_67> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_62> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_61> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_60> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_59> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_57> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_54> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_53> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_52> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_51> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_50> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_48> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_46> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_45> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_44> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_43> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_42> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_40> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_38> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_37> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_36> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_35> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_30> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_29> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_28> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_27> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_25> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_24> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_22> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_21> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_20> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_19> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_16> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_14> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_13> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_12> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_11> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_9> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_6> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_5> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_4> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_3> of sequential type is unconnected in block <calc_project_top>.
-WARNING:Xst:2677 - Node <core_uut/textOut_2> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_5> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_13> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_21> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_37> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_45> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_53> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_61> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_77> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_85> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_93> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_125> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_133> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_141> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_157> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_165> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_173> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_189> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_197> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_198> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_205> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_206> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_212> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_214> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_221> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_229> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_238> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_246> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <core_uut/num2_0> in Unit <calc_project_top> is equivalent to the following 8 FFs/Latches, which will be removed : <core_uut/textOut_248> <core_uut/textOut_242> <core_uut/textOut_217> <core_uut/textOut_216> <core_uut/textOut_210> <core_uut/textOut_194> <core_uut/textOut_186> <core_uut/textOut_184> 
+INFO:Xst:2261 - The FF/Latch <core_uut/textOut_252> in Unit <calc_project_top> is equivalent to the following 6 FFs/Latches, which will be removed : <core_uut/textOut_245> <core_uut/textOut_158> <core_uut/textOut_126> <core_uut/textOut_94> <core_uut/textOut_38> <core_uut/textOut_3> 
+INFO:Xst:2261 - The FF/Latch <core_uut/textOut_253> in Unit <calc_project_top> is equivalent to the following 21 FFs/Latches, which will be removed : <core_uut/textOut_230> <core_uut/textOut_182> <core_uut/textOut_174> <core_uut/textOut_166> <core_uut/textOut_150> <core_uut/textOut_142> <core_uut/textOut_134> <core_uut/textOut_118> <core_uut/textOut_110> <core_uut/textOut_102> <core_uut/textOut_86> <core_uut/textOut_78> <core_uut/textOut_70> <core_uut/textOut_62> <core_uut/textOut_54> <core_uut/textOut_46> <core_uut/textOut_30> <core_uut/textOut_22> <core_uut/textOut_14> <core_uut/textOut_6> <core_uut/textOut_4> 
+INFO:Xst:2261 - The FF/Latch <core_uut/textOut_249> in Unit <calc_project_top> is equivalent to the following 20 FFs/Latches, which will be removed : <core_uut/textOut_226> <core_uut/textOut_202> <core_uut/textOut_178> <core_uut/textOut_171> <core_uut/textOut_164> <core_uut/textOut_147> <core_uut/textOut_139> <core_uut/textOut_130> <core_uut/textOut_114> <core_uut/textOut_113> <core_uut/textOut_105> <core_uut/textOut_98> <core_uut/textOut_73> <core_uut/textOut_57> <core_uut/textOut_50> <core_uut/textOut_42> <core_uut/textOut_25> <core_uut/textOut_16> <core_uut/textOut_9> <core_uut/textOut_2> 
+INFO:Xst:2261 - The FF/Latch <core_uut/textOut_254> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_29> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block calc_project_top, actual ratio is 5.
+Found area constraint ratio of 100 (+ 5) on block calc_project_top, actual ratio is 8.
+FlipFlop uut/delayOK has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -751,8 +669,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 206
- Flip-Flops                                            : 206
+# Registers                                            : 305
+ Flip-Flops                                            : 305
 
 =========================================================================
 
@@ -775,30 +693,30 @@ Top Level Output File Name         : calc_project_top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 641
+# BELS                             : 884
 #      BUF                         : 1
 #      GND                         : 1
-#      INV                         : 7
-#      LUT1                        : 126
-#      LUT2                        : 13
-#      LUT3                        : 22
-#      LUT4                        : 17
-#      LUT5                        : 136
-#      LUT6                        : 59
-#      MUXCY                       : 126
+#      INV                         : 8
+#      LUT1                        : 133
+#      LUT2                        : 66
+#      LUT3                        : 76
+#      LUT4                        : 23
+#      LUT5                        : 165
+#      LUT6                        : 137
+#      MUXCY                       : 133
 #      VCC                         : 1
-#      XORCY                       : 132
-# FlipFlops/Latches                : 206
-#      FD                          : 124
-#      FDC                         : 57
-#      FDP                         : 1
+#      XORCY                       : 140
+# FlipFlops/Latches                : 305
+#      FD                          : 133
+#      FDC                         : 73
+#      FDP                         : 75
 #      FDR                         : 24
 # Clock Buffers                    : 2
 #      BUFG                        : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 32
+# IO Buffers                       : 42
 #      IBUF                        : 5
-#      OBUF                        : 27
+#      OBUF                        : 37
 
 Device utilization summary:
 ---------------------------
@@ -807,20 +725,20 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             206  out of  18224     1%  
- Number of Slice LUTs:                  380  out of   9112     4%  
-    Number used as Logic:               380  out of   9112     4%  
+ Number of Slice Registers:             305  out of  18224     1%  
+ Number of Slice LUTs:                  608  out of   9112     6%  
+    Number used as Logic:               608  out of   9112     6%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    380
-   Number with an unused Flip Flop:     174  out of    380    45%  
-   Number with an unused LUT:             0  out of    380     0%  
-   Number of fully used LUT-FF pairs:   206  out of    380    54%  
+ Number of LUT Flip Flop pairs used:    609
+   Number with an unused Flip Flop:     304  out of    609    49%  
+   Number with an unused LUT:             1  out of    609     0%  
+   Number of fully used LUT-FF pairs:   304  out of    609    49%  
    Number of unique control sets:         5
 
 IO Utilization: 
  Number of IOs:                          51
- Number of bonded IOBs:                  33  out of    232    14%  
+ Number of bonded IOBs:                  43  out of    232    18%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
@@ -846,8 +764,8 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-ClkPort                            | BUFGP                  | 178   |
-uut/oneUSClk                       | BUFG                   | 28    |
+ClkPort                            | BUFGP                  | 268   |
+uut/oneUSClk                       | BUFG                   | 37    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -858,9 +776,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 4.637ns (Maximum Frequency: 215.638MHz)
-   Minimum input arrival time before clock: 4.399ns
-   Maximum output required time after clock: 7.427ns
+   Minimum period: 6.270ns (Maximum Frequency: 159.492MHz)
+   Minimum input arrival time before clock: 4.801ns
+   Maximum output required time after clock: 10.088ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -869,57 +787,58 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'ClkPort'
-  Clock period: 3.643ns (frequency: 274.462MHz)
-  Total number of paths / destination ports: 2690 / 185
+  Clock period: 4.044ns (frequency: 247.256MHz)
+  Total number of paths / destination ports: 3565 / 275
 -------------------------------------------------------------------------
-Delay:               3.643ns (Levels of Logic = 2)
-  Source:            ee201_debouncer_L/state_FSM_FFd6 (FF)
-  Destination:       ee201_debouncer_L/state_FSM_FFd4 (FF)
+Delay:               4.044ns (Levels of Logic = 2)
+  Source:            core_uut/state_FSM_FFd5 (FF)
+  Destination:       core_uut/textOut_234 (FF)
   Source Clock:      ClkPort rising
   Destination Clock: ClkPort rising
 
-  Data Path: ee201_debouncer_L/state_FSM_FFd6 to ee201_debouncer_L/state_FSM_FFd4
+  Data Path: core_uut/state_FSM_FFd5 to core_uut/textOut_234
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q             37   0.447   1.727  ee201_debouncer_L/state_FSM_FFd6 (ee201_debouncer_L/state_FSM_FFd6)
-     LUT6:I0->O            2   0.203   0.961  ee201_debouncer_L/state_FSM_FFd4-In211 (ee201_debouncer_L/state_FSM_FFd4-In21)
-     LUT6:I1->O            1   0.203   0.000  ee201_debouncer_L/state_FSM_FFd4-In1 (ee201_debouncer_L/state_FSM_FFd4-In)
-     FDC:D                     0.102          ee201_debouncer_L/state_FSM_FFd4
+     FDC:C->Q              4   0.447   1.048  core_uut/state_FSM_FFd5 (core_uut/state_FSM_FFd5)
+     LUT6:I0->O           90   0.203   2.040  core_uut/state__n01121 (core_uut/_n0112)
+     LUT4:I1->O            1   0.205   0.000  core_uut/state[14]_GND_2_o_select_47_OUT<57>1 (core_uut/state[14]_GND_2_o_select_47_OUT<200>)
+     FDC:D                     0.102          core_uut/textOut_200
     ----------------------------------------
-    Total                      3.643ns (0.955ns logic, 2.688ns route)
-                                       (26.2% logic, 73.8% route)
+    Total                      4.044ns (0.957ns logic, 3.087ns route)
+                                       (23.7% logic, 76.3% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'uut/oneUSClk'
-  Clock period: 4.637ns (frequency: 215.638MHz)
-  Total number of paths / destination ports: 458 / 45
+  Clock period: 6.270ns (frequency: 159.492MHz)
+  Total number of paths / destination ports: 3606 / 54
 -------------------------------------------------------------------------
-Delay:               4.637ns (Levels of Logic = 4)
-  Source:            uut/stCur_9 (FF)
-  Destination:       uut/delayOK (FF)
+Delay:               6.270ns (Levels of Logic = 5)
+  Source:            uut/stCur_0 (FF)
+  Destination:       uut/lcd_cmd_ptr_5 (FF)
   Source Clock:      uut/oneUSClk rising
   Destination Clock: uut/oneUSClk rising
 
-  Data Path: uut/stCur_9 to uut/delayOK
+  Data Path: uut/stCur_0 to uut/lcd_cmd_ptr_5
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               9   0.447   1.058  uut/stCur_9 (uut/stCur_9)
-     LUT3:I0->O            2   0.205   0.721  uut/stCur[9]_GND_7_o_equal_52_o<9>21 (uut/stCur[9]_GND_7_o_equal_52_o<9>2)
-     LUT6:I4->O            4   0.203   0.912  uut/stCur[9]_GND_7_o_equal_54_o<9>1 (uut/stCur[9]_GND_7_o_equal_54_o)
-     LUT6:I3->O            1   0.205   0.580  uut/Mmux_stCur[9]_PWR_6_o_MUX_84_o15 (uut/stCur[9]_PWR_6_o_MUX_84_o)
-     LUT6:I5->O            1   0.205   0.000  uut/delayOK_rstpot (uut/delayOK_rstpot)
-     FD:D                      0.102          uut/delayOK
+     FD:C->Q               9   0.447   1.174  uut/stCur_0 (uut/stCur_0)
+     LUT5:I0->O           12   0.203   0.909  uut/stCur[9]_GND_7_o_equal_52_o<9>11 (uut/stCur[9]_GND_7_o_equal_52_o<9>1)
+     LUT6:I5->O            1   0.205   0.924  uut/stNext<3>2_SW1 (N47)
+     LUT6:I1->O            6   0.203   0.849  uut/stNext<3>3 (uut/stNext<3>)
+     LUT5:I3->O            6   0.203   0.849  uut/_n02833_SW0 (N19)
+     LUT6:I4->O            1   0.203   0.000  uut/lcd_cmd_ptr_5_rstpot (uut/lcd_cmd_ptr_5_rstpot)
+     FD:D                      0.102          uut/lcd_cmd_ptr_5
     ----------------------------------------
-    Total                      4.637ns (1.367ns logic, 3.270ns route)
-                                       (29.5% logic, 70.5% route)
+    Total                      6.270ns (1.566ns logic, 4.704ns route)
+                                       (25.0% logic, 75.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'ClkPort'
-  Total number of paths / destination ports: 86 / 82
+  Total number of paths / destination ports: 176 / 172
 -------------------------------------------------------------------------
-Offset:              4.399ns (Levels of Logic = 2)
+Offset:              4.801ns (Levels of Logic = 2)
   Source:            BtnU (PAD)
   Destination:       DIV_CLK_0 (FF)
   Destination Clock: ClkPort rising
@@ -929,54 +848,58 @@ Offset:              4.399ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             1   1.222   0.579  BtnU_IBUF (BtnU_IBUF)
-     BUF:I->O             58   0.568   1.600  BUF2 (Reset)
+     BUF:I->O            148   0.568   2.002  BUF2 (Reset)
      FDC:CLR                   0.430          DIV_CLK_0
     ----------------------------------------
-    Total                      4.399ns (2.220ns logic, 2.179ns route)
-                                       (50.5% logic, 49.5% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'ClkPort'
-  Total number of paths / destination ports: 42 / 14
--------------------------------------------------------------------------
-Offset:              4.804ns (Levels of Logic = 2)
-  Source:            core_uut/state_FSM_FFd12 (FF)
-  Destination:       Ld1 (PAD)
-  Source Clock:      ClkPort rising
-
-  Data Path: core_uut/state_FSM_FFd12 to Ld1
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDC:C->Q              7   0.447   1.002  core_uut/state_FSM_FFd12 (core_uut/state_FSM_FFd12)
-     LUT4:I1->O            1   0.205   0.579  Ld11 (Ld1_OBUF)
-     OBUF:I->O                 2.571          Ld1_OBUF (Ld1)
-    ----------------------------------------
-    Total                      4.804ns (3.223ns logic, 1.581ns route)
-                                       (67.1% logic, 32.9% route)
+    Total                      4.801ns (2.220ns logic, 2.581ns route)
+                                       (46.2% logic, 53.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'uut/oneUSClk'
-  Total number of paths / destination ports: 30 / 1
+  Total number of paths / destination ports: 680 / 10
 -------------------------------------------------------------------------
-Offset:              7.427ns (Levels of Logic = 5)
-  Source:            uut/stCur_4 (FF)
-  Destination:       LCD_e (PAD)
+Offset:              10.088ns (Levels of Logic = 6)
+  Source:            uut/lcd_cmd_ptr_2 (FF)
+  Destination:       LCD_data<0> (PAD)
   Source Clock:      uut/oneUSClk rising
 
-  Data Path: uut/stCur_4 to LCD_e
+  Data Path: uut/lcd_cmd_ptr_2 to LCD_data<0>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               6   0.447   0.973  uut/stCur_4 (uut/stCur_4)
-     LUT3:I0->O            7   0.205   0.774  uut/stCur[9]_GND_7_o_equal_92_o<9>11 (uut/stCur[9]_GND_7_o_equal_92_o<9>1)
-     LUT5:I4->O            4   0.205   0.684  uut/stCur[9]_GND_7_o_equal_87_o<9>11 (uut/stCur[9]_GND_7_o_equal_87_o<9>1)
-     LUT4:I3->O            1   0.205   0.580  uut/stCur[9]_GND_7_o_equal_95_o<9>1 (uut/stCur[9]_GND_7_o_equal_95_o)
-     LUT6:I5->O            1   0.205   0.579  uut/lcd_e1 (LCD_e_OBUF)
-     OBUF:I->O                 2.571          LCD_e_OBUF (LCD_e)
+     FD:C->Q              37   0.447   1.591  uut/lcd_cmd_ptr_2 (uut/lcd_cmd_ptr_2)
+     LUT3:I0->O           19   0.205   1.300  uut/Mmux__n02763131 (uut/Mmux__n0276313)
+     LUT6:I3->O            1   0.205   0.827  uut/Mmux_LCD_CMDS12 (uut/Mmux_LCD_CMDS11)
+     LUT5:I1->O            1   0.203   0.944  uut/Mmux_LCD_CMDS15_SW0 (N69)
+     LUT6:I0->O            1   0.203   0.808  uut/Mmux_LCD_CMDS15 (uut/Mmux_LCD_CMDS14)
+     LUT6:I3->O            1   0.205   0.579  uut/Mmux_LCD_CMDS114 (LCD_data_0_OBUF)
+     OBUF:I->O                 2.571          LCD_data_0_OBUF (LCD_data<0>)
     ----------------------------------------
-    Total                      7.427ns (3.838ns logic, 3.589ns route)
-                                       (51.7% logic, 48.3% route)
+    Total                     10.088ns (4.039ns logic, 6.049ns route)
+                                       (40.0% logic, 60.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ClkPort'
+  Total number of paths / destination ports: 167 / 21
+-------------------------------------------------------------------------
+Offset:              8.237ns (Levels of Logic = 5)
+  Source:            core_uut/num2_0 (FF)
+  Destination:       LCD_data<0> (PAD)
+  Source Clock:      ClkPort rising
+
+  Data Path: core_uut/num2_0 to LCD_data<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             11   0.447   1.247  core_uut/num2_0 (core_uut/num2_0)
+     LUT6:I0->O            1   0.203   0.827  uut/Mmux_LCD_CMDS12 (uut/Mmux_LCD_CMDS11)
+     LUT5:I1->O            1   0.203   0.944  uut/Mmux_LCD_CMDS15_SW0 (N69)
+     LUT6:I0->O            1   0.203   0.808  uut/Mmux_LCD_CMDS15 (uut/Mmux_LCD_CMDS14)
+     LUT6:I3->O            1   0.205   0.579  uut/Mmux_LCD_CMDS114 (LCD_data_0_OBUF)
+     OBUF:I->O                 2.571          LCD_data_0_OBUF (LCD_data<0>)
+    ----------------------------------------
+    Total                      8.237ns (3.832ns logic, 4.405ns route)
+                                       (46.5% logic, 53.5% route)
 
 =========================================================================
 
@@ -988,7 +911,7 @@ Clock to Setup on destination clock ClkPort
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-ClkPort        |    3.643|         |         |         |
+ClkPort        |    4.044|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock uut/oneUSClk
@@ -996,20 +919,20 @@ Clock to Setup on destination clock uut/oneUSClk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-uut/oneUSClk   |    4.637|         |         |         |
+uut/oneUSClk   |    6.270|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 6.36 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.90 secs
  
 --> 
 
-Total memory usage is 252740 kilobytes
+Total memory usage is 265540 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  358 (   0 filtered)
-Number of infos    :   21 (   0 filtered)
+Number of warnings :  260 (   0 filtered)
+Number of infos    :   26 (   0 filtered)
 
