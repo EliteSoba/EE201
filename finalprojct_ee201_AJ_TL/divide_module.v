@@ -5,7 +5,7 @@
 // 
 // Create Date:    01:01:03 11/28/2012 
 // Design Name: 
-// Module Name:    add_module 
+// Module Name:    divide_module 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
@@ -18,7 +18,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module add_module(Clk, data_in, reset, enable, textOut, next, done);
+module divide_module(Clk, data_in, reset, enable, textOut, next, done);
 	input Clk;
 	input [7:0] data_in;
 	input reset;
@@ -27,18 +27,24 @@ module add_module(Clk, data_in, reset, enable, textOut, next, done);
 	
 	output reg [8*32:0] textOut;
 	output reg done;
-	reg [7:0] data_out;
+	reg [15:0] data_out;
 	
 	reg [7:0] input_A, input_B;
 	
-	reg [4:0] state;
+	reg [6:0] state;
+	reg Ready;
+	integer i;
+	integer Remainder;
+	reg [8*16:0] out;
 	
 	localparam
-		START			= 5'b00001,
-		LOAD_A		= 5'b00010,
-		LOAD_B		= 5'b00100,
-		CALCULATE	= 5'b01000,
-		DONE			= 5'b10000;
+		START			= 7'b0000001,
+		LOAD_A		= 7'b0000010,
+		LOAD_B		= 7'b0000100,
+		BEGIN			= 7'b0001000,
+		CALCULATE	= 7'b0010000,
+		SUBTRACT		= 7'b0100000,
+		DONE			= 7'b1000000;
 		
 	always @(posedge Clk, posedge reset) 
 		begin
@@ -56,10 +62,13 @@ module add_module(Clk, data_in, reset, enable, textOut, next, done);
 					case (state)
 						START:
 						begin
-							textOut = "Addition        Adds 2 Numbers  ";
+							textOut = "Division        Divides 2 Nums  ";
 							input_A <= 0;
 							input_B <= 0;
 							done <= 0;
+							Ready <= 0;
+							Remainder <= 0;
+							i <= 0;
 							if (next && enable)
 								state <= LOAD_A;
 						end
@@ -80,26 +89,66 @@ module add_module(Clk, data_in, reset, enable, textOut, next, done);
 							if (next)
 							begin
 								input_B <= data_in;
-								state <= CALCULATE;
+								state <= BEGIN;
 							end
+						end
+						BEGIN:
+						begin
+							data_out <= input_A / input_B;
+							Remainder <= input_A % input_B;
+							textOut = {"Calculating... ",Ready?"Press Btnc       ":"Press Btnc       "};
+							out <= {bin2x(data_out[7:4]), bin2x(data_out[3:0]), "."};
+							state <= CALCULATE;
 						end
 						CALCULATE:
 						begin
-							data_out <= input_A + input_B;
-							textOut = "Calculating...                  ";
-							if (next)
+							textOut = {"Calculating... ",Ready?"Press Btnc       ":"Press Btnc       "};
+							if (!Ready)
+								begin
+								if (Remainder == 0)
+									Ready <= 1;
+								Remainder <= Remainder << 1;
+								state <= SUBTRACT;
+							end
+							else if (next)
 								state <= DONE;
+						end
+						SUBTRACT: //TODO: Convert the output after the decimal point to hex.
+						/* Algorithm is:
+							Same Exit statements
+							Left Shift Remainder 4 (<<4)
+							out <= {out, bin2x(Remainder / input_B);
+							Remainder <= Remainder % input_B;
+						*/
+						begin
+							textOut = {"Calculating... ",Ready?"Press Btnc       ":"Press Btnc       "};
+							if (!Ready)
+							begin
+								if (Remainder >= input_B)
+								begin
+									out <= {out, "1"};
+									Remainder <= Remainder - input_B;
+								end
+								else
+									out <= {out, "0"};
+								i <= i + 1;
+								if (i >= 11)
+									Ready <= 1;
+							end
+							else if (next)
+								state <= DONE;
+						
 						end
 						DONE:
 						begin
-							textOut = {"The Sum is:     ", bin2x(data_out[7:4]), bin2x(data_out[3:0]), "              "};
+							textOut = {"The Quotient is:", out, " "};
 							done <= 1;
 						end
 					endcase
 				end
 			//end
 		end
-		
+	
 function [7:0] bin2x;
  input [3:0] data;
   begin

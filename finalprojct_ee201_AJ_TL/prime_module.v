@@ -5,7 +5,7 @@
 // 
 // Create Date:    01:01:03 11/28/2012 
 // Design Name: 
-// Module Name:    add_module 
+// Module Name:    prime_module 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
@@ -18,7 +18,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module add_module(Clk, data_in, reset, enable, textOut, next, done);
+module prime_module(Clk, data_in, reset, enable, textOut, next, done);
 	input Clk;
 	input [7:0] data_in;
 	input reset;
@@ -27,18 +27,20 @@ module add_module(Clk, data_in, reset, enable, textOut, next, done);
 	
 	output reg [8*32:0] textOut;
 	output reg done;
-	reg [7:0] data_out;
+	reg [15:0] data_out;
 	
-	reg [7:0] input_A, input_B;
+	reg [7:0] input_A;
+	reg [7:0] i;
 	
-	reg [4:0] state;
+	reg [3:0] state;
+	reg isNotPrime;
+	reg Ready;
 	
 	localparam
-		START			= 5'b00001,
-		LOAD_A		= 5'b00010,
-		LOAD_B		= 5'b00100,
-		CALCULATE	= 5'b01000,
-		DONE			= 5'b10000;
+		START			= 4'b0001,
+		LOAD_A		= 4'b0010,
+		CALCULATE	= 4'b0100,
+		DONE			= 4'b1000;
 		
 	always @(posedge Clk, posedge reset) 
 		begin
@@ -56,10 +58,12 @@ module add_module(Clk, data_in, reset, enable, textOut, next, done);
 					case (state)
 						START:
 						begin
-							textOut = "Addition        Adds 2 Numbers  ";
+							textOut = "Determinses if  A # is Prime    ";
 							input_A <= 0;
-							input_B <= 0;
+							i <= 2;
 							done <= 0;
+							isNotPrime <= 0;
+							Ready <= 0;
 							if (next && enable)
 								state <= LOAD_A;
 						end
@@ -70,36 +74,37 @@ module add_module(Clk, data_in, reset, enable, textOut, next, done);
 							if (next)
 							begin
 								input_A <= data_in;
-								state <= LOAD_B;
-							end
-						end
-						LOAD_B:
-						begin
-							textOut = "Input 2nd #     Then Press Btnc ";
-							
-							if (next)
-							begin
-								input_B <= data_in;
 								state <= CALCULATE;
 							end
 						end
 						CALCULATE:
 						begin
-							data_out <= input_A + input_B;
-							textOut = "Calculating...                  ";
-							if (next)
+							if (i > input_A>>1)
+								Ready <= 1;
+							else
+							begin
+								if (modulus(input_A, i) == 0)
+								begin
+									isNotPrime <= 1;
+									Ready <= 1;
+								end
+								i <= i + 1;
+							end
+							data_out <= !isNotPrime;
+							textOut = {"Calculating...  ",Ready?"Press Btnc      ":"                "};
+							if (next && Ready)
 								state <= DONE;
 						end
 						DONE:
 						begin
-							textOut = {"The Sum is:     ", bin2x(data_out[7:4]), bin2x(data_out[3:0]), "              "};
+							textOut = {"The Number is:  ", isNotPrime?"not":"   ", " Prime       "};
 							done <= 1;
 						end
 					endcase
 				end
 			//end
 		end
-		
+	
 function [7:0] bin2x;
  input [3:0] data;
   begin
@@ -111,5 +116,13 @@ function [7:0] bin2x;
 	default:bin2x = "0";
 	endcase
   end
+endfunction
+function [7:0] modulus;
+	input [7:0] input_X;
+	input	[7:0] input_Y;
+	begin
+		
+		modulus = input_X - input_Y*(input_X/input_Y);
+	end
 endfunction
 endmodule

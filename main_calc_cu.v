@@ -34,7 +34,9 @@ reg [14:0] state;
 wire [8*32:0] textOut_Add;
 wire [8*32:0] textOut_Sub;
 wire [8*32:0] textOut_Mult;
-wire done_Add, done_Sub, done_Mult;
+wire [8*32:0] textOut_Div;
+wire [8*32:0] textOut_Prime;
+wire done_Add, done_Sub, done_Mult, done_Div, done_Prime;
 
 //assign state outputs to the state register
 assign {sel1, sel2, sel3, sel4, sel5, sel6, sel7, add, sub, div, mult, gcd, isprime, sqrt, done} = state;
@@ -66,6 +68,8 @@ DONE 	= 15'b000000000000001;
 add_module add_uut(.Clk(Clk), .data_in(dataInBus), .reset(state==SEL1), .enable(state==ADD), .textOut(textOut_Add), .next(btc), .done(done_Add));
 subtract_module sub_uut(.Clk(Clk), .data_in(dataInBus), .reset(state==SEL2), .enable(state==SUB), .textOut(textOut_Sub), .next(btc), .done(done_Sub));
 mult_module mult_uut(.Clk(Clk), .data_in(dataInBus), .reset(state==SEL4), .enable(state==MULT), .textOut(textOut_Mult), .next(btc), .done(done_Mult));
+//divide_module div_uut(.Clk(Clk), .data_in(dataInBus), .reset(state==SEL3), .enable(state==DIV), .textOut(textOut_Div), .next(btc), .done(done_Div));
+prime_module prime_uut(.Clk(Clk), .data_in(dataInBus), .reset(state==SEL6), .enable(state==ISPRIME), .textOut(textOut_Prime), .next(btc), .done(done_Prime));
 //assign textOut = {line1, line2};
 
 always @(posedge Clk, posedge Reset) 
@@ -237,7 +241,9 @@ always @(posedge Clk, posedge Reset)
 	          begin
 		         // state transitions in the control unit
 		         // RTL operations in the Data Path 
-
+					textOut = textOut_Div;
+					if (done_Div && btc)
+						state <= SEL3;
 	          end 
 			MULT	: 
 	          begin
@@ -257,7 +263,9 @@ always @(posedge Clk, posedge Reset)
 	          begin
 		         // state transitions in the control unit
 		         // RTL operations in the Data Path 
-
+					textOut = textOut_Prime;
+					if (done_Prime && btc)
+						state <= SEL6;
 	          end 
 			SQRT	: 
 	          begin

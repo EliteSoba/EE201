@@ -28,19 +28,19 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
 Timing constraint: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 
 50%;
 
- 6110 paths analyzed, 2843 endpoints analyzed, 0 failing endpoints
- 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   5.512ns.
+ 31742340 paths analyzed, 3300 endpoints analyzed, 5 failing endpoints
+ 5 timing errors detected. (5 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  18.004ns.
 --------------------------------------------------------------------------------
 
-Paths for end point core_uut/state_FSM_FFd13 (SLICE_X19Y20.C2), 5 paths
+Paths for end point core_uut/prime_uut/Ready (SLICE_X10Y24.A5), 9917050 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     4.488ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               ee201_debouncer_L/state_FSM_FFd2 (FF)
-  Destination:          core_uut/state_FSM_FFd13 (FF)
+Slack (setup path):     -8.004ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               core_uut/prime_uut/i_1_2 (FF)
+  Destination:          core_uut/prime_uut/Ready (FF)
   Requirement:          10.000ns
-  Data Path Delay:      5.413ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.064ns (0.417 - 0.481)
+  Data Path Delay:      17.926ns (Levels of Logic = 15)
+  Clock Path Skew:      -0.043ns (0.248 - 0.291)
   Source Clock:         board_clk rising at 0.000ns
   Destination Clock:    board_clk rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -51,30 +51,69 @@ Slack (setup path):     4.488ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: ee201_debouncer_L/state_FSM_FFd2 to core_uut/state_FSM_FFd13
+  Maximum Data Path at Slow Process Corner: core_uut/prime_uut/i_1_2 to core_uut/prime_uut/Ready
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X5Y51.CQ       Tcko                  0.391   ee201_debouncer_L/state_FSM_FFd3
-                                                       ee201_debouncer_L/state_FSM_FFd2
-    SLICE_X19Y20.D5      net (fanout=11)       3.022   ee201_debouncer_L/state_FSM_FFd2
-    SLICE_X19Y20.D       Tilo                  0.259   core_uut/state_FSM_FFd13
-                                                       core_uut/state_FSM_FFd13-In1
-    SLICE_X19Y20.C2      net (fanout=1)        1.419   core_uut/state_FSM_FFd13-In1
-    SLICE_X19Y20.CLK     Tas                   0.322   core_uut/state_FSM_FFd13
-                                                       core_uut/state_FSM_FFd13-In2
-                                                       core_uut/state_FSM_FFd13
+    SLICE_X6Y28.CQ       Tcko                  0.447   core_uut/prime_uut/i_2_3
+                                                       core_uut/prime_uut/i_1_2
+    SLICE_X6Y30.B4       net (fanout=19)       0.917   core_uut/prime_uut/i_1_2
+    SLICE_X6Y30.B        Tilo                  0.203   N267
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<4>2_SW0
+    SLICE_X4Y26.D4       net (fanout=2)        1.532   N259
+    SLICE_X4Y26.D        Tilo                  0.205   core_uut/prime_uut/i_6_1
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<4>11_SW0
+    SLICE_X6Y25.D6       net (fanout=12)       0.384   N357
+    SLICE_X6Y25.D        Tilo                  0.203   core_uut/prime_uut/i<1>
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<2>1_SW2
+    SLICE_X7Y24.B4       net (fanout=2)        0.604   N253
+    SLICE_X7Y24.B        Tilo                  0.259   core_uut/prime_uut/i<2>
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<2>24_SW2_SW2
+    SLICE_X5Y25.B4       net (fanout=2)        0.873   N333
+    SLICE_X5Y25.B        Tilo                  0.259   N331
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<2>24_SW2_SW3
+    SLICE_X5Y25.A5       net (fanout=1)        0.187   N425
+    SLICE_X5Y25.A        Tilo                  0.259   N331
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Mmux_a[0]_GND_11_o_MUX_498_o121_SW0
+    SLICE_X9Y25.C6       net (fanout=2)        0.607   N349
+    SLICE_X9Y25.C        Tilo                  0.259   core_uut/prime_uut/input_A[7]_i[7]_div_4/a[2]_GND_11_o_MUX_496_o
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Mmux_a[0]_GND_11_o_MUX_498_o121
+    SLICE_X8Y25.BX       net (fanout=2)        0.536   core_uut/prime_uut/input_A[7]_i[7]_div_4/a[2]_GND_11_o_MUX_496_o
+    SLICE_X8Y25.CMUX     Taxc                  0.317   core_uut/prime_uut/input_A[7]_i[7]_div_4/Madd_GND_11_o_b[7]_add_15_OUT_Madd_Madd_cy<4>
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Madd_GND_11_o_b[7]_add_15_OUT_Madd_Madd_cy<4>
+    SLICE_X9Y25.A2       net (fanout=4)        0.797   core_uut/prime_uut/input_A[7]_i[7]_div_4/GND_11_o_b[7]_add_15_OUT<3>
+    SLICE_X9Y25.A        Tilo                  0.259   core_uut/prime_uut/input_A[7]_i[7]_div_4/a[2]_GND_11_o_MUX_496_o
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Mmux_n028651_SW6
+    SLICE_X9Y27.C1       net (fanout=1)        0.769   N305
+    SLICE_X9Y27.C        Tilo                  0.259   N294
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<0>1_SW5
+    SLICE_X9Y27.D5       net (fanout=1)        0.209   N226
+    SLICE_X9Y27.D        Tilo                  0.259   N294
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<0>1_SW1
+    SLICE_X9Y26.C6       net (fanout=1)        0.279   N294
+    SLICE_X9Y26.C        Tilo                  0.259   N293
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<0>2
+    DSP48_X0Y6.A0        net (fanout=1)        0.339   core_uut/prime_uut/input_A[7]_i[7]_div_4_OUT<0>
+    DSP48_X0Y6.P1        Tdspdo_A_P            4.560   core_uut/prime_uut/Maddsub_n0055
+                                                       core_uut/prime_uut/Maddsub_n0055
+    SLICE_X10Y24.B2      net (fanout=2)        1.172   core_uut/prime_uut/_n0080<6>
+    SLICE_X10Y24.B       Tilo                  0.203   core_uut/prime_uut/Ready
+                                                       core_uut/prime_uut/state[3]_GND_10_o_Select_26_o1_SW2
+    SLICE_X10Y24.A5      net (fanout=1)        0.222   N233
+    SLICE_X10Y24.CLK     Tas                   0.289   core_uut/prime_uut/Ready
+                                                       core_uut/prime_uut/state[3]_GND_10_o_Select_26_o2
+                                                       core_uut/prime_uut/Ready
     -------------------------------------------------  ---------------------------
-    Total                                      5.413ns (0.972ns logic, 4.441ns route)
-                                                       (18.0% logic, 82.0% route)
+    Total                                     17.926ns (8.499ns logic, 9.427ns route)
+                                                       (47.4% logic, 52.6% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     4.530ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               ee201_debouncer_R/state_FSM_FFd2 (FF)
-  Destination:          core_uut/state_FSM_FFd13 (FF)
+Slack (setup path):     -7.901ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               core_uut/prime_uut/i_1_2 (FF)
+  Destination:          core_uut/prime_uut/Ready (FF)
   Requirement:          10.000ns
-  Data Path Delay:      5.412ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.023ns (0.417 - 0.440)
+  Data Path Delay:      17.823ns (Levels of Logic = 15)
+  Clock Path Skew:      -0.043ns (0.248 - 0.291)
   Source Clock:         board_clk rising at 0.000ns
   Destination Clock:    board_clk rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -85,30 +124,69 @@ Slack (setup path):     4.530ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: ee201_debouncer_R/state_FSM_FFd2 to core_uut/state_FSM_FFd13
+  Maximum Data Path at Slow Process Corner: core_uut/prime_uut/i_1_2 to core_uut/prime_uut/Ready
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X15Y55.CQ      Tcko                  0.391   ee201_debouncer_R/state_FSM_FFd3
-                                                       ee201_debouncer_R/state_FSM_FFd2
-    SLICE_X19Y20.D1      net (fanout=10)       3.021   ee201_debouncer_R/state_FSM_FFd2
-    SLICE_X19Y20.D       Tilo                  0.259   core_uut/state_FSM_FFd13
-                                                       core_uut/state_FSM_FFd13-In1
-    SLICE_X19Y20.C2      net (fanout=1)        1.419   core_uut/state_FSM_FFd13-In1
-    SLICE_X19Y20.CLK     Tas                   0.322   core_uut/state_FSM_FFd13
-                                                       core_uut/state_FSM_FFd13-In2
-                                                       core_uut/state_FSM_FFd13
+    SLICE_X6Y28.CQ       Tcko                  0.447   core_uut/prime_uut/i_2_3
+                                                       core_uut/prime_uut/i_1_2
+    SLICE_X6Y30.B4       net (fanout=19)       0.917   core_uut/prime_uut/i_1_2
+    SLICE_X6Y30.B        Tilo                  0.203   N267
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<4>2_SW0
+    SLICE_X4Y26.D4       net (fanout=2)        1.532   N259
+    SLICE_X4Y26.D        Tilo                  0.205   core_uut/prime_uut/i_6_1
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<4>11_SW0
+    SLICE_X6Y25.D6       net (fanout=12)       0.384   N357
+    SLICE_X6Y25.D        Tilo                  0.203   core_uut/prime_uut/i<1>
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<2>1_SW2
+    SLICE_X7Y24.B4       net (fanout=2)        0.604   N253
+    SLICE_X7Y24.B        Tilo                  0.259   core_uut/prime_uut/i<2>
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<2>24_SW2_SW2
+    SLICE_X5Y25.B4       net (fanout=2)        0.873   N333
+    SLICE_X5Y25.B        Tilo                  0.259   N331
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<2>24_SW2_SW3
+    SLICE_X5Y25.A5       net (fanout=1)        0.187   N425
+    SLICE_X5Y25.A        Tilo                  0.259   N331
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Mmux_a[0]_GND_11_o_MUX_498_o121_SW0
+    SLICE_X9Y25.C6       net (fanout=2)        0.607   N349
+    SLICE_X9Y25.C        Tilo                  0.259   core_uut/prime_uut/input_A[7]_i[7]_div_4/a[2]_GND_11_o_MUX_496_o
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Mmux_a[0]_GND_11_o_MUX_498_o121
+    SLICE_X8Y25.BX       net (fanout=2)        0.536   core_uut/prime_uut/input_A[7]_i[7]_div_4/a[2]_GND_11_o_MUX_496_o
+    SLICE_X8Y25.CMUX     Taxc                  0.317   core_uut/prime_uut/input_A[7]_i[7]_div_4/Madd_GND_11_o_b[7]_add_15_OUT_Madd_Madd_cy<4>
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Madd_GND_11_o_b[7]_add_15_OUT_Madd_Madd_cy<4>
+    SLICE_X7Y25.B3       net (fanout=4)        0.755   core_uut/prime_uut/input_A[7]_i[7]_div_4/GND_11_o_b[7]_add_15_OUT<3>
+    SLICE_X7Y25.B        Tilo                  0.259   N387
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Mmux_n028651_SW7
+    SLICE_X9Y27.C6       net (fanout=1)        0.708   N306
+    SLICE_X9Y27.C        Tilo                  0.259   N294
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<0>1_SW5
+    SLICE_X9Y27.D5       net (fanout=1)        0.209   N226
+    SLICE_X9Y27.D        Tilo                  0.259   N294
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<0>1_SW1
+    SLICE_X9Y26.C6       net (fanout=1)        0.279   N294
+    SLICE_X9Y26.C        Tilo                  0.259   N293
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<0>2
+    DSP48_X0Y6.A0        net (fanout=1)        0.339   core_uut/prime_uut/input_A[7]_i[7]_div_4_OUT<0>
+    DSP48_X0Y6.P1        Tdspdo_A_P            4.560   core_uut/prime_uut/Maddsub_n0055
+                                                       core_uut/prime_uut/Maddsub_n0055
+    SLICE_X10Y24.B2      net (fanout=2)        1.172   core_uut/prime_uut/_n0080<6>
+    SLICE_X10Y24.B       Tilo                  0.203   core_uut/prime_uut/Ready
+                                                       core_uut/prime_uut/state[3]_GND_10_o_Select_26_o1_SW2
+    SLICE_X10Y24.A5      net (fanout=1)        0.222   N233
+    SLICE_X10Y24.CLK     Tas                   0.289   core_uut/prime_uut/Ready
+                                                       core_uut/prime_uut/state[3]_GND_10_o_Select_26_o2
+                                                       core_uut/prime_uut/Ready
     -------------------------------------------------  ---------------------------
-    Total                                      5.412ns (0.972ns logic, 4.440ns route)
-                                                       (18.0% logic, 82.0% route)
+    Total                                     17.823ns (8.499ns logic, 9.324ns route)
+                                                       (47.7% logic, 52.3% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     6.626ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               core_uut/state_FSM_FFd14 (FF)
-  Destination:          core_uut/state_FSM_FFd13 (FF)
+Slack (setup path):     -7.882ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               core_uut/prime_uut/input_A_5_1 (FF)
+  Destination:          core_uut/prime_uut/Ready (FF)
   Requirement:          10.000ns
-  Data Path Delay:      3.314ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.025ns (0.330 - 0.355)
+  Data Path Delay:      17.799ns (Levels of Logic = 16)
+  Clock Path Skew:      -0.048ns (0.248 - 0.296)
   Source Clock:         board_clk rising at 0.000ns
   Destination Clock:    board_clk rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -119,33 +197,75 @@ Slack (setup path):     6.626ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: core_uut/state_FSM_FFd14 to core_uut/state_FSM_FFd13
+  Maximum Data Path at Slow Process Corner: core_uut/prime_uut/input_A_5_1 to core_uut/prime_uut/Ready
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X14Y20.AQ      Tcko                  0.447   core_uut/state_FSM_FFd14
-                                                       core_uut/state_FSM_FFd14
-    SLICE_X19Y20.D3      net (fanout=32)       0.867   core_uut/state_FSM_FFd14
-    SLICE_X19Y20.D       Tilo                  0.259   core_uut/state_FSM_FFd13
-                                                       core_uut/state_FSM_FFd13-In1
-    SLICE_X19Y20.C2      net (fanout=1)        1.419   core_uut/state_FSM_FFd13-In1
-    SLICE_X19Y20.CLK     Tas                   0.322   core_uut/state_FSM_FFd13
-                                                       core_uut/state_FSM_FFd13-In2
-                                                       core_uut/state_FSM_FFd13
+    SLICE_X4Y28.CQ       Tcko                  0.408   core_uut/prime_uut/input_A<6>
+                                                       core_uut/prime_uut/input_A_5_1
+    SLICE_X4Y28.B1       net (fanout=7)        0.716   core_uut/prime_uut/input_A_5_1
+    SLICE_X4Y28.B        Tilo                  0.205   core_uut/prime_uut/input_A<6>
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<6>11_SW3
+    SLICE_X7Y28.C3       net (fanout=1)        0.799   N442
+    SLICE_X7Y28.C        Tilo                  0.259   core_uut/prime_uut/input_A_5_2
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<4>2_SW1
+    SLICE_X4Y26.D5       net (fanout=2)        0.585   N260
+    SLICE_X4Y26.D        Tilo                  0.205   core_uut/prime_uut/i_6_1
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<4>11_SW0
+    SLICE_X6Y25.D6       net (fanout=12)       0.384   N357
+    SLICE_X6Y25.D        Tilo                  0.203   core_uut/prime_uut/i<1>
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<2>1_SW2
+    SLICE_X7Y24.B4       net (fanout=2)        0.604   N253
+    SLICE_X7Y24.B        Tilo                  0.259   core_uut/prime_uut/i<2>
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<2>24_SW2_SW2
+    SLICE_X5Y25.B4       net (fanout=2)        0.873   N333
+    SLICE_X5Y25.B        Tilo                  0.259   N331
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<2>24_SW2_SW3
+    SLICE_X5Y25.A5       net (fanout=1)        0.187   N425
+    SLICE_X5Y25.A        Tilo                  0.259   N331
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Mmux_a[0]_GND_11_o_MUX_498_o121_SW0
+    SLICE_X9Y25.C6       net (fanout=2)        0.607   N349
+    SLICE_X9Y25.C        Tilo                  0.259   core_uut/prime_uut/input_A[7]_i[7]_div_4/a[2]_GND_11_o_MUX_496_o
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Mmux_a[0]_GND_11_o_MUX_498_o121
+    SLICE_X8Y25.BX       net (fanout=2)        0.536   core_uut/prime_uut/input_A[7]_i[7]_div_4/a[2]_GND_11_o_MUX_496_o
+    SLICE_X8Y25.CMUX     Taxc                  0.317   core_uut/prime_uut/input_A[7]_i[7]_div_4/Madd_GND_11_o_b[7]_add_15_OUT_Madd_Madd_cy<4>
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Madd_GND_11_o_b[7]_add_15_OUT_Madd_Madd_cy<4>
+    SLICE_X9Y25.A2       net (fanout=4)        0.797   core_uut/prime_uut/input_A[7]_i[7]_div_4/GND_11_o_b[7]_add_15_OUT<3>
+    SLICE_X9Y25.A        Tilo                  0.259   core_uut/prime_uut/input_A[7]_i[7]_div_4/a[2]_GND_11_o_MUX_496_o
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Mmux_n028651_SW6
+    SLICE_X9Y27.C1       net (fanout=1)        0.769   N305
+    SLICE_X9Y27.C        Tilo                  0.259   N294
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<0>1_SW5
+    SLICE_X9Y27.D5       net (fanout=1)        0.209   N226
+    SLICE_X9Y27.D        Tilo                  0.259   N294
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<0>1_SW1
+    SLICE_X9Y26.C6       net (fanout=1)        0.279   N294
+    SLICE_X9Y26.C        Tilo                  0.259   N293
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<0>2
+    DSP48_X0Y6.A0        net (fanout=1)        0.339   core_uut/prime_uut/input_A[7]_i[7]_div_4_OUT<0>
+    DSP48_X0Y6.P1        Tdspdo_A_P            4.560   core_uut/prime_uut/Maddsub_n0055
+                                                       core_uut/prime_uut/Maddsub_n0055
+    SLICE_X10Y24.B2      net (fanout=2)        1.172   core_uut/prime_uut/_n0080<6>
+    SLICE_X10Y24.B       Tilo                  0.203   core_uut/prime_uut/Ready
+                                                       core_uut/prime_uut/state[3]_GND_10_o_Select_26_o1_SW2
+    SLICE_X10Y24.A5      net (fanout=1)        0.222   N233
+    SLICE_X10Y24.CLK     Tas                   0.289   core_uut/prime_uut/Ready
+                                                       core_uut/prime_uut/state[3]_GND_10_o_Select_26_o2
+                                                       core_uut/prime_uut/Ready
     -------------------------------------------------  ---------------------------
-    Total                                      3.314ns (1.028ns logic, 2.286ns route)
-                                                       (31.0% logic, 69.0% route)
+    Total                                     17.799ns (8.721ns logic, 9.078ns route)
+                                                       (49.0% logic, 51.0% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point core_uut/state_FSM_FFd8 (SLICE_X24Y19.A2), 5 paths
+Paths for end point core_uut/prime_uut/Ready (SLICE_X10Y24.A6), 5950230 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     4.903ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               ee201_debouncer_L/state_FSM_FFd2 (FF)
-  Destination:          core_uut/state_FSM_FFd8 (FF)
+Slack (setup path):     -7.862ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               core_uut/prime_uut/i_1_2 (FF)
+  Destination:          core_uut/prime_uut/Ready (FF)
   Requirement:          10.000ns
-  Data Path Delay:      5.014ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.048ns (0.433 - 0.481)
+  Data Path Delay:      17.784ns (Levels of Logic = 15)
+  Clock Path Skew:      -0.043ns (0.248 - 0.291)
   Source Clock:         board_clk rising at 0.000ns
   Destination Clock:    board_clk rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -156,30 +276,69 @@ Slack (setup path):     4.903ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: ee201_debouncer_L/state_FSM_FFd2 to core_uut/state_FSM_FFd8
+  Maximum Data Path at Slow Process Corner: core_uut/prime_uut/i_1_2 to core_uut/prime_uut/Ready
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X5Y51.CQ       Tcko                  0.391   ee201_debouncer_L/state_FSM_FFd3
-                                                       ee201_debouncer_L/state_FSM_FFd2
-    SLICE_X24Y19.C2      net (fanout=11)       3.436   ee201_debouncer_L/state_FSM_FFd2
-    SLICE_X24Y19.CMUX    Tilo                  0.251   core_uut/state_FSM_FFd9
-                                                       core_uut/state_FSM_FFd8-In_SW0
-    SLICE_X24Y19.A2      net (fanout=1)        0.595   N11
-    SLICE_X24Y19.CLK     Tas                   0.341   core_uut/state_FSM_FFd9
-                                                       core_uut/state_FSM_FFd8-In
-                                                       core_uut/state_FSM_FFd8
+    SLICE_X6Y28.CQ       Tcko                  0.447   core_uut/prime_uut/i_2_3
+                                                       core_uut/prime_uut/i_1_2
+    SLICE_X6Y30.B4       net (fanout=19)       0.917   core_uut/prime_uut/i_1_2
+    SLICE_X6Y30.B        Tilo                  0.203   N267
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<4>2_SW0
+    SLICE_X4Y26.D4       net (fanout=2)        1.532   N259
+    SLICE_X4Y26.D        Tilo                  0.205   core_uut/prime_uut/i_6_1
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<4>11_SW0
+    SLICE_X6Y25.D6       net (fanout=12)       0.384   N357
+    SLICE_X6Y25.D        Tilo                  0.203   core_uut/prime_uut/i<1>
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<2>1_SW2
+    SLICE_X7Y24.B4       net (fanout=2)        0.604   N253
+    SLICE_X7Y24.B        Tilo                  0.259   core_uut/prime_uut/i<2>
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<2>24_SW2_SW2
+    SLICE_X5Y25.B4       net (fanout=2)        0.873   N333
+    SLICE_X5Y25.B        Tilo                  0.259   N331
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<2>24_SW2_SW3
+    SLICE_X5Y25.A5       net (fanout=1)        0.187   N425
+    SLICE_X5Y25.A        Tilo                  0.259   N331
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Mmux_a[0]_GND_11_o_MUX_498_o121_SW0
+    SLICE_X9Y25.C6       net (fanout=2)        0.607   N349
+    SLICE_X9Y25.C        Tilo                  0.259   core_uut/prime_uut/input_A[7]_i[7]_div_4/a[2]_GND_11_o_MUX_496_o
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Mmux_a[0]_GND_11_o_MUX_498_o121
+    SLICE_X8Y25.BX       net (fanout=2)        0.536   core_uut/prime_uut/input_A[7]_i[7]_div_4/a[2]_GND_11_o_MUX_496_o
+    SLICE_X8Y25.CMUX     Taxc                  0.317   core_uut/prime_uut/input_A[7]_i[7]_div_4/Madd_GND_11_o_b[7]_add_15_OUT_Madd_Madd_cy<4>
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Madd_GND_11_o_b[7]_add_15_OUT_Madd_Madd_cy<4>
+    SLICE_X9Y25.A2       net (fanout=4)        0.797   core_uut/prime_uut/input_A[7]_i[7]_div_4/GND_11_o_b[7]_add_15_OUT<3>
+    SLICE_X9Y25.A        Tilo                  0.259   core_uut/prime_uut/input_A[7]_i[7]_div_4/a[2]_GND_11_o_MUX_496_o
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Mmux_n028651_SW6
+    SLICE_X9Y27.C1       net (fanout=1)        0.769   N305
+    SLICE_X9Y27.C        Tilo                  0.259   N294
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<0>1_SW5
+    SLICE_X9Y27.D5       net (fanout=1)        0.209   N226
+    SLICE_X9Y27.D        Tilo                  0.259   N294
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<0>1_SW1
+    SLICE_X9Y26.C6       net (fanout=1)        0.279   N294
+    SLICE_X9Y26.C        Tilo                  0.259   N293
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<0>2
+    DSP48_X0Y6.A0        net (fanout=1)        0.339   core_uut/prime_uut/input_A[7]_i[7]_div_4_OUT<0>
+    DSP48_X0Y6.P5        Tdspdo_A_P            4.560   core_uut/prime_uut/Maddsub_n0055
+                                                       core_uut/prime_uut/Maddsub_n0055
+    SLICE_X8Y24.A5       net (fanout=1)        0.839   core_uut/prime_uut/_n0080<2>
+    SLICE_X8Y24.A        Tilo                  0.205   core_uut/prime_uut/isNotPrime
+                                                       core_uut/prime_uut/state[3]_GND_10_o_Select_26_o1_SW0
+    SLICE_X10Y24.A6      net (fanout=2)        0.411   N211
+    SLICE_X10Y24.CLK     Tas                   0.289   core_uut/prime_uut/Ready
+                                                       core_uut/prime_uut/state[3]_GND_10_o_Select_26_o2
+                                                       core_uut/prime_uut/Ready
     -------------------------------------------------  ---------------------------
-    Total                                      5.014ns (0.983ns logic, 4.031ns route)
-                                                       (19.6% logic, 80.4% route)
+    Total                                     17.784ns (8.501ns logic, 9.283ns route)
+                                                       (47.8% logic, 52.2% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     5.196ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               ee201_debouncer_R/state_FSM_FFd2 (FF)
-  Destination:          core_uut/state_FSM_FFd8 (FF)
+Slack (setup path):     -7.759ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               core_uut/prime_uut/i_1_2 (FF)
+  Destination:          core_uut/prime_uut/Ready (FF)
   Requirement:          10.000ns
-  Data Path Delay:      4.762ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.007ns (0.433 - 0.440)
+  Data Path Delay:      17.681ns (Levels of Logic = 15)
+  Clock Path Skew:      -0.043ns (0.248 - 0.291)
   Source Clock:         board_clk rising at 0.000ns
   Destination Clock:    board_clk rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -190,30 +349,69 @@ Slack (setup path):     5.196ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: ee201_debouncer_R/state_FSM_FFd2 to core_uut/state_FSM_FFd8
+  Maximum Data Path at Slow Process Corner: core_uut/prime_uut/i_1_2 to core_uut/prime_uut/Ready
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X15Y55.CQ      Tcko                  0.391   ee201_debouncer_R/state_FSM_FFd3
-                                                       ee201_debouncer_R/state_FSM_FFd2
-    SLICE_X24Y19.C4      net (fanout=10)       3.184   ee201_debouncer_R/state_FSM_FFd2
-    SLICE_X24Y19.CMUX    Tilo                  0.251   core_uut/state_FSM_FFd9
-                                                       core_uut/state_FSM_FFd8-In_SW0
-    SLICE_X24Y19.A2      net (fanout=1)        0.595   N11
-    SLICE_X24Y19.CLK     Tas                   0.341   core_uut/state_FSM_FFd9
-                                                       core_uut/state_FSM_FFd8-In
-                                                       core_uut/state_FSM_FFd8
+    SLICE_X6Y28.CQ       Tcko                  0.447   core_uut/prime_uut/i_2_3
+                                                       core_uut/prime_uut/i_1_2
+    SLICE_X6Y30.B4       net (fanout=19)       0.917   core_uut/prime_uut/i_1_2
+    SLICE_X6Y30.B        Tilo                  0.203   N267
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<4>2_SW0
+    SLICE_X4Y26.D4       net (fanout=2)        1.532   N259
+    SLICE_X4Y26.D        Tilo                  0.205   core_uut/prime_uut/i_6_1
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<4>11_SW0
+    SLICE_X6Y25.D6       net (fanout=12)       0.384   N357
+    SLICE_X6Y25.D        Tilo                  0.203   core_uut/prime_uut/i<1>
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<2>1_SW2
+    SLICE_X7Y24.B4       net (fanout=2)        0.604   N253
+    SLICE_X7Y24.B        Tilo                  0.259   core_uut/prime_uut/i<2>
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<2>24_SW2_SW2
+    SLICE_X5Y25.B4       net (fanout=2)        0.873   N333
+    SLICE_X5Y25.B        Tilo                  0.259   N331
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<2>24_SW2_SW3
+    SLICE_X5Y25.A5       net (fanout=1)        0.187   N425
+    SLICE_X5Y25.A        Tilo                  0.259   N331
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Mmux_a[0]_GND_11_o_MUX_498_o121_SW0
+    SLICE_X9Y25.C6       net (fanout=2)        0.607   N349
+    SLICE_X9Y25.C        Tilo                  0.259   core_uut/prime_uut/input_A[7]_i[7]_div_4/a[2]_GND_11_o_MUX_496_o
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Mmux_a[0]_GND_11_o_MUX_498_o121
+    SLICE_X8Y25.BX       net (fanout=2)        0.536   core_uut/prime_uut/input_A[7]_i[7]_div_4/a[2]_GND_11_o_MUX_496_o
+    SLICE_X8Y25.CMUX     Taxc                  0.317   core_uut/prime_uut/input_A[7]_i[7]_div_4/Madd_GND_11_o_b[7]_add_15_OUT_Madd_Madd_cy<4>
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Madd_GND_11_o_b[7]_add_15_OUT_Madd_Madd_cy<4>
+    SLICE_X7Y25.B3       net (fanout=4)        0.755   core_uut/prime_uut/input_A[7]_i[7]_div_4/GND_11_o_b[7]_add_15_OUT<3>
+    SLICE_X7Y25.B        Tilo                  0.259   N387
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Mmux_n028651_SW7
+    SLICE_X9Y27.C6       net (fanout=1)        0.708   N306
+    SLICE_X9Y27.C        Tilo                  0.259   N294
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<0>1_SW5
+    SLICE_X9Y27.D5       net (fanout=1)        0.209   N226
+    SLICE_X9Y27.D        Tilo                  0.259   N294
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<0>1_SW1
+    SLICE_X9Y26.C6       net (fanout=1)        0.279   N294
+    SLICE_X9Y26.C        Tilo                  0.259   N293
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<0>2
+    DSP48_X0Y6.A0        net (fanout=1)        0.339   core_uut/prime_uut/input_A[7]_i[7]_div_4_OUT<0>
+    DSP48_X0Y6.P5        Tdspdo_A_P            4.560   core_uut/prime_uut/Maddsub_n0055
+                                                       core_uut/prime_uut/Maddsub_n0055
+    SLICE_X8Y24.A5       net (fanout=1)        0.839   core_uut/prime_uut/_n0080<2>
+    SLICE_X8Y24.A        Tilo                  0.205   core_uut/prime_uut/isNotPrime
+                                                       core_uut/prime_uut/state[3]_GND_10_o_Select_26_o1_SW0
+    SLICE_X10Y24.A6      net (fanout=2)        0.411   N211
+    SLICE_X10Y24.CLK     Tas                   0.289   core_uut/prime_uut/Ready
+                                                       core_uut/prime_uut/state[3]_GND_10_o_Select_26_o2
+                                                       core_uut/prime_uut/Ready
     -------------------------------------------------  ---------------------------
-    Total                                      4.762ns (0.983ns logic, 3.779ns route)
-                                                       (20.6% logic, 79.4% route)
+    Total                                     17.681ns (8.501ns logic, 9.180ns route)
+                                                       (48.1% logic, 51.9% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     7.425ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               core_uut/state_FSM_FFd10 (FF)
-  Destination:          core_uut/state_FSM_FFd8 (FF)
+Slack (setup path):     -7.740ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               core_uut/prime_uut/input_A_5_1 (FF)
+  Destination:          core_uut/prime_uut/Ready (FF)
   Requirement:          10.000ns
-  Data Path Delay:      2.542ns (Levels of Logic = 2)
-  Clock Path Skew:      0.002ns (0.256 - 0.254)
+  Data Path Delay:      17.657ns (Levels of Logic = 16)
+  Clock Path Skew:      -0.048ns (0.248 - 0.296)
   Source Clock:         board_clk rising at 0.000ns
   Destination Clock:    board_clk rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -224,33 +422,75 @@ Slack (setup path):     7.425ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: core_uut/state_FSM_FFd10 to core_uut/state_FSM_FFd8
+  Maximum Data Path at Slow Process Corner: core_uut/prime_uut/input_A_5_1 to core_uut/prime_uut/Ready
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X19Y20.AQ      Tcko                  0.391   core_uut/state_FSM_FFd13
-                                                       core_uut/state_FSM_FFd10
-    SLICE_X24Y19.C1      net (fanout=16)       0.964   core_uut/state_FSM_FFd10
-    SLICE_X24Y19.CMUX    Tilo                  0.251   core_uut/state_FSM_FFd9
-                                                       core_uut/state_FSM_FFd8-In_SW0
-    SLICE_X24Y19.A2      net (fanout=1)        0.595   N11
-    SLICE_X24Y19.CLK     Tas                   0.341   core_uut/state_FSM_FFd9
-                                                       core_uut/state_FSM_FFd8-In
-                                                       core_uut/state_FSM_FFd8
+    SLICE_X4Y28.CQ       Tcko                  0.408   core_uut/prime_uut/input_A<6>
+                                                       core_uut/prime_uut/input_A_5_1
+    SLICE_X4Y28.B1       net (fanout=7)        0.716   core_uut/prime_uut/input_A_5_1
+    SLICE_X4Y28.B        Tilo                  0.205   core_uut/prime_uut/input_A<6>
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<6>11_SW3
+    SLICE_X7Y28.C3       net (fanout=1)        0.799   N442
+    SLICE_X7Y28.C        Tilo                  0.259   core_uut/prime_uut/input_A_5_2
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<4>2_SW1
+    SLICE_X4Y26.D5       net (fanout=2)        0.585   N260
+    SLICE_X4Y26.D        Tilo                  0.205   core_uut/prime_uut/i_6_1
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<4>11_SW0
+    SLICE_X6Y25.D6       net (fanout=12)       0.384   N357
+    SLICE_X6Y25.D        Tilo                  0.203   core_uut/prime_uut/i<1>
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<2>1_SW2
+    SLICE_X7Y24.B4       net (fanout=2)        0.604   N253
+    SLICE_X7Y24.B        Tilo                  0.259   core_uut/prime_uut/i<2>
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<2>24_SW2_SW2
+    SLICE_X5Y25.B4       net (fanout=2)        0.873   N333
+    SLICE_X5Y25.B        Tilo                  0.259   N331
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<2>24_SW2_SW3
+    SLICE_X5Y25.A5       net (fanout=1)        0.187   N425
+    SLICE_X5Y25.A        Tilo                  0.259   N331
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Mmux_a[0]_GND_11_o_MUX_498_o121_SW0
+    SLICE_X9Y25.C6       net (fanout=2)        0.607   N349
+    SLICE_X9Y25.C        Tilo                  0.259   core_uut/prime_uut/input_A[7]_i[7]_div_4/a[2]_GND_11_o_MUX_496_o
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Mmux_a[0]_GND_11_o_MUX_498_o121
+    SLICE_X8Y25.BX       net (fanout=2)        0.536   core_uut/prime_uut/input_A[7]_i[7]_div_4/a[2]_GND_11_o_MUX_496_o
+    SLICE_X8Y25.CMUX     Taxc                  0.317   core_uut/prime_uut/input_A[7]_i[7]_div_4/Madd_GND_11_o_b[7]_add_15_OUT_Madd_Madd_cy<4>
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Madd_GND_11_o_b[7]_add_15_OUT_Madd_Madd_cy<4>
+    SLICE_X9Y25.A2       net (fanout=4)        0.797   core_uut/prime_uut/input_A[7]_i[7]_div_4/GND_11_o_b[7]_add_15_OUT<3>
+    SLICE_X9Y25.A        Tilo                  0.259   core_uut/prime_uut/input_A[7]_i[7]_div_4/a[2]_GND_11_o_MUX_496_o
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Mmux_n028651_SW6
+    SLICE_X9Y27.C1       net (fanout=1)        0.769   N305
+    SLICE_X9Y27.C        Tilo                  0.259   N294
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<0>1_SW5
+    SLICE_X9Y27.D5       net (fanout=1)        0.209   N226
+    SLICE_X9Y27.D        Tilo                  0.259   N294
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<0>1_SW1
+    SLICE_X9Y26.C6       net (fanout=1)        0.279   N294
+    SLICE_X9Y26.C        Tilo                  0.259   N293
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<0>2
+    DSP48_X0Y6.A0        net (fanout=1)        0.339   core_uut/prime_uut/input_A[7]_i[7]_div_4_OUT<0>
+    DSP48_X0Y6.P5        Tdspdo_A_P            4.560   core_uut/prime_uut/Maddsub_n0055
+                                                       core_uut/prime_uut/Maddsub_n0055
+    SLICE_X8Y24.A5       net (fanout=1)        0.839   core_uut/prime_uut/_n0080<2>
+    SLICE_X8Y24.A        Tilo                  0.205   core_uut/prime_uut/isNotPrime
+                                                       core_uut/prime_uut/state[3]_GND_10_o_Select_26_o1_SW0
+    SLICE_X10Y24.A6      net (fanout=2)        0.411   N211
+    SLICE_X10Y24.CLK     Tas                   0.289   core_uut/prime_uut/Ready
+                                                       core_uut/prime_uut/state[3]_GND_10_o_Select_26_o2
+                                                       core_uut/prime_uut/Ready
     -------------------------------------------------  ---------------------------
-    Total                                      2.542ns (0.983ns logic, 1.559ns route)
-                                                       (38.7% logic, 61.3% route)
+    Total                                     17.657ns (8.723ns logic, 8.934ns route)
+                                                       (49.4% logic, 50.6% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point core_uut/textOut_178 (SLICE_X25Y11.B2), 5 paths
+Paths for end point core_uut/prime_uut/isNotPrime (SLICE_X8Y24.B4), 7933661 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     5.433ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               core_uut/state_FSM_FFd12 (FF)
-  Destination:          core_uut/textOut_178 (FF)
+Slack (setup path):     -7.764ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               core_uut/prime_uut/i_1_2 (FF)
+  Destination:          core_uut/prime_uut/isNotPrime (FF)
   Requirement:          10.000ns
-  Data Path Delay:      4.523ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.009ns (0.345 - 0.354)
+  Data Path Delay:      17.693ns (Levels of Logic = 15)
+  Clock Path Skew:      -0.036ns (0.255 - 0.291)
   Source Clock:         board_clk rising at 0.000ns
   Destination Clock:    board_clk rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -261,30 +501,69 @@ Slack (setup path):     5.433ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: core_uut/state_FSM_FFd12 to core_uut/textOut_178
+  Maximum Data Path at Slow Process Corner: core_uut/prime_uut/i_1_2 to core_uut/prime_uut/isNotPrime
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X22Y22.BMUX    Tshcko                0.488   core_uut/state_FSM_FFd3
-                                                       core_uut/state_FSM_FFd12
-    SLICE_X14Y20.D3      net (fanout=17)       1.368   core_uut/state_FSM_FFd12
-    SLICE_X14Y20.D       Tilo                  0.203   core_uut/state_FSM_FFd14
-                                                       core_uut/state[14]_GND_2_o_select_56_OUT<248>2
-    SLICE_X25Y11.B2      net (fanout=49)       2.142   core_uut/state[14]_GND_2_o_select_56_OUT<110>2
-    SLICE_X25Y11.CLK     Tas                   0.322   core_uut/textOut<180>
-                                                       core_uut/state[14]_GND_2_o_select_56_OUT<79>3
-                                                       core_uut/textOut_178
+    SLICE_X6Y28.CQ       Tcko                  0.447   core_uut/prime_uut/i_2_3
+                                                       core_uut/prime_uut/i_1_2
+    SLICE_X6Y30.B4       net (fanout=19)       0.917   core_uut/prime_uut/i_1_2
+    SLICE_X6Y30.B        Tilo                  0.203   N267
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<4>2_SW0
+    SLICE_X4Y26.D4       net (fanout=2)        1.532   N259
+    SLICE_X4Y26.D        Tilo                  0.205   core_uut/prime_uut/i_6_1
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<4>11_SW0
+    SLICE_X6Y25.D6       net (fanout=12)       0.384   N357
+    SLICE_X6Y25.D        Tilo                  0.203   core_uut/prime_uut/i<1>
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<2>1_SW2
+    SLICE_X7Y24.B4       net (fanout=2)        0.604   N253
+    SLICE_X7Y24.B        Tilo                  0.259   core_uut/prime_uut/i<2>
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<2>24_SW2_SW2
+    SLICE_X5Y25.B4       net (fanout=2)        0.873   N333
+    SLICE_X5Y25.B        Tilo                  0.259   N331
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<2>24_SW2_SW3
+    SLICE_X5Y25.A5       net (fanout=1)        0.187   N425
+    SLICE_X5Y25.A        Tilo                  0.259   N331
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Mmux_a[0]_GND_11_o_MUX_498_o121_SW0
+    SLICE_X9Y25.C6       net (fanout=2)        0.607   N349
+    SLICE_X9Y25.C        Tilo                  0.259   core_uut/prime_uut/input_A[7]_i[7]_div_4/a[2]_GND_11_o_MUX_496_o
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Mmux_a[0]_GND_11_o_MUX_498_o121
+    SLICE_X8Y25.BX       net (fanout=2)        0.536   core_uut/prime_uut/input_A[7]_i[7]_div_4/a[2]_GND_11_o_MUX_496_o
+    SLICE_X8Y25.CMUX     Taxc                  0.317   core_uut/prime_uut/input_A[7]_i[7]_div_4/Madd_GND_11_o_b[7]_add_15_OUT_Madd_Madd_cy<4>
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Madd_GND_11_o_b[7]_add_15_OUT_Madd_Madd_cy<4>
+    SLICE_X9Y25.A2       net (fanout=4)        0.797   core_uut/prime_uut/input_A[7]_i[7]_div_4/GND_11_o_b[7]_add_15_OUT<3>
+    SLICE_X9Y25.A        Tilo                  0.259   core_uut/prime_uut/input_A[7]_i[7]_div_4/a[2]_GND_11_o_MUX_496_o
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Mmux_n028651_SW6
+    SLICE_X9Y27.C1       net (fanout=1)        0.769   N305
+    SLICE_X9Y27.C        Tilo                  0.259   N294
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<0>1_SW5
+    SLICE_X9Y27.D5       net (fanout=1)        0.209   N226
+    SLICE_X9Y27.D        Tilo                  0.259   N294
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<0>1_SW1
+    SLICE_X9Y26.C6       net (fanout=1)        0.279   N294
+    SLICE_X9Y26.C        Tilo                  0.259   N293
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<0>2
+    DSP48_X0Y6.A0        net (fanout=1)        0.339   core_uut/prime_uut/input_A[7]_i[7]_div_4_OUT<0>
+    DSP48_X0Y6.P2        Tdspdo_A_P            4.560   core_uut/prime_uut/Maddsub_n0055
+                                                       core_uut/prime_uut/Maddsub_n0055
+    SLICE_X8Y24.C2       net (fanout=2)        0.829   core_uut/prime_uut/_n0080<5>
+    SLICE_X8Y24.C        Tilo                  0.205   core_uut/prime_uut/isNotPrime
+                                                       core_uut/prime_uut/state[3]_GND_10_o_Select_26_o1_SW1
+    SLICE_X8Y24.B4       net (fanout=1)        0.278   N231
+    SLICE_X8Y24.CLK      Tas                   0.341   core_uut/prime_uut/isNotPrime
+                                                       core_uut/prime_uut/state[3]_GND_10_o_Select_24_o1
+                                                       core_uut/prime_uut/isNotPrime
     -------------------------------------------------  ---------------------------
-    Total                                      4.523ns (1.013ns logic, 3.510ns route)
-                                                       (22.4% logic, 77.6% route)
+    Total                                     17.693ns (8.553ns logic, 9.140ns route)
+                                                       (48.3% logic, 51.7% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     6.119ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               core_uut/state_FSM_FFd10 (FF)
-  Destination:          core_uut/textOut_178 (FF)
+Slack (setup path):     -7.697ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               core_uut/prime_uut/i_1_2 (FF)
+  Destination:          core_uut/prime_uut/isNotPrime (FF)
   Requirement:          10.000ns
-  Data Path Delay:      3.842ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.004ns (0.345 - 0.349)
+  Data Path Delay:      17.626ns (Levels of Logic = 15)
+  Clock Path Skew:      -0.036ns (0.255 - 0.291)
   Source Clock:         board_clk rising at 0.000ns
   Destination Clock:    board_clk rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -295,30 +574,69 @@ Slack (setup path):     6.119ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: core_uut/state_FSM_FFd10 to core_uut/textOut_178
+  Maximum Data Path at Slow Process Corner: core_uut/prime_uut/i_1_2 to core_uut/prime_uut/isNotPrime
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X19Y20.AQ      Tcko                  0.391   core_uut/state_FSM_FFd13
-                                                       core_uut/state_FSM_FFd10
-    SLICE_X14Y20.D4      net (fanout=16)       0.784   core_uut/state_FSM_FFd10
-    SLICE_X14Y20.D       Tilo                  0.203   core_uut/state_FSM_FFd14
-                                                       core_uut/state[14]_GND_2_o_select_56_OUT<248>2
-    SLICE_X25Y11.B2      net (fanout=49)       2.142   core_uut/state[14]_GND_2_o_select_56_OUT<110>2
-    SLICE_X25Y11.CLK     Tas                   0.322   core_uut/textOut<180>
-                                                       core_uut/state[14]_GND_2_o_select_56_OUT<79>3
-                                                       core_uut/textOut_178
+    SLICE_X6Y28.CQ       Tcko                  0.447   core_uut/prime_uut/i_2_3
+                                                       core_uut/prime_uut/i_1_2
+    SLICE_X6Y30.B4       net (fanout=19)       0.917   core_uut/prime_uut/i_1_2
+    SLICE_X6Y30.B        Tilo                  0.203   N267
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<4>2_SW0
+    SLICE_X4Y26.D4       net (fanout=2)        1.532   N259
+    SLICE_X4Y26.D        Tilo                  0.205   core_uut/prime_uut/i_6_1
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<4>11_SW0
+    SLICE_X6Y25.D6       net (fanout=12)       0.384   N357
+    SLICE_X6Y25.D        Tilo                  0.203   core_uut/prime_uut/i<1>
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<2>1_SW2
+    SLICE_X7Y24.B4       net (fanout=2)        0.604   N253
+    SLICE_X7Y24.B        Tilo                  0.259   core_uut/prime_uut/i<2>
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<2>24_SW2_SW2
+    SLICE_X5Y25.B4       net (fanout=2)        0.873   N333
+    SLICE_X5Y25.B        Tilo                  0.259   N331
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<2>24_SW2_SW3
+    SLICE_X5Y25.A5       net (fanout=1)        0.187   N425
+    SLICE_X5Y25.A        Tilo                  0.259   N331
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Mmux_a[0]_GND_11_o_MUX_498_o121_SW0
+    SLICE_X9Y25.C6       net (fanout=2)        0.607   N349
+    SLICE_X9Y25.C        Tilo                  0.259   core_uut/prime_uut/input_A[7]_i[7]_div_4/a[2]_GND_11_o_MUX_496_o
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Mmux_a[0]_GND_11_o_MUX_498_o121
+    SLICE_X8Y25.BX       net (fanout=2)        0.536   core_uut/prime_uut/input_A[7]_i[7]_div_4/a[2]_GND_11_o_MUX_496_o
+    SLICE_X8Y25.CMUX     Taxc                  0.317   core_uut/prime_uut/input_A[7]_i[7]_div_4/Madd_GND_11_o_b[7]_add_15_OUT_Madd_Madd_cy<4>
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Madd_GND_11_o_b[7]_add_15_OUT_Madd_Madd_cy<4>
+    SLICE_X9Y25.A2       net (fanout=4)        0.797   core_uut/prime_uut/input_A[7]_i[7]_div_4/GND_11_o_b[7]_add_15_OUT<3>
+    SLICE_X9Y25.A        Tilo                  0.259   core_uut/prime_uut/input_A[7]_i[7]_div_4/a[2]_GND_11_o_MUX_496_o
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Mmux_n028651_SW6
+    SLICE_X9Y27.C1       net (fanout=1)        0.769   N305
+    SLICE_X9Y27.C        Tilo                  0.259   N294
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<0>1_SW5
+    SLICE_X9Y27.D5       net (fanout=1)        0.209   N226
+    SLICE_X9Y27.D        Tilo                  0.259   N294
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<0>1_SW1
+    SLICE_X9Y26.C6       net (fanout=1)        0.279   N294
+    SLICE_X9Y26.C        Tilo                  0.259   N293
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<0>2
+    DSP48_X0Y6.A0        net (fanout=1)        0.339   core_uut/prime_uut/input_A[7]_i[7]_div_4_OUT<0>
+    DSP48_X0Y6.P4        Tdspdo_A_P            4.560   core_uut/prime_uut/Maddsub_n0055
+                                                       core_uut/prime_uut/Maddsub_n0055
+    SLICE_X8Y24.C3       net (fanout=2)        0.762   core_uut/prime_uut/_n0080<3>
+    SLICE_X8Y24.C        Tilo                  0.205   core_uut/prime_uut/isNotPrime
+                                                       core_uut/prime_uut/state[3]_GND_10_o_Select_26_o1_SW1
+    SLICE_X8Y24.B4       net (fanout=1)        0.278   N231
+    SLICE_X8Y24.CLK      Tas                   0.341   core_uut/prime_uut/isNotPrime
+                                                       core_uut/prime_uut/state[3]_GND_10_o_Select_24_o1
+                                                       core_uut/prime_uut/isNotPrime
     -------------------------------------------------  ---------------------------
-    Total                                      3.842ns (0.916ns logic, 2.926ns route)
-                                                       (23.8% logic, 76.2% route)
+    Total                                     17.626ns (8.553ns logic, 9.073ns route)
+                                                       (48.5% logic, 51.5% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     6.133ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               core_uut/state_FSM_FFd13 (FF)
-  Destination:          core_uut/textOut_178 (FF)
+Slack (setup path):     -7.693ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               core_uut/prime_uut/i_1_2 (FF)
+  Destination:          core_uut/prime_uut/isNotPrime (FF)
   Requirement:          10.000ns
-  Data Path Delay:      3.828ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.004ns (0.345 - 0.349)
+  Data Path Delay:      17.622ns (Levels of Logic = 15)
+  Clock Path Skew:      -0.036ns (0.255 - 0.291)
   Source Clock:         board_clk rising at 0.000ns
   Destination Clock:    board_clk rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -329,33 +647,72 @@ Slack (setup path):     6.133ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: core_uut/state_FSM_FFd13 to core_uut/textOut_178
+  Maximum Data Path at Slow Process Corner: core_uut/prime_uut/i_1_2 to core_uut/prime_uut/isNotPrime
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X19Y20.CQ      Tcko                  0.391   core_uut/state_FSM_FFd13
-                                                       core_uut/state_FSM_FFd13
-    SLICE_X14Y20.D6      net (fanout=32)       0.770   core_uut/state_FSM_FFd13
-    SLICE_X14Y20.D       Tilo                  0.203   core_uut/state_FSM_FFd14
-                                                       core_uut/state[14]_GND_2_o_select_56_OUT<248>2
-    SLICE_X25Y11.B2      net (fanout=49)       2.142   core_uut/state[14]_GND_2_o_select_56_OUT<110>2
-    SLICE_X25Y11.CLK     Tas                   0.322   core_uut/textOut<180>
-                                                       core_uut/state[14]_GND_2_o_select_56_OUT<79>3
-                                                       core_uut/textOut_178
+    SLICE_X6Y28.CQ       Tcko                  0.447   core_uut/prime_uut/i_2_3
+                                                       core_uut/prime_uut/i_1_2
+    SLICE_X6Y30.B4       net (fanout=19)       0.917   core_uut/prime_uut/i_1_2
+    SLICE_X6Y30.B        Tilo                  0.203   N267
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<4>2_SW0
+    SLICE_X4Y26.D4       net (fanout=2)        1.532   N259
+    SLICE_X4Y26.D        Tilo                  0.205   core_uut/prime_uut/i_6_1
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<4>11_SW0
+    SLICE_X6Y25.D6       net (fanout=12)       0.384   N357
+    SLICE_X6Y25.D        Tilo                  0.203   core_uut/prime_uut/i<1>
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<2>1_SW2
+    SLICE_X7Y24.B4       net (fanout=2)        0.604   N253
+    SLICE_X7Y24.B        Tilo                  0.259   core_uut/prime_uut/i<2>
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<2>24_SW2_SW2
+    SLICE_X5Y25.B4       net (fanout=2)        0.873   N333
+    SLICE_X5Y25.B        Tilo                  0.259   N331
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<2>24_SW2_SW3
+    SLICE_X5Y25.A5       net (fanout=1)        0.187   N425
+    SLICE_X5Y25.A        Tilo                  0.259   N331
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Mmux_a[0]_GND_11_o_MUX_498_o121_SW0
+    SLICE_X9Y25.C6       net (fanout=2)        0.607   N349
+    SLICE_X9Y25.C        Tilo                  0.259   core_uut/prime_uut/input_A[7]_i[7]_div_4/a[2]_GND_11_o_MUX_496_o
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Mmux_a[0]_GND_11_o_MUX_498_o121
+    SLICE_X8Y25.BX       net (fanout=2)        0.536   core_uut/prime_uut/input_A[7]_i[7]_div_4/a[2]_GND_11_o_MUX_496_o
+    SLICE_X8Y25.CMUX     Taxc                  0.317   core_uut/prime_uut/input_A[7]_i[7]_div_4/Madd_GND_11_o_b[7]_add_15_OUT_Madd_Madd_cy<4>
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Madd_GND_11_o_b[7]_add_15_OUT_Madd_Madd_cy<4>
+    SLICE_X9Y25.A2       net (fanout=4)        0.797   core_uut/prime_uut/input_A[7]_i[7]_div_4/GND_11_o_b[7]_add_15_OUT<3>
+    SLICE_X9Y25.A        Tilo                  0.259   core_uut/prime_uut/input_A[7]_i[7]_div_4/a[2]_GND_11_o_MUX_496_o
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/Mmux_n028651_SW6
+    SLICE_X9Y27.C1       net (fanout=1)        0.769   N305
+    SLICE_X9Y27.C        Tilo                  0.259   N294
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<0>1_SW5
+    SLICE_X9Y27.D5       net (fanout=1)        0.209   N226
+    SLICE_X9Y27.D        Tilo                  0.259   N294
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<0>1_SW1
+    SLICE_X9Y26.C6       net (fanout=1)        0.279   N294
+    SLICE_X9Y26.C        Tilo                  0.259   N293
+                                                       core_uut/prime_uut/input_A[7]_i[7]_div_4/o<0>2
+    DSP48_X0Y6.A0        net (fanout=1)        0.339   core_uut/prime_uut/input_A[7]_i[7]_div_4_OUT<0>
+    DSP48_X0Y6.P1        Tdspdo_A_P            4.560   core_uut/prime_uut/Maddsub_n0055
+                                                       core_uut/prime_uut/Maddsub_n0055
+    SLICE_X8Y24.C6       net (fanout=2)        0.758   core_uut/prime_uut/_n0080<6>
+    SLICE_X8Y24.C        Tilo                  0.205   core_uut/prime_uut/isNotPrime
+                                                       core_uut/prime_uut/state[3]_GND_10_o_Select_26_o1_SW1
+    SLICE_X8Y24.B4       net (fanout=1)        0.278   N231
+    SLICE_X8Y24.CLK      Tas                   0.341   core_uut/prime_uut/isNotPrime
+                                                       core_uut/prime_uut/state[3]_GND_10_o_Select_24_o1
+                                                       core_uut/prime_uut/isNotPrime
     -------------------------------------------------  ---------------------------
-    Total                                      3.828ns (0.916ns logic, 2.912ns route)
-                                                       (23.9% logic, 76.1% route)
+    Total                                     17.622ns (8.553ns logic, 9.069ns route)
+                                                       (48.5% logic, 51.5% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point core_uut/mult_uut/input_A_0 (SLICE_X8Y5.A6), 1 path
+Paths for end point core_uut/mult_uut/input_A_4 (SLICE_X8Y4.A6), 1 path
 --------------------------------------------------------------------------------
 Slack (hold path):      0.407ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               core_uut/mult_uut/input_A_0 (FF)
-  Destination:          core_uut/mult_uut/input_A_0 (FF)
+  Source:               core_uut/mult_uut/input_A_4 (FF)
+  Destination:          core_uut/mult_uut/input_A_4 (FF)
   Requirement:          0.000ns
   Data Path Delay:      0.407ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
@@ -363,27 +720,27 @@ Slack (hold path):      0.407ns (requirement - (clock path skew + uncertainty - 
   Destination Clock:    board_clk rising at 10.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: core_uut/mult_uut/input_A_0 to core_uut/mult_uut/input_A_0
+  Minimum Data Path at Fast Process Corner: core_uut/mult_uut/input_A_4 to core_uut/mult_uut/input_A_4
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X8Y5.AQ        Tcko                  0.200   core_uut/mult_uut/input_A<3>
-                                                       core_uut/mult_uut/input_A_0
-    SLICE_X8Y5.A6        net (fanout=1)        0.017   core_uut/mult_uut/input_A<0>
-    SLICE_X8Y5.CLK       Tah         (-Th)    -0.190   core_uut/mult_uut/input_A<3>
-                                                       core_uut/mult_uut/state[4]_GND_7_o_select_18_OUT<0>1
-                                                       core_uut/mult_uut/input_A_0
+    SLICE_X8Y4.AQ        Tcko                  0.200   core_uut/mult_uut/input_A<7>
+                                                       core_uut/mult_uut/input_A_4
+    SLICE_X8Y4.A6        net (fanout=1)        0.017   core_uut/mult_uut/input_A<4>
+    SLICE_X8Y4.CLK       Tah         (-Th)    -0.190   core_uut/mult_uut/input_A<7>
+                                                       core_uut/mult_uut/state[4]_GND_7_o_select_18_OUT<4>1
+                                                       core_uut/mult_uut/input_A_4
     -------------------------------------------------  ---------------------------
     Total                                      0.407ns (0.390ns logic, 0.017ns route)
                                                        (95.8% logic, 4.2% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point core_uut/mult_uut/input_B_3 (SLICE_X8Y6.D6), 1 path
+Paths for end point core_uut/mult_uut/input_A_7 (SLICE_X8Y4.D6), 1 path
 --------------------------------------------------------------------------------
 Slack (hold path):      0.407ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               core_uut/mult_uut/input_B_3 (FF)
-  Destination:          core_uut/mult_uut/input_B_3 (FF)
+  Source:               core_uut/mult_uut/input_A_7 (FF)
+  Destination:          core_uut/mult_uut/input_A_7 (FF)
   Requirement:          0.000ns
   Data Path Delay:      0.407ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
@@ -391,47 +748,47 @@ Slack (hold path):      0.407ns (requirement - (clock path skew + uncertainty - 
   Destination Clock:    board_clk rising at 10.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: core_uut/mult_uut/input_B_3 to core_uut/mult_uut/input_B_3
+  Minimum Data Path at Fast Process Corner: core_uut/mult_uut/input_A_7 to core_uut/mult_uut/input_A_7
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X8Y6.DQ        Tcko                  0.200   core_uut/mult_uut/input_B<3>
-                                                       core_uut/mult_uut/input_B_3
-    SLICE_X8Y6.D6        net (fanout=1)        0.017   core_uut/mult_uut/input_B<3>
-    SLICE_X8Y6.CLK       Tah         (-Th)    -0.190   core_uut/mult_uut/input_B<3>
-                                                       core_uut/mult_uut/state[4]_GND_7_o_select_19_OUT<3>1
-                                                       core_uut/mult_uut/input_B_3
+    SLICE_X8Y4.DQ        Tcko                  0.200   core_uut/mult_uut/input_A<7>
+                                                       core_uut/mult_uut/input_A_7
+    SLICE_X8Y4.D6        net (fanout=1)        0.017   core_uut/mult_uut/input_A<7>
+    SLICE_X8Y4.CLK       Tah         (-Th)    -0.190   core_uut/mult_uut/input_A<7>
+                                                       core_uut/mult_uut/state[4]_GND_7_o_select_18_OUT<7>1
+                                                       core_uut/mult_uut/input_A_7
     -------------------------------------------------  ---------------------------
     Total                                      0.407ns (0.390ns logic, 0.017ns route)
                                                        (95.8% logic, 4.2% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point core_uut/textOut_170 (SLICE_X20Y13.D6), 1 path
+Paths for end point core_uut/textOut_233 (SLICE_X32Y17.A6), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.411ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               core_uut/textOut_170 (FF)
-  Destination:          core_uut/textOut_170 (FF)
+Slack (hold path):      0.412ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               core_uut/textOut_233 (FF)
+  Destination:          core_uut/textOut_233 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.411ns (Levels of Logic = 1)
+  Data Path Delay:      0.412ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
   Source Clock:         board_clk rising at 10.000ns
   Destination Clock:    board_clk rising at 10.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: core_uut/textOut_170 to core_uut/textOut_170
+  Minimum Data Path at Fast Process Corner: core_uut/textOut_233 to core_uut/textOut_233
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X20Y13.DQ      Tcko                  0.200   core_uut/textOut<170>
-                                                       core_uut/textOut_170
-    SLICE_X20Y13.D6      net (fanout=2)        0.021   core_uut/textOut<170>
-    SLICE_X20Y13.CLK     Tah         (-Th)    -0.190   core_uut/textOut<170>
-                                                       core_uut/state[14]_GND_2_o_select_56_OUT<87>
-                                                       core_uut/textOut_170
+    SLICE_X32Y17.AQ      Tcko                  0.200   core_uut/textOut<235>
+                                                       core_uut/textOut_233
+    SLICE_X32Y17.A6      net (fanout=2)        0.022   core_uut/textOut<233>
+    SLICE_X32Y17.CLK     Tah         (-Th)    -0.190   core_uut/textOut<235>
+                                                       core_uut/state[14]_GND_2_o_select_60_OUT<24>1
+                                                       core_uut/textOut_233
     -------------------------------------------------  ---------------------------
-    Total                                      0.411ns (0.390ns logic, 0.021ns route)
-                                                       (94.9% logic, 5.1% route)
+    Total                                      0.412ns (0.390ns logic, 0.022ns route)
+                                                       (94.7% logic, 5.3% route)
 
 --------------------------------------------------------------------------------
 
@@ -463,7 +820,7 @@ Slack: 9.570ns (period - min period limit)
 --------------------------------------------------------------------------------
 
 
-All constraints were met.
+1 constraint not met.
 
 
 Data Sheet report:
@@ -475,32 +832,32 @@ Clock to Setup on destination clock ClkPort
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-ClkPort        |    5.512|         |         |         |
+ClkPort        |   18.004|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
 Timing summary:
 ---------------
 
-Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+Timing errors: 5  Score: 38302  (Setup/Max: 38302, Hold: 0)
 
-Constraints cover 6110 paths, 0 nets, and 3271 connections
+Constraints cover 31742340 paths, 0 nets, and 5215 connections
 
 Design statistics:
-   Minimum period:   5.512ns{1}   (Maximum frequency: 181.422MHz)
+   Minimum period:  18.004ns{1}   (Maximum frequency:  55.543MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Wed Dec 05 03:19:02 2012 
+Analysis completed Wed Dec 05 14:28:35 2012 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 240 MB
+Peak Memory Usage: 247 MB
 
 
 
