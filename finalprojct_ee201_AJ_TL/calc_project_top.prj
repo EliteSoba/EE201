@@ -1,6 +1,7 @@
 verilog work "subtract_module.v"
 verilog work "prime_module.v"
 verilog work "mult_module.v"
+verilog work "divide_module.v"
 verilog work "../add_module.v"
 verilog work "../main_calc_cu.v"
 verilog work "../lcd_core.v"

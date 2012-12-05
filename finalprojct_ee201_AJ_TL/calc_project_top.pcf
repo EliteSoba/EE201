@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map O.61xd on Wed Dec 05 14:28:07 2012
+// Written by: Map O.61xd on Wed Dec 05 15:00:47 2012
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -57,6 +57,8 @@ COMP "QuadSpiFlashCS" LOCATE = SITE "V3" LEVEL 1;
 PIN core_uut/mult_uut/Mmult_input_A[7]_input_B[7]_MuLt_5_OUT_pins<92> = BEL
         "core_uut/mult_uut/Mmult_input_A[7]_input_B[7]_MuLt_5_OUT" PINNAME
         CLK;
+PIN core_uut/div_uut/Maddsub_n0089_pins<92> = BEL
+        "core_uut/div_uut/Maddsub_n0089" PINNAME CLK;
 PIN core_uut/prime_uut/Maddsub_n0055_pins<92> = BEL
         "core_uut/prime_uut/Maddsub_n0055" PINNAME CLK;
 TIMEGRP sys_clk_pin = BEL "DIV_CLK_0" BEL "DIV_CLK_1" BEL "DIV_CLK_2" BEL
@@ -198,112 +200,108 @@ TIMEGRP sys_clk_pin = BEL "DIV_CLK_0" BEL "DIV_CLK_1" BEL "DIV_CLK_2" BEL
         "ee201_debouncer_C/debounce_count_0" BEL "uut/clkCount_6" BEL
         "uut/clkCount_5" BEL "uut/clkCount_4" BEL "uut/clkCount_3" BEL
         "uut/clkCount_2" BEL "uut/clkCount_1" BEL "uut/clkCount_0" BEL
-        "core_uut/state_FSM_FFd1" BEL "core_uut/state_FSM_FFd2" BEL
-        "core_uut/state_FSM_FFd3" BEL "core_uut/state_FSM_FFd4" BEL
-        "core_uut/state_FSM_FFd5" BEL "core_uut/state_FSM_FFd6" BEL
-        "core_uut/state_FSM_FFd8" BEL "core_uut/state_FSM_FFd9" BEL
-        "core_uut/state_FSM_FFd7" BEL "core_uut/state_FSM_FFd10" BEL
-        "core_uut/state_FSM_FFd11" BEL "core_uut/state_FSM_FFd12" BEL
+        "uut/oneUSClk" BEL "core_uut/state_FSM_FFd1" BEL
+        "core_uut/state_FSM_FFd2" BEL "core_uut/state_FSM_FFd3" BEL
+        "core_uut/state_FSM_FFd4" BEL "core_uut/state_FSM_FFd5" BEL
+        "core_uut/state_FSM_FFd6" BEL "core_uut/state_FSM_FFd8" BEL
+        "core_uut/state_FSM_FFd9" BEL "core_uut/state_FSM_FFd7" BEL
+        "core_uut/state_FSM_FFd10" BEL "core_uut/state_FSM_FFd11" BEL
         "core_uut/state_FSM_FFd13" BEL "core_uut/state_FSM_FFd14" BEL
+        "core_uut/state_FSM_FFd12" BEL "core_uut/num2_0" BEL
         "core_uut/textOut_252" BEL "core_uut/textOut_251" BEL
         "core_uut/textOut_250" BEL "core_uut/textOut_249" BEL
         "core_uut/textOut_248" BEL "core_uut/textOut_245" BEL
         "core_uut/textOut_244" BEL "core_uut/textOut_243" BEL
         "core_uut/textOut_242" BEL "core_uut/textOut_240" BEL
-        "core_uut/textOut_238" BEL "core_uut/textOut_237" BEL
         "core_uut/textOut_236" BEL "core_uut/textOut_235" BEL
         "core_uut/textOut_234" BEL "core_uut/textOut_233" BEL
-        "core_uut/textOut_232" BEL "core_uut/textOut_229" BEL
-        "core_uut/textOut_228" BEL "core_uut/textOut_227" BEL
-        "core_uut/textOut_226" BEL "core_uut/textOut_225" BEL
-        "core_uut/textOut_224" BEL "core_uut/textOut_222" BEL
-        "core_uut/textOut_221" BEL "core_uut/textOut_220" BEL
-        "core_uut/textOut_219" BEL "core_uut/textOut_218" BEL
-        "core_uut/textOut_217" BEL "core_uut/textOut_216" BEL
-        "core_uut/textOut_213" BEL "core_uut/textOut_212" BEL
-        "core_uut/textOut_211" BEL "core_uut/textOut_210" BEL
-        "core_uut/textOut_209" BEL "core_uut/textOut_208" BEL
-        "core_uut/textOut_206" BEL "core_uut/textOut_205" BEL
-        "core_uut/textOut_203" BEL "core_uut/textOut_202" BEL
-        "core_uut/textOut_201" BEL "core_uut/textOut_200" BEL
-        "core_uut/textOut_198" BEL "core_uut/textOut_197" BEL
+        "core_uut/textOut_232" BEL "core_uut/textOut_228" BEL
+        "core_uut/textOut_227" BEL "core_uut/textOut_226" BEL
+        "core_uut/textOut_225" BEL "core_uut/textOut_224" BEL
+        "core_uut/textOut_222" BEL "core_uut/textOut_221" BEL
+        "core_uut/textOut_220" BEL "core_uut/textOut_219" BEL
+        "core_uut/textOut_218" BEL "core_uut/textOut_217" BEL
+        "core_uut/textOut_216" BEL "core_uut/textOut_213" BEL
+        "core_uut/textOut_212" BEL "core_uut/textOut_211" BEL
+        "core_uut/textOut_210" BEL "core_uut/textOut_209" BEL
+        "core_uut/textOut_208" BEL "core_uut/textOut_206" BEL
+        "core_uut/textOut_204" BEL "core_uut/textOut_203" BEL
+        "core_uut/textOut_202" BEL "core_uut/textOut_201" BEL
+        "core_uut/textOut_200" BEL "core_uut/textOut_198" BEL
         "core_uut/textOut_196" BEL "core_uut/textOut_195" BEL
         "core_uut/textOut_194" BEL "core_uut/textOut_193" BEL
         "core_uut/textOut_192" BEL "core_uut/textOut_190" BEL
-        "core_uut/textOut_189" BEL "core_uut/textOut_188" BEL
-        "core_uut/textOut_187" BEL "core_uut/textOut_186" BEL
-        "core_uut/textOut_185" BEL "core_uut/textOut_184" BEL
-        "core_uut/textOut_182" BEL "core_uut/textOut_181" BEL
-        "core_uut/textOut_180" BEL "core_uut/textOut_179" BEL
-        "core_uut/textOut_178" BEL "core_uut/textOut_177" BEL
-        "core_uut/textOut_176" BEL "core_uut/textOut_174" BEL
-        "core_uut/textOut_173" BEL "core_uut/textOut_172" BEL
+        "core_uut/textOut_188" BEL "core_uut/textOut_187" BEL
+        "core_uut/textOut_186" BEL "core_uut/textOut_185" BEL
+        "core_uut/textOut_184" BEL "core_uut/textOut_182" BEL
+        "core_uut/textOut_181" BEL "core_uut/textOut_180" BEL
+        "core_uut/textOut_179" BEL "core_uut/textOut_178" BEL
+        "core_uut/textOut_177" BEL "core_uut/textOut_176" BEL
+        "core_uut/textOut_174" BEL "core_uut/textOut_172" BEL
         "core_uut/textOut_171" BEL "core_uut/textOut_170" BEL
         "core_uut/textOut_169" BEL "core_uut/textOut_168" BEL
-        "core_uut/textOut_166" BEL "core_uut/textOut_165" BEL
-        "core_uut/textOut_164" BEL "core_uut/textOut_163" BEL
-        "core_uut/textOut_162" BEL "core_uut/textOut_161" BEL
-        "core_uut/textOut_160" BEL "core_uut/textOut_157" BEL
+        "core_uut/textOut_166" BEL "core_uut/textOut_164" BEL
+        "core_uut/textOut_163" BEL "core_uut/textOut_162" BEL
+        "core_uut/textOut_161" BEL "core_uut/textOut_160" BEL
         "core_uut/textOut_156" BEL "core_uut/textOut_155" BEL
         "core_uut/textOut_154" BEL "core_uut/textOut_153" BEL
         "core_uut/textOut_152" BEL "core_uut/textOut_150" BEL
         "core_uut/textOut_149" BEL "core_uut/textOut_148" BEL
         "core_uut/textOut_147" BEL "core_uut/textOut_146" BEL
         "core_uut/textOut_145" BEL "core_uut/textOut_144" BEL
-        "core_uut/textOut_142" BEL "core_uut/textOut_141" BEL
         "core_uut/textOut_140" BEL "core_uut/textOut_138" BEL
-        "core_uut/textOut_137" BEL "core_uut/textOut_134" BEL
-        "core_uut/textOut_133" BEL "core_uut/textOut_132" BEL
-        "core_uut/textOut_126" BEL "core_uut/textOut_125" BEL
-        "core_uut/textOut_124" BEL "core_uut/textOut_123" BEL
-        "core_uut/textOut_122" BEL "core_uut/textOut_121" BEL
-        "core_uut/textOut_120" BEL "core_uut/textOut_118" BEL
-        "core_uut/textOut_117" BEL "core_uut/textOut_116" BEL
-        "core_uut/textOut_115" BEL "core_uut/textOut_114" BEL
-        "core_uut/textOut_113" BEL "core_uut/textOut_112" BEL
-        "core_uut/textOut_110" BEL "core_uut/textOut_109" BEL
-        "core_uut/textOut_108" BEL "core_uut/textOut_107" BEL
-        "core_uut/textOut_106" BEL "core_uut/textOut_105" BEL
-        "core_uut/textOut_104" BEL "core_uut/textOut_102" BEL
-        "core_uut/textOut_101" BEL "core_uut/textOut_100" BEL
-        "core_uut/textOut_99" BEL "core_uut/textOut_98" BEL
-        "core_uut/textOut_97" BEL "core_uut/textOut_96" BEL
-        "core_uut/textOut_94" BEL "core_uut/textOut_93" BEL
-        "core_uut/textOut_92" BEL "core_uut/textOut_91" BEL
+        "core_uut/textOut_137" BEL "core_uut/textOut_136" BEL
+        "core_uut/textOut_134" BEL "core_uut/textOut_132" BEL
+        "core_uut/textOut_131" BEL "core_uut/textOut_126" BEL
+        "core_uut/textOut_125" BEL "core_uut/textOut_124" BEL
+        "core_uut/textOut_123" BEL "core_uut/textOut_122" BEL
+        "core_uut/textOut_121" BEL "core_uut/textOut_120" BEL
+        "core_uut/textOut_118" BEL "core_uut/textOut_117" BEL
+        "core_uut/textOut_116" BEL "core_uut/textOut_115" BEL
+        "core_uut/textOut_114" BEL "core_uut/textOut_113" BEL
+        "core_uut/textOut_112" BEL "core_uut/textOut_110" BEL
+        "core_uut/textOut_109" BEL "core_uut/textOut_108" BEL
+        "core_uut/textOut_107" BEL "core_uut/textOut_106" BEL
+        "core_uut/textOut_105" BEL "core_uut/textOut_104" BEL
+        "core_uut/textOut_102" BEL "core_uut/textOut_101" BEL
+        "core_uut/textOut_100" BEL "core_uut/textOut_99" BEL
+        "core_uut/textOut_98" BEL "core_uut/textOut_97" BEL
+        "core_uut/textOut_96" BEL "core_uut/textOut_94" BEL
+        "core_uut/textOut_93" BEL "core_uut/textOut_92" BEL
+        "core_uut/textOut_91" BEL "core_uut/textOut_90" BEL
         "core_uut/textOut_89" BEL "core_uut/textOut_88" BEL
         "core_uut/textOut_86" BEL "core_uut/textOut_85" BEL
         "core_uut/textOut_84" BEL "core_uut/textOut_83" BEL
-        "core_uut/textOut_81" BEL "core_uut/textOut_80" BEL
-        "core_uut/textOut_78" BEL "core_uut/textOut_77" BEL
-        "core_uut/textOut_76" BEL "core_uut/textOut_74" BEL
+        "core_uut/textOut_82" BEL "core_uut/textOut_81" BEL
+        "core_uut/textOut_80" BEL "core_uut/textOut_78" BEL
+        "core_uut/textOut_77" BEL "core_uut/textOut_76" BEL
+        "core_uut/textOut_75" BEL "core_uut/textOut_74" BEL
         "core_uut/textOut_73" BEL "core_uut/textOut_72" BEL
         "core_uut/textOut_70" BEL "core_uut/textOut_69" BEL
         "core_uut/textOut_68" BEL "core_uut/textOut_67" BEL
         "core_uut/textOut_66" BEL "core_uut/textOut_65" BEL
-        "core_uut/textOut_64" BEL "core_uut/textOut_61" BEL
-        "core_uut/textOut_60" BEL "core_uut/textOut_59" BEL
-        "core_uut/textOut_58" BEL "core_uut/textOut_57" BEL
-        "core_uut/textOut_56" BEL "core_uut/textOut_54" BEL
-        "core_uut/textOut_53" BEL "core_uut/textOut_51" BEL
-        "core_uut/textOut_49" BEL "core_uut/textOut_48" BEL
-        "core_uut/textOut_46" BEL "core_uut/textOut_45" BEL
-        "core_uut/textOut_44" BEL "core_uut/textOut_43" BEL
+        "core_uut/textOut_64" BEL "core_uut/textOut_60" BEL
+        "core_uut/textOut_59" BEL "core_uut/textOut_58" BEL
+        "core_uut/textOut_57" BEL "core_uut/textOut_56" BEL
+        "core_uut/textOut_54" BEL "core_uut/textOut_51" BEL
+        "core_uut/textOut_50" BEL "core_uut/textOut_49" BEL
+        "core_uut/textOut_48" BEL "core_uut/textOut_46" BEL
+        "core_uut/textOut_45" BEL "core_uut/textOut_43" BEL
+        "core_uut/textOut_42" BEL "core_uut/textOut_41" BEL
         "core_uut/textOut_40" BEL "core_uut/textOut_38" BEL
         "core_uut/textOut_37" BEL "core_uut/textOut_36" BEL
         "core_uut/textOut_35" BEL "core_uut/textOut_33" BEL
-        "core_uut/textOut_32" BEL "core_uut/textOut_29" BEL
-        "core_uut/textOut_28" BEL "core_uut/textOut_27" BEL
-        "core_uut/textOut_26" BEL "core_uut/textOut_25" BEL
-        "core_uut/textOut_24" BEL "core_uut/textOut_22" BEL
-        "core_uut/textOut_21" BEL "core_uut/textOut_20" BEL
+        "core_uut/textOut_32" BEL "core_uut/textOut_30" BEL
+        "core_uut/textOut_29" BEL "core_uut/textOut_28" BEL
+        "core_uut/textOut_27" BEL "core_uut/textOut_26" BEL
+        "core_uut/textOut_25" BEL "core_uut/textOut_24" BEL
+        "core_uut/textOut_22" BEL "core_uut/textOut_20" BEL
         "core_uut/textOut_19" BEL "core_uut/textOut_18" BEL
         "core_uut/textOut_17" BEL "core_uut/textOut_16" BEL
-        "core_uut/textOut_14" BEL "core_uut/textOut_13" BEL
         "core_uut/textOut_12" BEL "core_uut/textOut_11" BEL
         "core_uut/textOut_9" BEL "core_uut/textOut_8" BEL "core_uut/textOut_6"
-        BEL "core_uut/textOut_5" BEL "core_uut/textOut_4" BEL
-        "core_uut/textOut_3" BEL "core_uut/textOut_2" BEL
-        "core_uut/add_uut/state_FSM_FFd2" BEL
+        BEL "core_uut/textOut_4" BEL "core_uut/textOut_3" BEL
+        "core_uut/textOut_2" BEL "core_uut/add_uut/state_FSM_FFd2" BEL
         "core_uut/add_uut/state_FSM_FFd3" BEL
         "core_uut/add_uut/state_FSM_FFd1" BEL "core_uut/add_uut/data_out_7"
         BEL "core_uut/add_uut/data_out_6" BEL "core_uut/add_uut/data_out_5"
@@ -408,8 +406,86 @@ TIMEGRP sys_clk_pin = BEL "DIV_CLK_0" BEL "DIV_CLK_1" BEL "DIV_CLK_2" BEL
         BEL "core_uut/mult_uut/input_B_4" BEL "core_uut/mult_uut/input_B_3"
         BEL "core_uut/mult_uut/input_B_2" BEL "core_uut/mult_uut/input_B_1"
         BEL "core_uut/mult_uut/input_B_0" BEL
-        "core_uut/prime_uut/state_FSM_FFd1" BEL
-        "core_uut/prime_uut/state_FSM_FFd2" PIN
+        "core_uut/div_uut/state_FSM_FFd1" BEL
+        "core_uut/div_uut/state_FSM_FFd2" BEL
+        "core_uut/div_uut/state_FSM_FFd3" PIN
+        "core_uut/div_uut/Maddsub_n0089_pins<92>" BEL
+        "core_uut/div_uut/data_out_7" BEL "core_uut/div_uut/data_out_6" BEL
+        "core_uut/div_uut/data_out_5" BEL "core_uut/div_uut/data_out_4" BEL
+        "core_uut/div_uut/data_out_3" BEL "core_uut/div_uut/data_out_2" BEL
+        "core_uut/div_uut/data_out_1" BEL "core_uut/div_uut/data_out_0" BEL
+        "core_uut/div_uut/out_15" BEL "core_uut/div_uut/out_14" BEL
+        "core_uut/div_uut/out_13" BEL "core_uut/div_uut/out_12" BEL
+        "core_uut/div_uut/out_11" BEL "core_uut/div_uut/out_10" BEL
+        "core_uut/div_uut/out_9" BEL "core_uut/div_uut/out_8" BEL
+        "core_uut/div_uut/out_7" BEL "core_uut/div_uut/out_6" BEL
+        "core_uut/div_uut/out_5" BEL "core_uut/div_uut/out_4" BEL
+        "core_uut/div_uut/out_3" BEL "core_uut/div_uut/out_2" BEL
+        "core_uut/div_uut/out_1" BEL "core_uut/div_uut/out_0" BEL
+        "core_uut/div_uut/i_4" BEL "core_uut/div_uut/i_3" BEL
+        "core_uut/div_uut/i_2" BEL "core_uut/div_uut/i_1" BEL
+        "core_uut/div_uut/i_0" BEL "core_uut/div_uut/Remainder_31" BEL
+        "core_uut/div_uut/Remainder_30" BEL "core_uut/div_uut/Remainder_29"
+        BEL "core_uut/div_uut/Remainder_28" BEL
+        "core_uut/div_uut/Remainder_27" BEL "core_uut/div_uut/Remainder_26"
+        BEL "core_uut/div_uut/Remainder_25" BEL
+        "core_uut/div_uut/Remainder_24" BEL "core_uut/div_uut/Remainder_23"
+        BEL "core_uut/div_uut/Remainder_22" BEL
+        "core_uut/div_uut/Remainder_21" BEL "core_uut/div_uut/Remainder_20"
+        BEL "core_uut/div_uut/Remainder_19" BEL
+        "core_uut/div_uut/Remainder_18" BEL "core_uut/div_uut/Remainder_17"
+        BEL "core_uut/div_uut/Remainder_16" BEL
+        "core_uut/div_uut/Remainder_15" BEL "core_uut/div_uut/Remainder_14"
+        BEL "core_uut/div_uut/Remainder_13" BEL
+        "core_uut/div_uut/Remainder_12" BEL "core_uut/div_uut/Remainder_11"
+        BEL "core_uut/div_uut/Remainder_10" BEL "core_uut/div_uut/Remainder_9"
+        BEL "core_uut/div_uut/Remainder_8" BEL "core_uut/div_uut/Remainder_7"
+        BEL "core_uut/div_uut/Remainder_6" BEL "core_uut/div_uut/Remainder_5"
+        BEL "core_uut/div_uut/Remainder_4" BEL "core_uut/div_uut/Remainder_3"
+        BEL "core_uut/div_uut/Remainder_2" BEL "core_uut/div_uut/Remainder_1"
+        BEL "core_uut/div_uut/Remainder_0" BEL "core_uut/div_uut/done" BEL
+        "core_uut/div_uut/input_B_7" BEL "core_uut/div_uut/input_B_6" BEL
+        "core_uut/div_uut/input_B_5" BEL "core_uut/div_uut/input_B_4" BEL
+        "core_uut/div_uut/input_B_3" BEL "core_uut/div_uut/input_B_2" BEL
+        "core_uut/div_uut/input_B_1" BEL "core_uut/div_uut/input_B_0" BEL
+        "core_uut/div_uut/input_A_7" BEL "core_uut/div_uut/input_A_6" BEL
+        "core_uut/div_uut/input_A_5" BEL "core_uut/div_uut/input_A_4" BEL
+        "core_uut/div_uut/input_A_3" BEL "core_uut/div_uut/input_A_2" BEL
+        "core_uut/div_uut/input_A_1" BEL "core_uut/div_uut/input_A_0" BEL
+        "core_uut/div_uut/textOut_243" BEL "core_uut/div_uut/textOut_221" BEL
+        "core_uut/div_uut/textOut_211" BEL "core_uut/div_uut/textOut_201" BEL
+        "core_uut/div_uut/textOut_200" BEL "core_uut/div_uut/textOut_196" BEL
+        "core_uut/div_uut/textOut_195" BEL "core_uut/div_uut/textOut_194" BEL
+        "core_uut/div_uut/textOut_188" BEL "core_uut/div_uut/textOut_168" BEL
+        "core_uut/div_uut/textOut_147" BEL "core_uut/div_uut/textOut_145" BEL
+        "core_uut/div_uut/textOut_126" BEL "core_uut/div_uut/textOut_125" BEL
+        "core_uut/div_uut/textOut_124" BEL "core_uut/div_uut/textOut_123" BEL
+        "core_uut/div_uut/textOut_122" BEL "core_uut/div_uut/textOut_121" BEL
+        "core_uut/div_uut/textOut_120" BEL "core_uut/div_uut/textOut_118" BEL
+        "core_uut/div_uut/textOut_117" BEL "core_uut/div_uut/textOut_116" BEL
+        "core_uut/div_uut/textOut_115" BEL "core_uut/div_uut/textOut_114" BEL
+        "core_uut/div_uut/textOut_113" BEL "core_uut/div_uut/textOut_112" BEL
+        "core_uut/div_uut/textOut_107" BEL "core_uut/div_uut/textOut_106" BEL
+        "core_uut/div_uut/textOut_105" BEL "core_uut/div_uut/textOut_102" BEL
+        "core_uut/div_uut/textOut_101" BEL "core_uut/div_uut/textOut_100" BEL
+        "core_uut/div_uut/textOut_99" BEL "core_uut/div_uut/textOut_98" BEL
+        "core_uut/div_uut/textOut_97" BEL "core_uut/div_uut/textOut_96" BEL
+        "core_uut/div_uut/textOut_94" BEL "core_uut/div_uut/textOut_93" BEL
+        "core_uut/div_uut/textOut_92" BEL "core_uut/div_uut/textOut_91" BEL
+        "core_uut/div_uut/textOut_90" BEL "core_uut/div_uut/textOut_89" BEL
+        "core_uut/div_uut/textOut_88" BEL "core_uut/div_uut/textOut_86" BEL
+        "core_uut/div_uut/textOut_85" BEL "core_uut/div_uut/textOut_84" BEL
+        "core_uut/div_uut/textOut_83" BEL "core_uut/div_uut/textOut_82" BEL
+        "core_uut/div_uut/textOut_81" BEL "core_uut/div_uut/textOut_80" BEL
+        "core_uut/div_uut/textOut_78" BEL "core_uut/div_uut/textOut_77" BEL
+        "core_uut/div_uut/textOut_76" BEL "core_uut/div_uut/textOut_75" BEL
+        "core_uut/div_uut/textOut_74" BEL "core_uut/div_uut/textOut_73" BEL
+        "core_uut/div_uut/textOut_72" BEL "core_uut/div_uut/textOut_58" BEL
+        "core_uut/div_uut/textOut_57" BEL "core_uut/div_uut/textOut_48" BEL
+        "core_uut/div_uut/textOut_45" BEL "core_uut/div_uut/textOut_37" BEL
+        "core_uut/div_uut/textOut_17" BEL "core_uut/div_uut/textOut_16" BEL
+        "core_uut/div_uut/textOut_8" BEL "core_uut/prime_uut/state_FSM_FFd1"
+        BEL "core_uut/prime_uut/state_FSM_FFd2" PIN
         "core_uut/prime_uut/Maddsub_n0055_pins<92>" BEL
         "core_uut/prime_uut/Ready" BEL "core_uut/prime_uut/isNotPrime" BEL
         "core_uut/prime_uut/done" BEL "core_uut/prime_uut/i_7" BEL
@@ -439,26 +515,32 @@ TIMEGRP sys_clk_pin = BEL "DIV_CLK_0" BEL "DIV_CLK_1" BEL "DIV_CLK_2" BEL
         "core_uut/prime_uut/textOut_49" BEL "core_uut/prime_uut/textOut_48"
         BEL "core_uut/prime_uut/textOut_38" BEL
         "core_uut/prime_uut/textOut_37" BEL "core_uut/prime_uut/textOut_32"
-        BEL "core_uut/prime_uut/textOut_8" BEL "core_uut/num2_0" BEL
-        "uut/oneUSClk" BEL "core_uut/prime_uut/i_4_1" BEL
-        "core_uut/prime_uut/i_3_1" BEL "core_uut/prime_uut/i_5_1" BEL
-        "core_uut/prime_uut/i_2_1" BEL "core_uut/prime_uut/i_0_1" BEL
-        "core_uut/prime_uut/i_6_1" BEL "core_uut/prime_uut/input_A_5_1" BEL
-        "core_uut/prime_uut/i_1_1" BEL "core_uut/prime_uut/i_7_1" BEL
-        "core_uut/prime_uut/i_4_2" BEL "core_uut/prime_uut/i_5_2" BEL
-        "core_uut/prime_uut/i_3_2" BEL "core_uut/prime_uut/input_A_4_1" BEL
-        "core_uut/prime_uut/i_6_2" BEL "core_uut/prime_uut/i_0_2" BEL
-        "core_uut/prime_uut/i_0_3" BEL "core_uut/prime_uut/i_2_2" BEL
-        "core_uut/prime_uut/i_7_2" BEL "core_uut/prime_uut/input_A_3_1" BEL
-        "core_uut/prime_uut/input_A_5_2" BEL "core_uut/prime_uut/i_1_2" BEL
-        "core_uut/prime_uut/i_5_3" BEL "core_uut/prime_uut/i_2_3" BEL
-        "core_uut/prime_uut/i_6_3" BEL "core_uut/prime_uut/input_A_5_3" BEL
-        "core_uut/prime_uut/i_7_3" BEL "core_uut/prime_uut/input_A_7_1" BEL
-        "core_uut/prime_uut/input_A_4_2" BEL "core_uut/prime_uut/input_A_6_1"
+        BEL "core_uut/prime_uut/textOut_8" BEL "core_uut/prime_uut/i_4_1" BEL
+        "core_uut/prime_uut/i_0_1" BEL "core_uut/div_uut/input_B_0_1" BEL
+        "core_uut/div_uut/input_B_4_1" BEL "core_uut/prime_uut/i_3_1" BEL
+        "core_uut/div_uut/input_B_3_1" BEL "core_uut/prime_uut/i_1_1" BEL
+        "core_uut/div_uut/input_B_1_1" BEL "core_uut/prime_uut/i_2_1" BEL
+        "core_uut/div_uut/input_B_2_1" BEL "core_uut/prime_uut/i_6_1" BEL
+        "core_uut/prime_uut/i_5_1" BEL "core_uut/prime_uut/input_A_6_1" BEL
+        "core_uut/prime_uut/input_A_5_1" BEL "core_uut/div_uut/input_B_5_1"
+        BEL "core_uut/div_uut/input_B_6_1" BEL
+        "core_uut/prime_uut/input_A_4_1" BEL "core_uut/prime_uut/i_0_2" BEL
+        "core_uut/div_uut/input_B_0_2" BEL "core_uut/div_uut/input_B_4_2" BEL
+        "core_uut/div_uut/input_B_3_2" BEL "core_uut/prime_uut/i_1_2" BEL
+        "core_uut/div_uut/input_B_1_2" BEL "core_uut/div_uut/input_B_5_2" BEL
+        "core_uut/prime_uut/input_A_4_2" BEL "core_uut/div_uut/input_A_5_1"
+        BEL "core_uut/prime_uut/i_2_2" BEL "core_uut/div_uut/input_B_6_2" BEL
+        "core_uut/prime_uut/input_A_5_2" BEL "core_uut/prime_uut/i_0_3" BEL
+        "core_uut/div_uut/input_B_0_3" BEL "core_uut/prime_uut/input_A_4_3"
+        BEL "core_uut/div_uut/input_B_2_2" BEL "core_uut/prime_uut/i_1_3" BEL
+        "core_uut/div_uut/input_B_1_3" BEL "core_uut/div_uut/input_A_5_2" BEL
+        "core_uut/prime_uut/input_A_7_1" BEL "core_uut/prime_uut/i_7_1" BEL
+        "core_uut/prime_uut/input_A_5_3" BEL "core_uut/div_uut/input_B_7_1"
         BEL "core_uut/prime_uut/input_A_5_4" BEL
-        "core_uut/prime_uut/input_A_6_2" BEL "core_uut/prime_uut/input_A_7_2"
-        BEL "core_uut/prime_uut/i_4_3" BEL "core_uut/prime_uut/i_0_4" BEL
-        "core_uut/prime_uut/i_3_3" BEL "core_uut/prime_uut/input_A_4_3";
+        "core_uut/prime_uut/input_A_6_2" BEL "core_uut/prime_uut/input_A_5_5"
+        BEL "core_uut/div_uut/input_A_6_1" BEL
+        "core_uut/prime_uut/input_A_6_3" BEL "core_uut/prime_uut/input_A_5_6"
+        BEL "core_uut/div_uut/input_A_6_2";
 TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
 SCHEMATIC END;
 

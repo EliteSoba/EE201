@@ -68,7 +68,7 @@ DONE 	= 15'b000000000000001;
 add_module add_uut(.Clk(Clk), .data_in(dataInBus), .reset(state==SEL1), .enable(state==ADD), .textOut(textOut_Add), .next(btc), .done(done_Add));
 subtract_module sub_uut(.Clk(Clk), .data_in(dataInBus), .reset(state==SEL2), .enable(state==SUB), .textOut(textOut_Sub), .next(btc), .done(done_Sub));
 mult_module mult_uut(.Clk(Clk), .data_in(dataInBus), .reset(state==SEL4), .enable(state==MULT), .textOut(textOut_Mult), .next(btc), .done(done_Mult));
-//divide_module div_uut(.Clk(Clk), .data_in(dataInBus), .reset(state==SEL3), .enable(state==DIV), .textOut(textOut_Div), .next(btc), .done(done_Div));
+divide_module div_uut(.Clk(Clk), .data_in(dataInBus), .reset(state==SEL3), .enable(state==DIV), .textOut(textOut_Div), .next(btc), .done(done_Div));
 prime_module prime_uut(.Clk(Clk), .data_in(dataInBus), .reset(state==SEL6), .enable(state==ISPRIME), .textOut(textOut_Prime), .next(btc), .done(done_Prime));
 //assign textOut = {line1, line2};
 

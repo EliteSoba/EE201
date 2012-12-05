@@ -27,6 +27,6 @@ entity main_calc_cu is
         done            : out    vl_logic;
         num1_out        : out    vl_logic_vector(7 downto 0);
         num2_out        : out    vl_logic_vector(7 downto 0);
-        textOut         : out    vl_logic_vector(248 downto 0)
+        textOut         : out    vl_logic_vector(256 downto 0)
     );
 end main_calc_cu;

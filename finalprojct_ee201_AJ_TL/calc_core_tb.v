@@ -28,7 +28,8 @@ module calc_core_tb;
 			
 		reg Clk, Reset;
 		reg [7:0]dataInBus;
-		wire btl, btr, btd, btu, btc,sel1, sel2, sel3, sel4, sel5, sel6, sel7,add, sub, div, mult, gcd, isprime, sqrt, done;
+		reg btl, btr, btd, btu, btc;
+		wire sel1, sel2, sel3, sel4, sel5, sel6, sel7,add, sub, div, mult, gcd, isprime, sqrt, done;
 		wire [7:0] num1_out, num2_out;
 		wire [8*32:0] textOut;
 		
@@ -58,6 +59,34 @@ module calc_core_tb;
 		Reset = 1;
 		#11;
 		Reset = 0;
+		#10;
+		btr = 1;
+		#10;
+		btr=0;
+		#10;
+		btr=1;
+		#10;
+		btr=0;
+		#10;
+		btc=1;
+		#10;
+		btc=0;
+		#10;
+		btc=1;
+		#10;
+		btc=0;
+		dataInBus=8'b00000100;
+		#10;
+		btc=1;
+		#10;
+		btc=0;
+		dataInBus=8'b00000011;
+		#10;
+		btc=0;
+		#50;
+		btc=1;
+		#10
+		btc=0;
 		
 		end
 endmodule

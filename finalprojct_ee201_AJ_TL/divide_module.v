@@ -35,7 +35,7 @@ module divide_module(Clk, data_in, reset, enable, textOut, next, done);
 	reg Ready;
 	integer i;
 	integer Remainder;
-	reg [8*16:0] out;
+	reg [16:0] out;
 	
 	localparam
 		START			= 7'b0000001,
@@ -69,6 +69,7 @@ module divide_module(Clk, data_in, reset, enable, textOut, next, done);
 							Ready <= 0;
 							Remainder <= 0;
 							i <= 0;
+							out <= 0;
 							if (next && enable)
 								state <= LOAD_A;
 						end
@@ -95,18 +96,17 @@ module divide_module(Clk, data_in, reset, enable, textOut, next, done);
 						BEGIN:
 						begin
 							data_out <= input_A / input_B;
-							Remainder <= input_A % input_B;
-							textOut = {"Calculating... ",Ready?"Press Btnc       ":"Press Btnc       "};
-							out <= {bin2x(data_out[7:4]), bin2x(data_out[3:0]), "."};
+							Remainder <= modulus(input_A, input_B);
+							textOut = {"Calculating...  ",Ready?"Press Btnc      ":"                "};
 							state <= CALCULATE;
 						end
 						CALCULATE:
 						begin
-							textOut = {"Calculating... ",Ready?"Press Btnc       ":"Press Btnc       "};
+							textOut = {"Calculating...  ",Ready?"Press Btnc      ":"                "};
 							if (!Ready)
 								begin
-								if (Remainder == 0)
-									Ready <= 1;
+								//if (Remainder == 0)
+									//Ready <= 1;
 								Remainder <= Remainder << 1;
 								state <= SUBTRACT;
 							end
@@ -121,19 +121,23 @@ module divide_module(Clk, data_in, reset, enable, textOut, next, done);
 							Remainder <= Remainder % input_B;
 						*/
 						begin
-							textOut = {"Calculating... ",Ready?"Press Btnc       ":"Press Btnc       "};
+							textOut = {"Calculating...  ",Ready?"Press Btnc      ":"                "};
 							if (!Ready)
 							begin
 								if (Remainder >= input_B)
 								begin
-									out <= {out, "1"};
+									//out <= {out, "1"};
+									//out <= {out[14:0], 1};
+									out <= (out<<1) + 1;
 									Remainder <= Remainder - input_B;
 								end
 								else
-									out <= {out, "0"};
+									//out <= {out, "0"};
+									out <= out << 1;
 								i <= i + 1;
-								if (i >= 11)
+								if (i >= 15)
 									Ready <= 1;
+								state <= CALCULATE;
 							end
 							else if (next)
 								state <= DONE;
@@ -141,7 +145,7 @@ module divide_module(Clk, data_in, reset, enable, textOut, next, done);
 						end
 						DONE:
 						begin
-							textOut = {"The Quotient is:", out, " "};
+							textOut = {"The Quotient is:", bin2x(data_out[7:4]), bin2x(data_out[3:0]), ".", bin2x(out[15:12]), bin2x(out[11:8]), bin2x(out[7:4]), bin2x(out[3:0]),"         "};
 							done <= 1;
 						end
 					endcase
@@ -160,5 +164,13 @@ function [7:0] bin2x;
 	default:bin2x = "0";
 	endcase
   end
+endfunction
+function [7:0] modulus;
+	input [7:0] input_X;
+	input	[7:0] input_Y;
+	begin
+		
+		modulus = input_X - input_Y*(input_X/input_Y);
+	end
 endfunction
 endmodule

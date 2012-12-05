@@ -1,34 +1,93 @@
-# Reading C:/modeltech64_10.1/tcl/vsim/pref.tcl 
-# //  ModelSim SE-64 10.1 Dec  5 2011 
+# Reading C:/modeltech64_10.1c/tcl/vsim/pref.tcl 
+# //  ModelSim SE-64 10.1c Jul 28 2012 
 # //
-# //  Copyright 1991-2011 Mentor Graphics Corporation
+# //  Copyright 1991-2012 Mentor Graphics Corporation
 # //  All Rights Reserved.
 # //
 # //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
 # //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
-# do {main_calc_cu.fdo} 
+# do {calc_core_tb.fdo} 
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
-# Model Technology ModelSim SE-64 vlog 10.1 Compiler 2011.12 Dec  5 2011
+# Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+# -- Compiling module subtract_module
+# 
+# Top level modules:
+# 	subtract_module
+# Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+# -- Compiling module prime_module
+# 
+# Top level modules:
+# 	prime_module
+# Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+# -- Compiling module mult_module
+# 
+# Top level modules:
+# 	mult_module
+# Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+# -- Compiling module divide_module
+# 
+# Top level modules:
+# 	divide_module
+# Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+# -- Compiling module add_module
+# 
+# Top level modules:
+# 	add_module
+# Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 # -- Compiling module main_calc_cu
 # 
 # Top level modules:
 # 	main_calc_cu
-# Model Technology ModelSim SE-64 vlog 10.1 Compiler 2011.12 Dec  5 2011
+# Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+# -- Compiling module calc_core_tb
+# 
+# Top level modules:
+# 	calc_core_tb
+# Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 # -- Compiling module glbl
 # 
 # Top level modules:
 # 	glbl
-# vsim -L xilinxcorelib_ver -L unisims_ver -L secureip -lib work -voptargs=\"+acc\" -t 1ps work.main_calc_cu glbl 
-# ** Note: (vsim-3812) Design is being optimized...
+# vsim -L xilinxcorelib_ver -L unisims_ver -L secureip -lib work -voptargs=\"+acc\" -t 1ps work.calc_core_tb glbl 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # 
-# ** Note: (vopt-143) Recognized 1 FSM in module "main_calc_cu".
-# 
+# Loading work.calc_core_tb(fast)
 # Loading work.main_calc_cu(fast)
+# Loading work.add_module(fast)
+# Loading work.subtract_module(fast)
+# Loading work.mult_module(fast)
+# Loading work.divide_module(fast)
+# Loading work.prime_module(fast)
 # Loading work.glbl(fast)
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
-#  
+# Causality operation skipped due to absense of debug database file
+add wave  \
+sim:/calc_core_tb/uut/div_uut/out
+restart -f
+# Loading work.calc_core_tb(fast)
+# Loading work.main_calc_cu(fast)
+# Loading work.add_module(fast)
+# Loading work.subtract_module(fast)
+# Loading work.mult_module(fast)
+# Loading work.divide_module(fast)
+# Loading work.prime_module(fast)
+# Loading work.glbl(fast)
+run 10us
+add wave  \
+sim:/calc_core_tb/uut/div_uut/state
+restart -f
+# Loading work.calc_core_tb(fast)
+# Loading work.main_calc_cu(fast)
+# Loading work.add_module(fast)
+# Loading work.subtract_module(fast)
+# Loading work.mult_module(fast)
+# Loading work.divide_module(fast)
+# Loading work.prime_module(fast)
+# Loading work.glbl(fast)
+run 5ns
+run 5us
