@@ -28,19 +28,19 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
 Timing constraint: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 
 50%;
 
- 4380 paths analyzed, 1561 endpoints analyzed, 0 failing endpoints
+ 5404 paths analyzed, 2426 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   4.293ns.
+ Minimum period is   5.530ns.
 --------------------------------------------------------------------------------
 
-Paths for end point core_uut/textOut_171 (SLICE_X17Y16.B1), 6 paths
+Paths for end point core_uut/textOut_161 (SLICE_X19Y18.D2), 5 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     5.707ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               core_uut/state_FSM_FFd7 (FF)
-  Destination:          core_uut/textOut_171 (FF)
+Slack (setup path):     4.470ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               core_uut/state_FSM_FFd13 (FF)
+  Destination:          core_uut/textOut_161 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      4.241ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.017ns (0.337 - 0.354)
+  Data Path Delay:      5.485ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.010ns (0.243 - 0.253)
   Source Clock:         board_clk rising at 0.000ns
   Destination Clock:    board_clk rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -51,64 +51,30 @@ Slack (setup path):     5.707ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: core_uut/state_FSM_FFd7 to core_uut/textOut_171
+  Maximum Data Path at Slow Process Corner: core_uut/state_FSM_FFd13 to core_uut/textOut_161
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X22Y22.AQ      Tcko                  0.447   core_uut/state_FSM_FFd10
-                                                       core_uut/state_FSM_FFd7
-    SLICE_X17Y20.D1      net (fanout=68)       1.506   core_uut/state_FSM_FFd7
-    SLICE_X17Y20.D       Tilo                  0.259   N133
-                                                       core_uut/state[14]_GND_2_o_select_50_OUT<86>_SW0
-    SLICE_X17Y16.B1      net (fanout=2)        1.707   N133
-    SLICE_X17Y16.CLK     Tas                   0.322   core_uut/textOut<176>
-                                                       core_uut/state[14]_GND_2_o_select_50_OUT<86>
-                                                       core_uut/textOut_171
+    SLICE_X19Y27.AQ      Tcko                  0.391   core_uut/state_FSM_FFd14
+                                                       core_uut/state_FSM_FFd13
+    SLICE_X19Y8.D3       net (fanout=33)       2.371   core_uut/state_FSM_FFd13
+    SLICE_X19Y8.D        Tilo                  0.259   core_uut/textOut<120>
+                                                       core_uut/state[14]_GND_2_o_select_53_OUT<243>2
+    SLICE_X19Y18.D2      net (fanout=42)       2.142   core_uut/state[14]_GND_2_o_select_53_OUT<110>2
+    SLICE_X19Y18.CLK     Tas                   0.322   core_uut/textOut<161>
+                                                       core_uut/state[14]_GND_2_o_select_53_OUT<96>3
+                                                       core_uut/textOut_161
     -------------------------------------------------  ---------------------------
-    Total                                      4.241ns (1.028ns logic, 3.213ns route)
-                                                       (24.2% logic, 75.8% route)
+    Total                                      5.485ns (0.972ns logic, 4.513ns route)
+                                                       (17.7% logic, 82.3% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     5.891ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               core_uut/add_uut/textOut_12 (FF)
-  Destination:          core_uut/textOut_171 (FF)
-  Requirement:          10.000ns
-  Data Path Delay:      4.052ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.022ns (0.337 - 0.359)
-  Source Clock:         board_clk rising at 0.000ns
-  Destination Clock:    board_clk rising at 10.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: core_uut/add_uut/textOut_12 to core_uut/textOut_171
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X22Y20.DMUX    Tshcko                0.488   core_uut/add_uut/done
-                                                       core_uut/add_uut/textOut_12
-    SLICE_X17Y20.D2      net (fanout=3)        1.276   core_uut/add_uut/textOut<12>
-    SLICE_X17Y20.D       Tilo                  0.259   N133
-                                                       core_uut/state[14]_GND_2_o_select_50_OUT<86>_SW0
-    SLICE_X17Y16.B1      net (fanout=2)        1.707   N133
-    SLICE_X17Y16.CLK     Tas                   0.322   core_uut/textOut<176>
-                                                       core_uut/state[14]_GND_2_o_select_50_OUT<86>
-                                                       core_uut/textOut_171
-    -------------------------------------------------  ---------------------------
-    Total                                      4.052ns (1.069ns logic, 2.983ns route)
-                                                       (26.4% logic, 73.6% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     6.063ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     4.803ns (requirement - (data path - clock path skew + uncertainty))
   Source:               core_uut/state_FSM_FFd12 (FF)
-  Destination:          core_uut/textOut_171 (FF)
+  Destination:          core_uut/textOut_161 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      3.890ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.012ns (0.337 - 0.349)
+  Data Path Delay:      5.144ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.018ns (0.243 - 0.261)
   Source Clock:         board_clk rising at 0.000ns
   Destination Clock:    board_clk rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -119,33 +85,30 @@ Slack (setup path):     6.063ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: core_uut/state_FSM_FFd12 to core_uut/textOut_171
+  Maximum Data Path at Slow Process Corner: core_uut/state_FSM_FFd12 to core_uut/textOut_161
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X20Y22.BMUX    Tshcko                0.455   core_uut/state_FSM_FFd2
+    SLICE_X22Y26.BMUX    Tshcko                0.488   core_uut/state_FSM_FFd4
                                                        core_uut/state_FSM_FFd12
-    SLICE_X17Y20.D3      net (fanout=23)       1.147   core_uut/state_FSM_FFd12
-    SLICE_X17Y20.D       Tilo                  0.259   N133
-                                                       core_uut/state[14]_GND_2_o_select_50_OUT<86>_SW0
-    SLICE_X17Y16.B1      net (fanout=2)        1.707   N133
-    SLICE_X17Y16.CLK     Tas                   0.322   core_uut/textOut<176>
-                                                       core_uut/state[14]_GND_2_o_select_50_OUT<86>
-                                                       core_uut/textOut_171
+    SLICE_X19Y8.D6       net (fanout=16)       1.933   core_uut/state_FSM_FFd12
+    SLICE_X19Y8.D        Tilo                  0.259   core_uut/textOut<120>
+                                                       core_uut/state[14]_GND_2_o_select_53_OUT<243>2
+    SLICE_X19Y18.D2      net (fanout=42)       2.142   core_uut/state[14]_GND_2_o_select_53_OUT<110>2
+    SLICE_X19Y18.CLK     Tas                   0.322   core_uut/textOut<161>
+                                                       core_uut/state[14]_GND_2_o_select_53_OUT<96>3
+                                                       core_uut/textOut_161
     -------------------------------------------------  ---------------------------
-    Total                                      3.890ns (1.036ns logic, 2.854ns route)
-                                                       (26.6% logic, 73.4% route)
+    Total                                      5.144ns (1.069ns logic, 4.075ns route)
+                                                       (20.8% logic, 79.2% route)
 
 --------------------------------------------------------------------------------
-
-Paths for end point core_uut/state_FSM_FFd12 (SLICE_X20Y22.B4), 5 paths
---------------------------------------------------------------------------------
-Slack (setup path):     5.824ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               ee201_debouncer_R/state_FSM_FFd2 (FF)
-  Destination:          core_uut/state_FSM_FFd12 (FF)
+Slack (setup path):     4.816ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               core_uut/state_FSM_FFd11 (FF)
+  Destination:          core_uut/textOut_161 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      4.113ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.028ns (0.417 - 0.445)
+  Data Path Delay:      5.129ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.020ns (0.243 - 0.263)
   Source Clock:         board_clk rising at 0.000ns
   Destination Clock:    board_clk rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -156,30 +119,33 @@ Slack (setup path):     5.824ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: ee201_debouncer_R/state_FSM_FFd2 to core_uut/state_FSM_FFd12
+  Maximum Data Path at Slow Process Corner: core_uut/state_FSM_FFd11 to core_uut/textOut_161
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X14Y58.CQ      Tcko                  0.447   ee201_debouncer_R/state_FSM_FFd3
-                                                       ee201_debouncer_R/state_FSM_FFd2
-    SLICE_X20Y22.A4      net (fanout=10)       2.869   ee201_debouncer_R/state_FSM_FFd2
-    SLICE_X20Y22.A       Tilo                  0.205   core_uut/state_FSM_FFd2
-                                                       core_uut/state_FSM_FFd12-In1
-    SLICE_X20Y22.B4      net (fanout=1)        0.379   core_uut/state_FSM_FFd12-In1
-    SLICE_X20Y22.CLK     Tas                   0.213   core_uut/state_FSM_FFd2
-                                                       core_uut/state_FSM_FFd12-In2
-                                                       core_uut/state_FSM_FFd12
+    SLICE_X22Y27.CQ      Tcko                  0.447   core_uut/state_FSM_FFd11
+                                                       core_uut/state_FSM_FFd11
+    SLICE_X19Y8.D2       net (fanout=30)       1.959   core_uut/state_FSM_FFd11
+    SLICE_X19Y8.D        Tilo                  0.259   core_uut/textOut<120>
+                                                       core_uut/state[14]_GND_2_o_select_53_OUT<243>2
+    SLICE_X19Y18.D2      net (fanout=42)       2.142   core_uut/state[14]_GND_2_o_select_53_OUT<110>2
+    SLICE_X19Y18.CLK     Tas                   0.322   core_uut/textOut<161>
+                                                       core_uut/state[14]_GND_2_o_select_53_OUT<96>3
+                                                       core_uut/textOut_161
     -------------------------------------------------  ---------------------------
-    Total                                      4.113ns (0.865ns logic, 3.248ns route)
-                                                       (21.0% logic, 79.0% route)
+    Total                                      5.129ns (1.028ns logic, 4.101ns route)
+                                                       (20.0% logic, 80.0% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     5.941ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               ee201_debouncer_L/state_FSM_FFd2 (FF)
-  Destination:          core_uut/state_FSM_FFd12 (FF)
+
+Paths for end point core_uut/textOut_85 (SLICE_X16Y29.D6), 5 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     4.487ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               core_uut/state_FSM_FFd13 (FF)
+  Destination:          core_uut/textOut_85 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      3.958ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.066ns (0.417 - 0.483)
+  Data Path Delay:      5.465ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.013ns (0.335 - 0.348)
   Source Clock:         board_clk rising at 0.000ns
   Destination Clock:    board_clk rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -190,30 +156,30 @@ Slack (setup path):     5.941ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: ee201_debouncer_L/state_FSM_FFd2 to core_uut/state_FSM_FFd12
+  Maximum Data Path at Slow Process Corner: core_uut/state_FSM_FFd13 to core_uut/textOut_85
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X4Y50.CQ       Tcko                  0.408   ee201_debouncer_L/state_FSM_FFd3
-                                                       ee201_debouncer_L/state_FSM_FFd2
-    SLICE_X20Y22.A3      net (fanout=10)       2.753   ee201_debouncer_L/state_FSM_FFd2
-    SLICE_X20Y22.A       Tilo                  0.205   core_uut/state_FSM_FFd2
-                                                       core_uut/state_FSM_FFd12-In1
-    SLICE_X20Y22.B4      net (fanout=1)        0.379   core_uut/state_FSM_FFd12-In1
-    SLICE_X20Y22.CLK     Tas                   0.213   core_uut/state_FSM_FFd2
-                                                       core_uut/state_FSM_FFd12-In2
-                                                       core_uut/state_FSM_FFd12
+    SLICE_X19Y27.AQ      Tcko                  0.391   core_uut/state_FSM_FFd14
+                                                       core_uut/state_FSM_FFd13
+    SLICE_X19Y8.D3       net (fanout=33)       2.371   core_uut/state_FSM_FFd13
+    SLICE_X19Y8.D        Tilo                  0.259   core_uut/textOut<120>
+                                                       core_uut/state[14]_GND_2_o_select_53_OUT<243>2
+    SLICE_X16Y29.D6      net (fanout=42)       2.103   core_uut/state[14]_GND_2_o_select_53_OUT<110>2
+    SLICE_X16Y29.CLK     Tas                   0.341   core_uut/textOut<85>
+                                                       core_uut/state[14]_GND_2_o_select_53_OUT<172>3
+                                                       core_uut/textOut_85
     -------------------------------------------------  ---------------------------
-    Total                                      3.958ns (0.826ns logic, 3.132ns route)
-                                                       (20.9% logic, 79.1% route)
+    Total                                      5.465ns (0.991ns logic, 4.474ns route)
+                                                       (18.1% logic, 81.9% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     7.965ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     4.820ns (requirement - (data path - clock path skew + uncertainty))
   Source:               core_uut/state_FSM_FFd12 (FF)
-  Destination:          core_uut/state_FSM_FFd12 (FF)
+  Destination:          core_uut/textOut_85 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      2.000ns (Levels of Logic = 2)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      5.124ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.021ns (0.335 - 0.356)
   Source Clock:         board_clk rising at 0.000ns
   Destination Clock:    board_clk rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -224,33 +190,135 @@ Slack (setup path):     7.965ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: core_uut/state_FSM_FFd12 to core_uut/state_FSM_FFd12
+  Maximum Data Path at Slow Process Corner: core_uut/state_FSM_FFd12 to core_uut/textOut_85
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X20Y22.BMUX    Tshcko                0.455   core_uut/state_FSM_FFd2
+    SLICE_X22Y26.BMUX    Tshcko                0.488   core_uut/state_FSM_FFd4
                                                        core_uut/state_FSM_FFd12
-    SLICE_X20Y22.A6      net (fanout=23)       0.748   core_uut/state_FSM_FFd12
-    SLICE_X20Y22.A       Tilo                  0.205   core_uut/state_FSM_FFd2
-                                                       core_uut/state_FSM_FFd12-In1
-    SLICE_X20Y22.B4      net (fanout=1)        0.379   core_uut/state_FSM_FFd12-In1
-    SLICE_X20Y22.CLK     Tas                   0.213   core_uut/state_FSM_FFd2
-                                                       core_uut/state_FSM_FFd12-In2
+    SLICE_X19Y8.D6       net (fanout=16)       1.933   core_uut/state_FSM_FFd12
+    SLICE_X19Y8.D        Tilo                  0.259   core_uut/textOut<120>
+                                                       core_uut/state[14]_GND_2_o_select_53_OUT<243>2
+    SLICE_X16Y29.D6      net (fanout=42)       2.103   core_uut/state[14]_GND_2_o_select_53_OUT<110>2
+    SLICE_X16Y29.CLK     Tas                   0.341   core_uut/textOut<85>
+                                                       core_uut/state[14]_GND_2_o_select_53_OUT<172>3
+                                                       core_uut/textOut_85
+    -------------------------------------------------  ---------------------------
+    Total                                      5.124ns (1.088ns logic, 4.036ns route)
+                                                       (21.2% logic, 78.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     4.833ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               core_uut/state_FSM_FFd11 (FF)
+  Destination:          core_uut/textOut_85 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      5.109ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.023ns (0.335 - 0.358)
+  Source Clock:         board_clk rising at 0.000ns
+  Destination Clock:    board_clk rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: core_uut/state_FSM_FFd11 to core_uut/textOut_85
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y27.CQ      Tcko                  0.447   core_uut/state_FSM_FFd11
+                                                       core_uut/state_FSM_FFd11
+    SLICE_X19Y8.D2       net (fanout=30)       1.959   core_uut/state_FSM_FFd11
+    SLICE_X19Y8.D        Tilo                  0.259   core_uut/textOut<120>
+                                                       core_uut/state[14]_GND_2_o_select_53_OUT<243>2
+    SLICE_X16Y29.D6      net (fanout=42)       2.103   core_uut/state[14]_GND_2_o_select_53_OUT<110>2
+    SLICE_X16Y29.CLK     Tas                   0.341   core_uut/textOut<85>
+                                                       core_uut/state[14]_GND_2_o_select_53_OUT<172>3
+                                                       core_uut/textOut_85
+    -------------------------------------------------  ---------------------------
+    Total                                      5.109ns (1.047ns logic, 4.062ns route)
+                                                       (20.5% logic, 79.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point core_uut/textOut_76 (SLICE_X16Y26.B4), 5 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     4.524ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               core_uut/state_FSM_FFd13 (FF)
+  Destination:          core_uut/textOut_76 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      5.422ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.019ns (0.329 - 0.348)
+  Source Clock:         board_clk rising at 0.000ns
+  Destination Clock:    board_clk rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: core_uut/state_FSM_FFd13 to core_uut/textOut_76
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X19Y27.AQ      Tcko                  0.391   core_uut/state_FSM_FFd14
+                                                       core_uut/state_FSM_FFd13
+    SLICE_X19Y8.D3       net (fanout=33)       2.371   core_uut/state_FSM_FFd13
+    SLICE_X19Y8.D        Tilo                  0.259   core_uut/textOut<120>
+                                                       core_uut/state[14]_GND_2_o_select_53_OUT<243>2
+    SLICE_X16Y26.B4      net (fanout=42)       2.060   core_uut/state[14]_GND_2_o_select_53_OUT<110>2
+    SLICE_X16Y26.CLK     Tas                   0.341   core_uut/textOut<80>
+                                                       core_uut/state[14]_GND_2_o_select_53_OUT<181>3
+                                                       core_uut/textOut_76
+    -------------------------------------------------  ---------------------------
+    Total                                      5.422ns (0.991ns logic, 4.431ns route)
+                                                       (18.3% logic, 81.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     4.857ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               core_uut/state_FSM_FFd12 (FF)
+  Destination:          core_uut/textOut_76 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      5.081ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.027ns (0.329 - 0.356)
+  Source Clock:         board_clk rising at 0.000ns
+  Destination Clock:    board_clk rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: core_uut/state_FSM_FFd12 to core_uut/textOut_76
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y26.BMUX    Tshcko                0.488   core_uut/state_FSM_FFd4
                                                        core_uut/state_FSM_FFd12
+    SLICE_X19Y8.D6       net (fanout=16)       1.933   core_uut/state_FSM_FFd12
+    SLICE_X19Y8.D        Tilo                  0.259   core_uut/textOut<120>
+                                                       core_uut/state[14]_GND_2_o_select_53_OUT<243>2
+    SLICE_X16Y26.B4      net (fanout=42)       2.060   core_uut/state[14]_GND_2_o_select_53_OUT<110>2
+    SLICE_X16Y26.CLK     Tas                   0.341   core_uut/textOut<80>
+                                                       core_uut/state[14]_GND_2_o_select_53_OUT<181>3
+                                                       core_uut/textOut_76
     -------------------------------------------------  ---------------------------
-    Total                                      2.000ns (0.873ns logic, 1.127ns route)
-                                                       (43.6% logic, 56.4% route)
+    Total                                      5.081ns (1.088ns logic, 3.993ns route)
+                                                       (21.4% logic, 78.6% route)
 
 --------------------------------------------------------------------------------
-
-Paths for end point core_uut/state_FSM_FFd8 (SLICE_X23Y23.B5), 5 paths
---------------------------------------------------------------------------------
-Slack (setup path):     5.831ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               ee201_debouncer_L/state_FSM_FFd2 (FF)
-  Destination:          core_uut/state_FSM_FFd8 (FF)
+Slack (setup path):     4.870ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               core_uut/state_FSM_FFd11 (FF)
+  Destination:          core_uut/textOut_76 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      4.070ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.064ns (0.419 - 0.483)
+  Data Path Delay:      5.066ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.029ns (0.329 - 0.358)
   Source Clock:         board_clk rising at 0.000ns
   Destination Clock:    board_clk rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -261,101 +329,33 @@ Slack (setup path):     5.831ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: ee201_debouncer_L/state_FSM_FFd2 to core_uut/state_FSM_FFd8
+  Maximum Data Path at Slow Process Corner: core_uut/state_FSM_FFd11 to core_uut/textOut_76
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X4Y50.CQ       Tcko                  0.408   ee201_debouncer_L/state_FSM_FFd3
-                                                       ee201_debouncer_L/state_FSM_FFd2
-    SLICE_X21Y23.C3      net (fanout=10)       2.745   ee201_debouncer_L/state_FSM_FFd2
-    SLICE_X21Y23.CMUX    Tilo                  0.313   core_uut/state_FSM_FFd6
-                                                       core_uut/state_FSM_FFd8-In_SW0
-    SLICE_X23Y23.B5      net (fanout=1)        0.377   N11
-    SLICE_X23Y23.CLK     Tas                   0.227   core_uut/state_FSM_FFd14
-                                                       core_uut/state_FSM_FFd8-In
-                                                       core_uut/state_FSM_FFd8
+    SLICE_X22Y27.CQ      Tcko                  0.447   core_uut/state_FSM_FFd11
+                                                       core_uut/state_FSM_FFd11
+    SLICE_X19Y8.D2       net (fanout=30)       1.959   core_uut/state_FSM_FFd11
+    SLICE_X19Y8.D        Tilo                  0.259   core_uut/textOut<120>
+                                                       core_uut/state[14]_GND_2_o_select_53_OUT<243>2
+    SLICE_X16Y26.B4      net (fanout=42)       2.060   core_uut/state[14]_GND_2_o_select_53_OUT<110>2
+    SLICE_X16Y26.CLK     Tas                   0.341   core_uut/textOut<80>
+                                                       core_uut/state[14]_GND_2_o_select_53_OUT<181>3
+                                                       core_uut/textOut_76
     -------------------------------------------------  ---------------------------
-    Total                                      4.070ns (0.948ns logic, 3.122ns route)
-                                                       (23.3% logic, 76.7% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     5.992ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               ee201_debouncer_R/state_FSM_FFd2 (FF)
-  Destination:          core_uut/state_FSM_FFd8 (FF)
-  Requirement:          10.000ns
-  Data Path Delay:      3.947ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.026ns (0.419 - 0.445)
-  Source Clock:         board_clk rising at 0.000ns
-  Destination Clock:    board_clk rising at 10.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: ee201_debouncer_R/state_FSM_FFd2 to core_uut/state_FSM_FFd8
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X14Y58.CQ      Tcko                  0.447   ee201_debouncer_R/state_FSM_FFd3
-                                                       ee201_debouncer_R/state_FSM_FFd2
-    SLICE_X21Y23.C5      net (fanout=10)       2.583   ee201_debouncer_R/state_FSM_FFd2
-    SLICE_X21Y23.CMUX    Tilo                  0.313   core_uut/state_FSM_FFd6
-                                                       core_uut/state_FSM_FFd8-In_SW0
-    SLICE_X23Y23.B5      net (fanout=1)        0.377   N11
-    SLICE_X23Y23.CLK     Tas                   0.227   core_uut/state_FSM_FFd14
-                                                       core_uut/state_FSM_FFd8-In
-                                                       core_uut/state_FSM_FFd8
-    -------------------------------------------------  ---------------------------
-    Total                                      3.947ns (0.987ns logic, 2.960ns route)
-                                                       (25.0% logic, 75.0% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     7.729ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               core_uut/state_FSM_FFd8 (FF)
-  Destination:          core_uut/state_FSM_FFd8 (FF)
-  Requirement:          10.000ns
-  Data Path Delay:      2.236ns (Levels of Logic = 2)
-  Clock Path Skew:      0.000ns
-  Source Clock:         board_clk rising at 0.000ns
-  Destination Clock:    board_clk rising at 10.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: core_uut/state_FSM_FFd8 to core_uut/state_FSM_FFd8
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X23Y23.BMUX    Tshcko                0.461   core_uut/state_FSM_FFd14
-                                                       core_uut/state_FSM_FFd8
-    SLICE_X21Y23.C1      net (fanout=59)       0.858   core_uut/state_FSM_FFd8
-    SLICE_X21Y23.CMUX    Tilo                  0.313   core_uut/state_FSM_FFd6
-                                                       core_uut/state_FSM_FFd8-In_SW0
-    SLICE_X23Y23.B5      net (fanout=1)        0.377   N11
-    SLICE_X23Y23.CLK     Tas                   0.227   core_uut/state_FSM_FFd14
-                                                       core_uut/state_FSM_FFd8-In
-                                                       core_uut/state_FSM_FFd8
-    -------------------------------------------------  ---------------------------
-    Total                                      2.236ns (1.001ns logic, 1.235ns route)
-                                                       (44.8% logic, 55.2% route)
+    Total                                      5.066ns (1.047ns logic, 4.019ns route)
+                                                       (20.7% logic, 79.3% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point ee201_debouncer_R/debounce_count_8 (SLICE_X16Y60.A6), 1 path
+Paths for end point ee201_debouncer_D/debounce_count_8 (SLICE_X28Y50.A6), 1 path
 --------------------------------------------------------------------------------
 Slack (hold path):      0.411ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               ee201_debouncer_R/debounce_count_8 (FF)
-  Destination:          ee201_debouncer_R/debounce_count_8 (FF)
+  Source:               ee201_debouncer_D/debounce_count_8 (FF)
+  Destination:          ee201_debouncer_D/debounce_count_8 (FF)
   Requirement:          0.000ns
   Data Path Delay:      0.411ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
@@ -363,55 +363,27 @@ Slack (hold path):      0.411ns (requirement - (clock path skew + uncertainty - 
   Destination Clock:    board_clk rising at 10.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: ee201_debouncer_R/debounce_count_8 to ee201_debouncer_R/debounce_count_8
+  Minimum Data Path at Fast Process Corner: ee201_debouncer_D/debounce_count_8 to ee201_debouncer_D/debounce_count_8
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X16Y60.AQ      Tcko                  0.200   ee201_debouncer_R/MCEN_count<3>
-                                                       ee201_debouncer_R/debounce_count_8
-    SLICE_X16Y60.A6      net (fanout=2)        0.021   ee201_debouncer_R/debounce_count<8>
-    SLICE_X16Y60.CLK     Tah         (-Th)    -0.190   ee201_debouncer_R/MCEN_count<3>
-                                                       ee201_debouncer_R/state[5]_GND_8_o_select_29_OUT<8>1
-                                                       ee201_debouncer_R/debounce_count_8
+    SLICE_X28Y50.AQ      Tcko                  0.200   ee201_debouncer_D/MCEN_count<3>
+                                                       ee201_debouncer_D/debounce_count_8
+    SLICE_X28Y50.A6      net (fanout=2)        0.021   ee201_debouncer_D/debounce_count<8>
+    SLICE_X28Y50.CLK     Tah         (-Th)    -0.190   ee201_debouncer_D/MCEN_count<3>
+                                                       ee201_debouncer_D/state[5]_GND_10_o_select_29_OUT<8>1
+                                                       ee201_debouncer_D/debounce_count_8
     -------------------------------------------------  ---------------------------
     Total                                      0.411ns (0.390ns logic, 0.021ns route)
                                                        (94.9% logic, 5.1% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point ee201_debouncer_C/debounce_count_8 (SLICE_X20Y39.A6), 1 path
---------------------------------------------------------------------------------
-Slack (hold path):      0.411ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               ee201_debouncer_C/debounce_count_8 (FF)
-  Destination:          ee201_debouncer_C/debounce_count_8 (FF)
-  Requirement:          0.000ns
-  Data Path Delay:      0.411ns (Levels of Logic = 1)
-  Clock Path Skew:      0.000ns
-  Source Clock:         board_clk rising at 10.000ns
-  Destination Clock:    board_clk rising at 10.000ns
-  Clock Uncertainty:    0.000ns
-
-  Minimum Data Path at Fast Process Corner: ee201_debouncer_C/debounce_count_8 to ee201_debouncer_C/debounce_count_8
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X20Y39.AQ      Tcko                  0.200   ee201_debouncer_C/MCEN_count<3>
-                                                       ee201_debouncer_C/debounce_count_8
-    SLICE_X20Y39.A6      net (fanout=2)        0.021   ee201_debouncer_C/debounce_count<8>
-    SLICE_X20Y39.CLK     Tah         (-Th)    -0.190   ee201_debouncer_C/MCEN_count<3>
-                                                       ee201_debouncer_C/state[5]_GND_8_o_select_29_OUT<8>1
-                                                       ee201_debouncer_C/debounce_count_8
-    -------------------------------------------------  ---------------------------
-    Total                                      0.411ns (0.390ns logic, 0.021ns route)
-                                                       (94.9% logic, 5.1% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point core_uut/textOut_54 (SLICE_X16Y13.D6), 1 path
+Paths for end point core_uut/textOut_92 (SLICE_X16Y27.D6), 1 path
 --------------------------------------------------------------------------------
 Slack (hold path):      0.412ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               core_uut/textOut_54 (FF)
-  Destination:          core_uut/textOut_54 (FF)
+  Source:               core_uut/textOut_92 (FF)
+  Destination:          core_uut/textOut_92 (FF)
   Requirement:          0.000ns
   Data Path Delay:      0.412ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
@@ -419,16 +391,44 @@ Slack (hold path):      0.412ns (requirement - (clock path skew + uncertainty - 
   Destination Clock:    board_clk rising at 10.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: core_uut/textOut_54 to core_uut/textOut_54
+  Minimum Data Path at Fast Process Corner: core_uut/textOut_92 to core_uut/textOut_92
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X16Y13.DQ      Tcko                  0.200   core_uut/textOut<54>
-                                                       core_uut/textOut_54
-    SLICE_X16Y13.D6      net (fanout=2)        0.022   core_uut/textOut<54>
-    SLICE_X16Y13.CLK     Tah         (-Th)    -0.190   core_uut/textOut<54>
-                                                       core_uut/state[14]_GND_2_o_select_50_OUT<203>
-                                                       core_uut/textOut_54
+    SLICE_X16Y27.DQ      Tcko                  0.200   core_uut/textOut<92>
+                                                       core_uut/textOut_92
+    SLICE_X16Y27.D6      net (fanout=2)        0.022   core_uut/textOut<92>
+    SLICE_X16Y27.CLK     Tah         (-Th)    -0.190   core_uut/textOut<92>
+                                                       core_uut/state[14]_GND_2_o_select_53_OUT<165>1
+                                                       core_uut/textOut_92
+    -------------------------------------------------  ---------------------------
+    Total                                      0.412ns (0.390ns logic, 0.022ns route)
+                                                       (94.7% logic, 5.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point core_uut/textOut_18 (SLICE_X20Y20.A6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.412ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               core_uut/textOut_18 (FF)
+  Destination:          core_uut/textOut_18 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.412ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         board_clk rising at 10.000ns
+  Destination Clock:    board_clk rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: core_uut/textOut_18 to core_uut/textOut_18
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y20.AQ      Tcko                  0.200   core_uut/textOut<24>
+                                                       core_uut/textOut_18
+    SLICE_X20Y20.A6      net (fanout=2)        0.022   core_uut/textOut<18>
+    SLICE_X20Y20.CLK     Tah         (-Th)    -0.190   core_uut/textOut<24>
+                                                       core_uut/state[14]_GND_2_o_select_53_OUT<239>1
+                                                       core_uut/textOut_18
     -------------------------------------------------  ---------------------------
     Total                                      0.412ns (0.390ns logic, 0.022ns route)
                                                        (94.7% logic, 5.3% route)
@@ -476,7 +476,7 @@ Clock to Setup on destination clock ClkPort
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-ClkPort        |    4.293|         |         |         |
+ClkPort        |    5.530|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -485,23 +485,23 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 4380 paths, 0 nets, and 1829 connections
+Constraints cover 5404 paths, 0 nets, and 2665 connections
 
 Design statistics:
-   Minimum period:   4.293ns{1}   (Maximum frequency: 232.937MHz)
+   Minimum period:   5.530ns{1}   (Maximum frequency: 180.832MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Wed Dec 05 00:08:07 2012 
+Analysis completed Wed Dec 05 02:55:09 2012 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 234 MB
+Peak Memory Usage: 238 MB
 
 
 

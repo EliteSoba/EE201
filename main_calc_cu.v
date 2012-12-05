@@ -32,7 +32,8 @@ reg [14:0] state;
 
 //Variables for each submodule
 wire [8*32:0] textOut_Add;
-wire done_Add;
+wire [8*32:0] textOut_Sub;
+wire done_Add, done_Sub;
 
 //assign state outputs to the state register
 assign {sel1, sel2, sel3, sel4, sel5, sel6, sel7, add, sub, div, mult, gcd, isprime, sqrt, done} = state;
@@ -62,6 +63,7 @@ DONE 	= 15'b000000000000001;
 
 
 add_module add_uut(.Clk(Clk), .data_in(dataInBus), .reset(state==SEL1), .enable(state==ADD), .textOut(textOut_Add), .next(btc), .done(done_Add));
+subtract_module sub_uut(.Clk(Clk), .data_in(dataInBus), .reset(state==SEL2), .enable(state==SUB), .textOut(textOut_Sub), .next(btc), .done(done_Sub));
 //assign textOut = {line1, line2};
 
 always @(posedge Clk, posedge Reset) 
@@ -225,7 +227,9 @@ always @(posedge Clk, posedge Reset)
 	          begin
 		         // state transitions in the control unit
 		         // RTL operations in the Data Path 
-
+					textOut = textOut_Sub;
+					if (done_Sub && btc)
+						state <= SEL2;
 	          end 
 			DIV	: 
 	          begin
@@ -267,18 +271,7 @@ always @(posedge Clk, posedge Reset)
     end 
   end
  //function for binary to hexadecimal(character) conversion
-function [7:0] bin2x;
- input [3:0] data;
-  begin
-	case (data)
-	4'h0:	bin2x = "0";4'h1:	bin2x = "1";4'h2:	bin2x = "2";4'h3:	bin2x = "3";
-	4'h4:	bin2x = "4";4'h5:	bin2x = "5";4'h6:	bin2x = "6";4'h7:	bin2x = "7";
-	4'h8:	bin2x = "8";4'h9:	bin2x = "9";4'hA:	bin2x = "A";4'hB:	bin2x = "B";
-	4'hC:	bin2x = "C";4'hD:	bin2x = "D";4'hE:	bin2x = "E";4'hF:	bin2x = "F";
-	default:bin2x = "0";
-	endcase
-  end
-endfunction
+
 
 
 endmodule  

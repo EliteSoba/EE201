@@ -4,7 +4,7 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
@@ -106,6 +106,8 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
+Analyzing Verilog file \"C:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL\subtract_module.v\" into library work
+Parsing module <subtract_module>.
 Analyzing Verilog file \"C:\Users\Tobias\Documents\GitHub\EE201\add_module.v\" into library work
 Parsing module <add_module>.
 Analyzing Verilog file \"C:\Users\Tobias\Documents\GitHub\EE201\main_calc_cu.v\" into library work
@@ -126,8 +128,9 @@ Elaborating module <calc_project_top>.
 Elaborating module <main_calc_cu>.
 
 Elaborating module <add_module>.
-WARNING:HDLCompiler:1127 - "C:\Users\Tobias\Documents\GitHub\EE201\add_module.v" Line 42: Assignment to input_A ignored, since the identifier is never used
-WARNING:HDLCompiler:1309 - "C:\Users\Tobias\Documents\GitHub\EE201\main_calc_cu.v" Line 86: Found full_case directive. Use of full_case directives may cause differences between RTL and post-synthesis simulation
+
+Elaborating module <subtract_module>.
+WARNING:HDLCompiler:1309 - "C:\Users\Tobias\Documents\GitHub\EE201\main_calc_cu.v" Line 88: Found full_case directive. Use of full_case directives may cause differences between RTL and post-synthesis simulation
 
 Elaborating module <BUFGP>.
 
@@ -232,8 +235,8 @@ INFO:Xst:1799 - State 000000000000001 is never reached in FSM <state>.
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 15                                             |
-    | Transitions        | 44                                             |
-    | Inputs             | 5                                              |
+    | Transitions        | 46                                             |
+    | Inputs             | 6                                              |
     | Outputs            | 28                                             |
     | Clock              | Clk (rising_edge)                              |
     | Reset              | Reset (positive)                               |
@@ -249,10 +252,12 @@ Unit <main_calc_cu> synthesized.
 
 Synthesizing Unit <add_module>.
     Related source file is "c:/users/tobias/documents/github/ee201/add_module.v".
-WARNING:Xst:647 - Input <data_in<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 5-bit register for signal <state>.
     Found 257-bit register for signal <textOut>.
+    Found 8-bit register for signal <input_A>.
+    Found 8-bit register for signal <input_B>.
     Found 1-bit register for signal <done>.
+    Found 8-bit register for signal <data_out>.
     Found finite state machine <FSM_1> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 5                                              |
@@ -266,10 +271,48 @@ WARNING:Xst:647 - Input <data_in<7:0>> is never used. This port will be preserve
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
+    Found 8-bit adder for signal <input_A[7]_input_B[7]_add_5_OUT> created at line 88.
+    Found 16x8-bit Read Only RAM for signal <data_out[7]_GND_3_o_wide_mux_7_OUT>
+    Found 16x8-bit Read Only RAM for signal <data_out[3]_GND_3_o_wide_mux_8_OUT>
     Summary:
-	inferred 258 D-type flip-flop(s).
+	inferred   2 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred 282 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
 Unit <add_module> synthesized.
+
+Synthesizing Unit <subtract_module>.
+    Related source file is "c:/users/tobias/documents/github/ee201/finalprojct_ee201_aj_tl/subtract_module.v".
+    Found 5-bit register for signal <state>.
+    Found 257-bit register for signal <textOut>.
+    Found 8-bit register for signal <input_A>.
+    Found 8-bit register for signal <input_B>.
+    Found 1-bit register for signal <done>.
+    Found 8-bit register for signal <data_out>.
+    Found finite state machine <FSM_2> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 10                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 5                                              |
+    | Clock              | Clk (rising_edge)                              |
+    | Reset              | reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00001                                          |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit subtractor for signal <input_A[7]_input_B[7]_sub_6_OUT> created at line 88.
+    Found 16x8-bit Read Only RAM for signal <data_out[7]_GND_5_o_wide_mux_7_OUT>
+    Found 16x8-bit Read Only RAM for signal <data_out[3]_GND_5_o_wide_mux_8_OUT>
+    Summary:
+	inferred   2 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred 282 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <subtract_module> synthesized.
 
 Synthesizing Unit <ee201_debouncer>.
     Related source file is "c:/users/tobias/documents/github/ee201/ee201_debounce_dpb_scen_ccen_mcen.v".
@@ -278,7 +321,7 @@ Synthesizing Unit <ee201_debouncer>.
     Found 6-bit register for signal <state>.
     Found 24-bit register for signal <debounce_count>.
     Found 4-bit register for signal <MCEN_count>.
-    Found finite state machine <FSM_2> for signal <state>.
+    Found finite state machine <FSM_3> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 9                                              |
     | Transitions        | 20                                             |
@@ -291,8 +334,8 @@ Synthesizing Unit <ee201_debouncer>.
     | Encoding           | user                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 24-bit adder for signal <debounce_count[23]_GND_8_o_add_2_OUT> created at line 162.
-    Found 4-bit adder for signal <MCEN_count[3]_GND_8_o_add_5_OUT> created at line 175.
+    Found 24-bit adder for signal <debounce_count[23]_GND_10_o_add_2_OUT> created at line 162.
+    Found 4-bit adder for signal <MCEN_count[3]_GND_10_o_add_5_OUT> created at line 175.
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred  28 D-type flip-flop(s).
@@ -317,9 +360,9 @@ Synthesizing Unit <lcd_core>.
     Found 8-bit register for signal <lcd_cmd_ptr>.
     Found 1-bit register for signal <oneUSClk>.
     Found 10-bit register for signal <stCur>.
-    Found 7-bit adder for signal <clkCount[6]_GND_9_o_add_40_OUT> created at line 155.
-    Found 17-bit adder for signal <count[16]_GND_9_o_add_44_OUT> created at line 171.
-    Found 8-bit adder for signal <lcd_cmd_ptr[7]_GND_9_o_add_60_OUT> created at line 205.
+    Found 7-bit adder for signal <clkCount[6]_GND_11_o_add_40_OUT> created at line 155.
+    Found 17-bit adder for signal <count[16]_GND_11_o_add_44_OUT> created at line 171.
+    Found 8-bit adder for signal <lcd_cmd_ptr[7]_GND_11_o_add_60_OUT> created at line 205.
     Found 10-bit 41-to-1 multiplexer for signal <_n0276> created at line 62.
     Found 17-bit comparator lessequal for signal <n0052> created at line 182
     Found 17-bit comparator lessequal for signal <n0060> created at line 188
@@ -336,33 +379,35 @@ Unit <lcd_core> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 1
- 16x8-bit single-port Read Only RAM                    : 1
-# Adders/Subtractors                                   : 12
+# RAMs                                                 : 5
+ 16x8-bit single-port Read Only RAM                    : 5
+# Adders/Subtractors                                   : 14
  17-bit adder                                          : 1
  24-bit adder                                          : 4
  27-bit adder                                          : 1
  4-bit adder                                           : 4
  7-bit adder                                           : 1
- 8-bit adder                                           : 1
-# Registers                                            : 20
- 1-bit register                                        : 3
+ 8-bit adder                                           : 2
+ 8-bit subtractor                                      : 1
+# Registers                                            : 28
+ 1-bit register                                        : 4
  10-bit register                                       : 1
  17-bit register                                       : 1
  24-bit register                                       : 4
- 257-bit register                                      : 2
+ 257-bit register                                      : 3
  27-bit register                                       : 1
  4-bit register                                        : 4
  7-bit register                                        : 1
- 8-bit register                                        : 3
+ 8-bit register                                        : 9
 # Comparators                                          : 3
  17-bit comparator lessequal                           : 3
-# Multiplexers                                         : 9
+# Multiplexers                                         : 13
  1-bit 2-to-1 multiplexer                              : 3
  1-bit 4-to-1 multiplexer                              : 4
  10-bit 2-to-1 multiplexer                             : 1
  10-bit 41-to-1 multiplexer                            : 1
-# FSMs                                                 : 6
+ 8-bit 2-to-1 multiplexer                              : 4
+# FSMs                                                 : 7
 
 =========================================================================
 
@@ -370,101 +415,195 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-INFO:Xst:2261 - The FF/Latch <num1_1> in Unit <core_uut> is equivalent to the following 7 FFs/Latches, which will be removed : <num1_3> <num2_0> <num2_2> <num2_3> <num2_4> <num2_6> <num2_7> 
 INFO:Xst:2261 - The FF/Latch <num1_0> in Unit <core_uut> is equivalent to the following 7 FFs/Latches, which will be removed : <num1_2> <num1_4> <num1_5> <num1_6> <num1_7> <num2_1> <num2_5> 
-WARNING:Xst:1710 - FF/Latch <textOut_174> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_170> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_167> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_163> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_161> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_160> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_159> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_156> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_151> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_150> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_148> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_147> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_146> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_145> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_144> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_143> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_140> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_139> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_138> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_135> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <num1_1> in Unit <core_uut> is equivalent to the following 7 FFs/Latches, which will be removed : <num1_3> <num2_0> <num2_2> <num2_3> <num2_4> <num2_6> <num2_7> 
+WARNING:Xst:1710 - FF/Latch <textOut_55> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_59> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_63> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_68> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_71> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_72> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_74> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_75> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_79> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_80> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_82> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_83> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_87> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_88> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_89> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_90> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_91> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_92> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_94> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_95> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_103> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_1> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_2> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_3> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_4> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_6> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_7> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_10> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_11> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_12> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_15> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_23> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_24> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_27> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_31> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_35> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_36> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_39> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_40> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_42> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_43> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_44> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_47> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_166> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_167> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_175> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_180> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_183> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_185> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_191> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_199> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_203> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_207> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_209> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_212> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_215> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_219> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_223> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_227> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_231> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_239> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_247> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_253> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_255> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <num1_0> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_255> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_253> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_249> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_247> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_240> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_239> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_235> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_233> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_231> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_223> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_219> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_215> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_209> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_207> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_199> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_191> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_183> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_179> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_178> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_175> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_59> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_55> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_107> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_108> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_111> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_128> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_129> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_135> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_136> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_137> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_138> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_139> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_140> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_142> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_143> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_144> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_148> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_150> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_151> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_152> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_156> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_158> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_159> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_160> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <textOut_47> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_44> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_43> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_42> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_40> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_39> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_36> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_35> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_31> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_27> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_24> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_23> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_15> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_11> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_10> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_7> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_4> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_1> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_0> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_132> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_127> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_119> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_113> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_112> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_111> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_108> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_105> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_103> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_95> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_91> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_89> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_87> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_83> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_79> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_75> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_74> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_72> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_71> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_68> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_55> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_59> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <textOut_63> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_68> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_71> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_72> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_74> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_75> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_79> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_80> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_82> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_83> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_87> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_88> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_89> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_90> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_91> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_92> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_94> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_95> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_103> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_0> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_1> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_2> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_3> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_4> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_6> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_7> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_10> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_11> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_12> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_15> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_23> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_24> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_27> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_31> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_35> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_36> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_39> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_40> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_42> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_43> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_44> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_175> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_178> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_183> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_185> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_191> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_199> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_207> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_209> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_215> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_219> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_223> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_225> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_231> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_233> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_235> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_239> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_244> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_247> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_249> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_253> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_255> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_0> (without init value) has a constant value of 0 in block <sub_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_105> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_107> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_108> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_111> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_128> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_129> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_135> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_136> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_140> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_142> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_143> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_144> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_148> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_150> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_151> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_152> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_156> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_158> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_159> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_163> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_164> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_167> (without init value) has a constant value of 0 in block <add_uut>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <textOut_256> of sequential type is unconnected in block <add_uut>.
+WARNING:Xst:2677 - Node <textOut_256> of sequential type is unconnected in block <sub_uut>.
 WARNING:Xst:2677 - Node <textOut_256> of sequential type is unconnected in block <core_uut>.
+WARNING:Xst:1710 - FF/Latch <textOut_128> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_129> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_135> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_136> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <textOut_143> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_145> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <textOut_148> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <textOut_151> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <textOut_159> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_163> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <textOut_167> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_170> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <textOut_175> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <textOut_183> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <textOut_191> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
@@ -473,7 +612,6 @@ WARNING:Xst:1710 - FF/Latch <textOut_207> (without init value) has a constant va
 WARNING:Xst:1710 - FF/Latch <textOut_215> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <textOut_223> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <textOut_231> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_233> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <textOut_239> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <textOut_247> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <textOut_255> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
@@ -491,14 +629,39 @@ WARNING:Xst:1710 - FF/Latch <textOut_63> (without init value) has a constant val
 WARNING:Xst:1710 - FF/Latch <textOut_71> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <textOut_74> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <textOut_79> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_82> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <textOut_87> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_88> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_90> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <textOut_95> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <textOut_103> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <textOut_111> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_119> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_127> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_135> (without init value) has a constant value of 0 in block <core_uut>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2404 -  FFs/Latches <num1<7:4>> (without init value) have a constant value of 0 in block <main_calc_cu>.
+
+Synthesizing (advanced) Unit <add_module>.
+INFO:Xst:3231 - The small RAM <Mram_data_out[7]_GND_3_o_wide_mux_7_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_out<7:4>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_data_out[3]_GND_3_o_wide_mux_8_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_out<3:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <add_module> synthesized (advanced).
 
 Synthesizing (advanced) Unit <calc_project_top>.
 The following registers are absorbed into counter <DIV_CLK>: 1 register on signal <DIV_CLK>.
@@ -521,30 +684,58 @@ The following registers are absorbed into counter <count>: 1 register on signal 
 The following registers are absorbed into counter <lcd_cmd_ptr>: 1 register on signal <lcd_cmd_ptr>.
 Unit <lcd_core> synthesized (advanced).
 
+Synthesizing (advanced) Unit <subtract_module>.
+INFO:Xst:3231 - The small RAM <Mram_data_out[7]_GND_5_o_wide_mux_7_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_out<7:4>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_data_out[3]_GND_5_o_wide_mux_8_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_out<3:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <subtract_module> synthesized (advanced).
+
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 1
- 16x8-bit single-port distributed Read Only RAM        : 1
-# Adders/Subtractors                                   : 8
+# RAMs                                                 : 5
+ 16x8-bit single-port distributed Read Only RAM        : 5
+# Adders/Subtractors                                   : 10
  24-bit adder                                          : 4
  4-bit adder                                           : 4
+ 8-bit adder                                           : 1
+ 8-bit subtractor                                      : 1
 # Counters                                             : 4
  17-bit up counter                                     : 1
  27-bit up counter                                     : 1
  7-bit up counter                                      : 1
  8-bit up counter                                      : 1
-# Registers                                            : 651
- Flip-Flops                                            : 651
+# Registers                                            : 957
+ Flip-Flops                                            : 957
 # Comparators                                          : 3
  17-bit comparator lessequal                           : 3
-# Multiplexers                                         : 9
+# Multiplexers                                         : 13
  1-bit 2-to-1 multiplexer                              : 3
  1-bit 4-to-1 multiplexer                              : 4
  10-bit 2-to-1 multiplexer                             : 1
  10-bit 41-to-1 multiplexer                            : 1
-# FSMs                                                 : 6
+ 8-bit 2-to-1 multiplexer                              : 4
+# FSMs                                                 : 7
 
 =========================================================================
 
@@ -555,36 +746,39 @@ WARNING:Xst:1710 - FF/Latch <num2_1> (without init value) has a constant value o
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <num2_5> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <num1_0> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <num1_2> (without init value) has a constant value of 0 in block <main_calc_cu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <textOut_174> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_170> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_167> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_167> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_164> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_163> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_161> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_160> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_159> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_158> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_156> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_152> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_151> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_150> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_148> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_147> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_146> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_145> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_144> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_143> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_142> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_140> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_139> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_138> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_136> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_135> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_129> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_128> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_111> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_108> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_107> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_105> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_256> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_255> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_253> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_249> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_247> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_240> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_244> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_239> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_235> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_233> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_231> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_225> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_223> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_219> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_215> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
@@ -592,13 +786,10 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_209> (witho
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_207> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_199> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_191> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_185> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_183> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_179> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_178> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_175> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_59> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_55> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_47> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_44> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_43> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_42> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
@@ -611,26 +802,28 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_27> (withou
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_24> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_23> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_15> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_12> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_11> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_10> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_7> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_6> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_4> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_3> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_2> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_1> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_0> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_132> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_127> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_119> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_113> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_112> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_111> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_108> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_105> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_103> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_95> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_94> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_92> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_91> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_90> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_89> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_88> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_87> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_83> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_82> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_80> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_79> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_75> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_74> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
@@ -638,11 +831,102 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_72> (withou
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_71> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_68> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_63> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_59> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_55> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_47> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_160> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_159> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_158> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_156> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_152> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_151> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_150> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_148> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_144> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_143> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_142> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_140> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_139> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_138> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_137> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_136> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_135> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_129> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_128> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_111> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_108> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_107> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_256> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_255> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_253> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_247> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_239> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_231> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_227> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_223> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_219> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_215> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_212> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_209> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_207> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_203> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_199> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_191> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_185> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_183> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_180> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_175> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_167> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_166> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_44> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_43> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_42> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_40> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_39> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_36> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_35> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_31> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_27> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_24> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_23> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_15> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_12> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_11> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_10> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_7> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_6> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_4> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_3> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_2> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_1> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_0> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_103> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_95> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_94> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_92> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_91> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_90> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_89> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_88> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_87> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_83> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_82> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_80> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_79> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_75> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_74> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_72> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_71> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_68> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_63> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_59> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_55> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_47> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <num2_0> in Unit <main_calc_cu> is equivalent to the following 7 FFs/Latches, which will be removed : <num2_2> <num2_3> <num2_4> <num2_6> <num2_7> <num1_1> <num1_3> 
-Optimizing FSM <ee201_debouncer_C/FSM_2> on signal <state[1:6]> with user encoding.
-Optimizing FSM <ee201_debouncer_D/FSM_2> on signal <state[1:6]> with user encoding.
-Optimizing FSM <ee201_debouncer_R/FSM_2> on signal <state[1:6]> with user encoding.
-Optimizing FSM <ee201_debouncer_L/FSM_2> on signal <state[1:6]> with user encoding.
+Optimizing FSM <ee201_debouncer_C/FSM_3> on signal <state[1:6]> with user encoding.
+Optimizing FSM <ee201_debouncer_D/FSM_3> on signal <state[1:6]> with user encoding.
+Optimizing FSM <ee201_debouncer_R/FSM_3> on signal <state[1:6]> with user encoding.
+Optimizing FSM <ee201_debouncer_L/FSM_3> on signal <state[1:6]> with user encoding.
 --------------------
  State  | Encoding
 --------------------
@@ -688,6 +972,21 @@ Optimizing FSM <core_uut/add_uut/FSM_1> on signal <state[1:3]> with gray encodin
  01000 | 010
  10000 | 110
 -------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <core_uut/sub_uut/FSM_2> on signal <state[1:3]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00001 | 000
+ 00010 | 001
+ 00100 | 011
+ 01000 | 010
+ 10000 | 110
+-------------------
+WARNING:Xst:1710 - FF/Latch <textOut_119> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_127> (without init value) has a constant value of 0 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_119> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_127> (without init value) has a constant value of 0 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <DIV_CLK_19> of sequential type is unconnected in block <calc_project_top>.
 WARNING:Xst:2677 - Node <DIV_CLK_20> of sequential type is unconnected in block <calc_project_top>.
 WARNING:Xst:2677 - Node <DIV_CLK_21> of sequential type is unconnected in block <calc_project_top>.
@@ -706,15 +1005,13 @@ Optimizing unit <lcd_core> ...
 Optimizing unit <main_calc_cu> ...
 
 Optimizing unit <add_module> ...
-WARNING:Xst:1710 - FF/Latch <textOut_254> (without init value) has a constant value of 1 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_246> (without init value) has a constant value of 1 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_245> (without init value) has a constant value of 1 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <textOut_246> (without init value) has a constant value of 1 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_238> (without init value) has a constant value of 1 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_237> (without init value) has a constant value of 1 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_229> (without init value) has a constant value of 1 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_222> (without init value) has a constant value of 1 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_220> (without init value) has a constant value of 1 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_213> (without init value) has a constant value of 1 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_205> (without init value) has a constant value of 1 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_197> (without init value) has a constant value of 1 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_189> (without init value) has a constant value of 1 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_181> (without init value) has a constant value of 1 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
@@ -724,7 +1021,6 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_157> (witho
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_149> (without init value) has a constant value of 1 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_141> (without init value) has a constant value of 1 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_133> (without init value) has a constant value of 1 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_117> (without init value) has a constant value of 1 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_109> (without init value) has a constant value of 1 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_101> (without init value) has a constant value of 1 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_93> (without init value) has a constant value of 1 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
@@ -735,27 +1031,74 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_45> (withou
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_29> (without init value) has a constant value of 1 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_21> (without init value) has a constant value of 1 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_13> (without init value) has a constant value of 1 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <textOut_97> in Unit <add_module> is equivalent to the following 8 FFs/Latches, which will be removed : <textOut_102> <textOut_110> <textOut_118> <textOut_126> <textOut_198> <textOut_221> <textOut_224> <textOut_230> 
-INFO:Xst:2261 - The FF/Latch <textOut_5> in Unit <add_module> is equivalent to the following FF/Latch, which will be removed : <textOut_205> 
-INFO:Xst:2261 - The FF/Latch <textOut_194> in Unit <add_module> is equivalent to the following FF/Latch, which will be removed : <textOut_201> 
-INFO:Xst:2261 - The FF/Latch <textOut_2> in Unit <add_module> is equivalent to the following 31 FFs/Latches, which will be removed : <textOut_3> <textOut_6> <textOut_80> <textOut_82> <textOut_88> <textOut_90> <textOut_92> <textOut_94> <textOut_107> <textOut_116> <textOut_121> <textOut_123> <textOut_128> <textOut_129> <textOut_130> <textOut_131> <textOut_134> <textOut_136> <textOut_137> <textOut_142> <textOut_152> <textOut_153> <textOut_154> <textOut_155> <textOut_158> <textOut_162> <textOut_164> <textOut_166> <textOut_185> <textOut_225> <textOut_244> 
-INFO:Xst:2261 - The FF/Latch <textOut_12> in Unit <add_module> is equivalent to the following 7 FFs/Latches, which will be removed : <textOut_171> <textOut_172> <textOut_180> <textOut_184> <textOut_210> <textOut_212> <textOut_250> 
-INFO:Xst:2261 - The FF/Latch <textOut_8> in Unit <add_module> is equivalent to the following 18 FFs/Latches, which will be removed : <textOut_14> <textOut_19> <textOut_26> <textOut_33> <textOut_49> <textOut_52> <textOut_57> <textOut_64> <textOut_73> <textOut_76> <textOut_78> <textOut_115> <textOut_124> <textOut_168> <textOut_204> <textOut_226> <textOut_236> <textOut_251> 
-INFO:Xst:2261 - The FF/Latch <textOut_69> in Unit <add_module> is equivalent to the following FF/Latch, which will be removed : <textOut_190> 
-INFO:Xst:2261 - The FF/Latch <textOut_17> in Unit <add_module> is equivalent to the following 17 FFs/Latches, which will be removed : <textOut_22> <textOut_28> <textOut_30> <textOut_38> <textOut_48> <textOut_54> <textOut_56> <textOut_60> <textOut_62> <textOut_66> <textOut_70> <textOut_84> <textOut_106> <textOut_193> <textOut_218> <textOut_242> <textOut_248> 
-INFO:Xst:2261 - The FF/Latch <textOut_16> in Unit <add_module> is equivalent to the following 16 FFs/Latches, which will be removed : <textOut_25> <textOut_32> <textOut_34> <textOut_41> <textOut_46> <textOut_50> <textOut_51> <textOut_58> <textOut_65> <textOut_67> <textOut_81> <textOut_96> <textOut_100> <textOut_120> <textOut_211> <textOut_227> 
-INFO:Xst:2261 - The FF/Latch <textOut_9> in Unit <add_module> is equivalent to the following 3 FFs/Latches, which will be removed : <textOut_18> <textOut_169> <textOut_243> 
-INFO:Xst:2261 - The FF/Latch <textOut_37> in Unit <add_module> is equivalent to the following 3 FFs/Latches, which will be removed : <textOut_85> <textOut_206> <textOut_234> 
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_5> (without init value) has a constant value of 1 in block <add_module>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <textOut_198> in Unit <add_module> is equivalent to the following 2 FFs/Latches, which will be removed : <textOut_221> <textOut_230> 
+INFO:Xst:2261 - The FF/Latch <textOut_171> in Unit <add_module> is equivalent to the following 7 FFs/Latches, which will be removed : <textOut_176> <textOut_182> <textOut_210> <textOut_212> <textOut_216> <textOut_217> <textOut_232> 
+INFO:Xst:2261 - The FF/Latch <textOut_17> in Unit <add_module> is equivalent to the following 21 FFs/Latches, which will be removed : <textOut_22> <textOut_28> <textOut_30> <textOut_38> <textOut_48> <textOut_54> <textOut_56> <textOut_60> <textOut_62> <textOut_66> <textOut_70> <textOut_84> <textOut_97> <textOut_102> <textOut_106> <textOut_110> <textOut_193> <textOut_218> <textOut_224> <textOut_242> <textOut_248> 
+INFO:Xst:2261 - The FF/Latch <textOut_186> in Unit <add_module> is equivalent to the following 2 FFs/Latches, which will be removed : <textOut_226> <textOut_241> 
 INFO:Xst:2261 - The FF/Latch <textOut_188> in Unit <add_module> is equivalent to the following FF/Latch, which will be removed : <textOut_192> 
-INFO:Xst:2261 - The FF/Latch <textOut_86> in Unit <add_module> is equivalent to the following 7 FFs/Latches, which will be removed : <textOut_98> <textOut_99> <textOut_104> <textOut_122> <textOut_186> <textOut_228> <textOut_241> 
-INFO:Xst:2261 - The FF/Latch <textOut_20> in Unit <add_module> is equivalent to the following 4 FFs/Latches, which will be removed : <textOut_202> <textOut_203> <textOut_208> <textOut_214> 
-INFO:Xst:2261 - The FF/Latch <textOut_125> in Unit <add_module> is equivalent to the following 8 FFs/Latches, which will be removed : <textOut_176> <textOut_177> <textOut_182> <textOut_187> <textOut_216> <textOut_217> <textOut_232> <textOut_252> 
-WARNING:Xst:1710 - FF/Latch <core_uut/textOut_127> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <core_uut/textOut_119> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <textOut_220> in Unit <add_module> is equivalent to the following 2 FFs/Latches, which will be removed : <textOut_245> <textOut_254> 
+INFO:Xst:2261 - The FF/Latch <textOut_16> in Unit <add_module> is equivalent to the following 15 FFs/Latches, which will be removed : <textOut_20> <textOut_25> <textOut_32> <textOut_34> <textOut_41> <textOut_46> <textOut_50> <textOut_51> <textOut_58> <textOut_65> <textOut_67> <textOut_81> <textOut_96> <textOut_100> <textOut_211> 
+INFO:Xst:2261 - The FF/Latch <textOut_69> in Unit <add_module> is equivalent to the following 2 FFs/Latches, which will be removed : <textOut_169> <textOut_190> 
+INFO:Xst:2261 - The FF/Latch <textOut_8> in Unit <add_module> is equivalent to the following 22 FFs/Latches, which will be removed : <textOut_9> <textOut_14> <textOut_18> <textOut_19> <textOut_26> <textOut_33> <textOut_49> <textOut_52> <textOut_57> <textOut_64> <textOut_73> <textOut_76> <textOut_78> <textOut_86> <textOut_98> <textOut_99> <textOut_104> <textOut_168> <textOut_204> <textOut_228> <textOut_236> <textOut_251> 
+INFO:Xst:2261 - The FF/Latch <textOut_194> in Unit <add_module> is equivalent to the following 2 FFs/Latches, which will be removed : <textOut_195> <textOut_201> 
+INFO:Xst:2261 - The FF/Latch <textOut_37> in Unit <add_module> is equivalent to the following 6 FFs/Latches, which will be removed : <textOut_85> <textOut_202> <textOut_203> <textOut_206> <textOut_208> <textOut_214> 
+INFO:Xst:2261 - The FF/Latch <textOut_130> in Unit <add_module> is equivalent to the following 10 FFs/Latches, which will be removed : <textOut_131> <textOut_132> <textOut_134> <textOut_172> <textOut_177> <textOut_180> <textOut_184> <textOut_187> <textOut_250> <textOut_252> 
+INFO:Xst:2261 - The FF/Latch <textOut_137> in Unit <add_module> is equivalent to the following 16 FFs/Latches, which will be removed : <textOut_138> <textOut_139> <textOut_145> <textOut_146> <textOut_147> <textOut_153> <textOut_154> <textOut_155> <textOut_160> <textOut_161> <textOut_162> <textOut_166> <textOut_170> <textOut_174> <textOut_179> <textOut_240> 
+
+Optimizing unit <subtract_module> ...
+WARNING:Xst:1710 - FF/Latch <textOut_254> (without init value) has a constant value of 1 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_246> (without init value) has a constant value of 1 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_245> (without init value) has a constant value of 1 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_238> (without init value) has a constant value of 1 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_237> (without init value) has a constant value of 1 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_229> (without init value) has a constant value of 1 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_222> (without init value) has a constant value of 1 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_213> (without init value) has a constant value of 1 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_205> (without init value) has a constant value of 1 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_198> (without init value) has a constant value of 1 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_197> (without init value) has a constant value of 1 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_189> (without init value) has a constant value of 1 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_181> (without init value) has a constant value of 1 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_173> (without init value) has a constant value of 1 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_169> (without init value) has a constant value of 1 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_165> (without init value) has a constant value of 1 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_157> (without init value) has a constant value of 1 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_149> (without init value) has a constant value of 1 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_141> (without init value) has a constant value of 1 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_133> (without init value) has a constant value of 1 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_109> (without init value) has a constant value of 1 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_101> (without init value) has a constant value of 1 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_93> (without init value) has a constant value of 1 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_77> (without init value) has a constant value of 1 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_61> (without init value) has a constant value of 1 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_53> (without init value) has a constant value of 1 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_45> (without init value) has a constant value of 1 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_29> (without init value) has a constant value of 1 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_21> (without init value) has a constant value of 1 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_13> (without init value) has a constant value of 1 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <textOut_5> (without init value) has a constant value of 1 in block <subtract_module>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <textOut_16> in Unit <subtract_module> is equivalent to the following 19 FFs/Latches, which will be removed : <textOut_20> <textOut_25> <textOut_32> <textOut_34> <textOut_41> <textOut_46> <textOut_50> <textOut_51> <textOut_58> <textOut_65> <textOut_67> <textOut_81> <textOut_96> <textOut_100> <textOut_105> <textOut_171> <textOut_217> <textOut_233> <textOut_244> 
+INFO:Xst:2261 - The FF/Latch <textOut_196> in Unit <subtract_module> is equivalent to the following FF/Latch, which will be removed : <textOut_200> 
+INFO:Xst:2261 - The FF/Latch <textOut_69> in Unit <subtract_module> is equivalent to the following 2 FFs/Latches, which will be removed : <textOut_168> <textOut_218> 
+INFO:Xst:2261 - The FF/Latch <textOut_188> in Unit <subtract_module> is equivalent to the following FF/Latch, which will be removed : <textOut_192> 
+INFO:Xst:2261 - The FF/Latch <textOut_37> in Unit <subtract_module> is equivalent to the following 6 FFs/Latches, which will be removed : <textOut_85> <textOut_174> <textOut_179> <textOut_182> <textOut_206> <textOut_214> 
+INFO:Xst:2261 - The FF/Latch <textOut_176> in Unit <subtract_module> is equivalent to the following 2 FFs/Latches, which will be removed : <textOut_208> <textOut_252> 
+INFO:Xst:2261 - The FF/Latch <textOut_145> in Unit <subtract_module> is equivalent to the following 10 FFs/Latches, which will be removed : <textOut_146> <textOut_147> <textOut_153> <textOut_154> <textOut_155> <textOut_162> <textOut_210> <textOut_216> <textOut_225> <textOut_235> 
+INFO:Xst:2261 - The FF/Latch <textOut_190> in Unit <subtract_module> is equivalent to the following 4 FFs/Latches, which will be removed : <textOut_220> <textOut_221> <textOut_230> <textOut_248> 
+INFO:Xst:2261 - The FF/Latch <textOut_8> in Unit <subtract_module> is equivalent to the following 23 FFs/Latches, which will be removed : <textOut_9> <textOut_14> <textOut_18> <textOut_19> <textOut_26> <textOut_33> <textOut_49> <textOut_52> <textOut_57> <textOut_64> <textOut_73> <textOut_76> <textOut_78> <textOut_86> <textOut_98> <textOut_99> <textOut_104> <textOut_106> <textOut_186> <textOut_204> <textOut_236> <textOut_241> <textOut_251> 
+INFO:Xst:2261 - The FF/Latch <textOut_17> in Unit <subtract_module> is equivalent to the following 18 FFs/Latches, which will be removed : <textOut_22> <textOut_28> <textOut_30> <textOut_38> <textOut_48> <textOut_54> <textOut_56> <textOut_60> <textOut_62> <textOut_66> <textOut_70> <textOut_84> <textOut_97> <textOut_102> <textOut_110> <textOut_226> <textOut_228> <textOut_242> 
+INFO:Xst:2261 - The FF/Latch <textOut_161> in Unit <subtract_module> is equivalent to the following 3 FFs/Latches, which will be removed : <textOut_163> <textOut_211> <textOut_234> 
+INFO:Xst:2261 - The FF/Latch <textOut_170> in Unit <subtract_module> is equivalent to the following 6 FFs/Latches, which will be removed : <textOut_177> <textOut_178> <textOut_184> <textOut_187> <textOut_240> <textOut_249> 
+INFO:Xst:2261 - The FF/Latch <textOut_193> in Unit <subtract_module> is equivalent to the following FF/Latch, which will be removed : <textOut_243> 
+INFO:Xst:2261 - The FF/Latch <textOut_130> in Unit <subtract_module> is equivalent to the following 8 FFs/Latches, which will be removed : <textOut_131> <textOut_132> <textOut_134> <textOut_164> <textOut_172> <textOut_202> <textOut_232> <textOut_250> 
 WARNING:Xst:1710 - FF/Latch <core_uut/textOut_111> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <core_uut/textOut_103> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <core_uut/textOut_95> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_90> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_88> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <core_uut/textOut_87> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_82> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <core_uut/textOut_79> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <core_uut/textOut_74> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <core_uut/textOut_71> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
@@ -773,7 +1116,6 @@ WARNING:Xst:1710 - FF/Latch <core_uut/textOut_0> (without init value) has a cons
 WARNING:Xst:1710 - FF/Latch <core_uut/textOut_255> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <core_uut/textOut_247> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <core_uut/textOut_239> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <core_uut/textOut_233> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <core_uut/textOut_231> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <core_uut/textOut_223> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <core_uut/textOut_215> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
@@ -782,16 +1124,19 @@ WARNING:Xst:1710 - FF/Latch <core_uut/textOut_199> (without init value) has a co
 WARNING:Xst:1710 - FF/Latch <core_uut/textOut_191> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <core_uut/textOut_183> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <core_uut/textOut_175> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <core_uut/textOut_170> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <core_uut/textOut_167> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <core_uut/textOut_163> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <core_uut/textOut_159> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <core_uut/textOut_151> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <core_uut/textOut_148> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <core_uut/textOut_145> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <core_uut/textOut_143> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_136> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <core_uut/textOut_135> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_129> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_128> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_127> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_119> (without init value) has a constant value of 0 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <core_uut/textOut_256> of sequential type is unconnected in block <calc_project_top>.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_5> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <core_uut/textOut_13> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <core_uut/textOut_21> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <core_uut/textOut_45> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
@@ -806,52 +1151,43 @@ WARNING:Xst:1710 - FF/Latch <core_uut/textOut_165> (without init value) has a co
 WARNING:Xst:1710 - FF/Latch <core_uut/textOut_173> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <core_uut/textOut_189> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <core_uut/textOut_197> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <core_uut/textOut_205> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <core_uut/textOut_229> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <core_uut/textOut_237> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <core_uut/textOut_238> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <core_uut/textOut_246> (without init value) has a constant value of 1 in block <calc_project_top>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <core_uut/textOut_84> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_38> 
-INFO:Xst:2261 - The FF/Latch <core_uut/textOut_88> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_225> 
-INFO:Xst:2261 - The FF/Latch <core_uut/textOut_99> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_228> 
-INFO:Xst:2261 - The FF/Latch <core_uut/textOut_104> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_98> 
-INFO:Xst:2261 - The FF/Latch <core_uut/textOut_125> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_182> 
-INFO:Xst:2261 - The FF/Latch <core_uut/textOut_201> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_194> 
-INFO:Xst:2261 - The FF/Latch <core_uut/textOut_205> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_5> 
-INFO:Xst:2261 - The FF/Latch <core_uut/textOut_212> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_12> 
-INFO:Xst:2261 - The FF/Latch <core_uut/textOut_208> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_202> 
-INFO:Xst:2261 - The FF/Latch <core_uut/textOut_169> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_243> 
-INFO:Xst:2261 - The FF/Latch <core_uut/textOut_224> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_97> 
-INFO:Xst:2261 - The FF/Latch <core_uut/textOut_180> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_172> 
-INFO:Xst:2261 - The FF/Latch <core_uut/textOut_176> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_232> 
-INFO:Xst:2261 - The FF/Latch <core_uut/textOut_11> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_235> 
-INFO:Xst:2261 - The FF/Latch <core_uut/textOut_184> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_250> 
-INFO:Xst:2261 - The FF/Latch <core_uut/textOut_240> in Unit <calc_project_top> is equivalent to the following 12 FFs/Latches, which will be removed : <core_uut/textOut_209> <core_uut/textOut_178> <core_uut/textOut_161> <core_uut/textOut_147> <core_uut/textOut_139> <core_uut/textOut_113> <core_uut/textOut_112> <core_uut/textOut_105> <core_uut/textOut_72> <core_uut/textOut_42> <core_uut/textOut_40> <core_uut/textOut_24> 
-INFO:Xst:2261 - The FF/Latch <core_uut/textOut_241> in Unit <calc_project_top> is equivalent to the following 2 FFs/Latches, which will be removed : <core_uut/textOut_186> <core_uut/textOut_122> 
-INFO:Xst:2261 - The FF/Latch <core_uut/textOut_20> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_214> 
+INFO:Xst:2261 - The FF/Latch <core_uut/textOut_104> in Unit <calc_project_top> is equivalent to the following 4 FFs/Latches, which will be removed : <core_uut/textOut_98> <core_uut/textOut_73> <core_uut/textOut_57> <core_uut/textOut_9> 
+INFO:Xst:2261 - The FF/Latch <core_uut/textOut_131> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_172> 
+INFO:Xst:2261 - The FF/Latch <core_uut/textOut_132> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_134> 
+INFO:Xst:2261 - The FF/Latch <core_uut/textOut_138> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_166> 
+INFO:Xst:2261 - The FF/Latch <core_uut/textOut_145> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_154> 
+INFO:Xst:2261 - The FF/Latch <core_uut/textOut_162> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_146> 
+INFO:Xst:2261 - The FF/Latch <core_uut/textOut_221> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_230> 
+INFO:Xst:2261 - The FF/Latch <core_uut/textOut_216> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_210> 
+INFO:Xst:2261 - The FF/Latch <core_uut/textOut_184> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_177> 
+INFO:Xst:2261 - The FF/Latch <core_uut/textOut_241> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_186> 
 INFO:Xst:2261 - The FF/Latch <core_uut/textOut_16> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_50> 
-INFO:Xst:2261 - The FF/Latch <core_uut/textOut_22> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_70> 
+INFO:Xst:2261 - The FF/Latch <core_uut/textOut_17> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_242> 
+INFO:Xst:2261 - The FF/Latch <core_uut/textOut_22> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_110> 
+INFO:Xst:2261 - The FF/Latch <core_uut/textOut_245> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_254> 
 INFO:Xst:2261 - The FF/Latch <core_uut/textOut_19> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_236> 
-INFO:Xst:2261 - The FF/Latch <core_uut/textOut_248> in Unit <calc_project_top> is equivalent to the following 6 FFs/Latches, which will be removed : <core_uut/textOut_242> <core_uut/textOut_218> <core_uut/textOut_106> <core_uut/textOut_66> <core_uut/textOut_56> <core_uut/textOut_17> 
-INFO:Xst:2261 - The FF/Latch <core_uut/textOut_198> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_230> 
-INFO:Xst:2261 - The FF/Latch <core_uut/textOut_32> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_120> 
-INFO:Xst:2261 - The FF/Latch <core_uut/textOut_29> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_254> 
-INFO:Xst:2261 - The FF/Latch <core_uut/textOut_37> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_206> 
-INFO:Xst:2261 - The FF/Latch <core_uut/textOut_51> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_46> 
-INFO:Xst:2261 - The FF/Latch <core_uut/textOut_48> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_193> 
-INFO:Xst:2261 - The FF/Latch <core_uut/textOut_57> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_226> 
-INFO:Xst:2261 - The FF/Latch <core_uut/textOut_2> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_164> 
-INFO:Xst:2261 - The FF/Latch <core_uut/textOut_3> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_244> 
-INFO:Xst:2261 - The FF/Latch <core_uut/textOut_67> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_227> 
+INFO:Xst:2261 - The FF/Latch <core_uut/textOut_24> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_209> 
+INFO:Xst:2261 - The FF/Latch <core_uut/textOut_32> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_96> 
+INFO:Xst:2261 - The FF/Latch <core_uut/textOut_29> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_222> 
+INFO:Xst:2261 - The FF/Latch <core_uut/textOut_37> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_214> 
+INFO:Xst:2261 - The FF/Latch <core_uut/textOut_51> in Unit <calc_project_top> is equivalent to the following 2 FFs/Latches, which will be removed : <core_uut/textOut_46> <core_uut/textOut_20> 
+INFO:Xst:2261 - The FF/Latch <core_uut/textOut_3> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_158> 
+INFO:Xst:2261 - The FF/Latch <core_uut/textOut_67> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_100> 
 INFO:Xst:2261 - The FF/Latch <core_uut/textOut_4> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_253> 
-INFO:Xst:2261 - The FF/Latch <core_uut/textOut_69> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_190> 
-INFO:Xst:2261 - The FF/Latch <core_uut/textOut_6> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_166> 
 INFO:Xst:2261 - The FF/Latch <core_uut/textOut_76> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_204> 
 INFO:Xst:2261 - The FF/Latch <core_uut/textOut_8> in Unit <calc_project_top> is equivalent to the following FF/Latch, which will be removed : <core_uut/textOut_64> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block calc_project_top, actual ratio is 10.
+Found area constraint ratio of 100 (+ 5) on block calc_project_top, actual ratio is 12.
 FlipFlop uut/delayOK has been replicated 1 time(s)
+FlipFlop uut/lcd_cmd_ptr_0 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -859,8 +1195,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 381
- Flip-Flops                                            : 381
+# Registers                                            : 499
+ Flip-Flops                                            : 499
 
 =========================================================================
 
@@ -883,30 +1219,31 @@ Top Level Output File Name         : calc_project_top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 992
+# BELS                             : 1178
 #      BUF                         : 1
 #      GND                         : 1
-#      INV                         : 9
+#      INV                         : 10
 #      LUT1                        : 133
-#      LUT2                        : 36
-#      LUT3                        : 58
-#      LUT4                        : 82
-#      LUT5                        : 175
-#      LUT6                        : 223
-#      MUXCY                       : 133
+#      LUT2                        : 54
+#      LUT3                        : 56
+#      LUT4                        : 81
+#      LUT5                        : 177
+#      LUT6                        : 359
+#      MUXCY                       : 147
+#      MUXF7                       : 2
 #      VCC                         : 1
-#      XORCY                       : 140
-# FlipFlops/Latches                : 381
-#      FD                          : 133
-#      FDC                         : 113
-#      FDE                         : 20
-#      FDP                         : 91
+#      XORCY                       : 156
+# FlipFlops/Latches                : 499
+#      FD                          : 134
+#      FDC                         : 134
+#      FDE                         : 114
+#      FDP                         : 93
 #      FDR                         : 24
 # Clock Buffers                    : 2
 #      BUFG                        : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 42
-#      IBUF                        : 5
+# IO Buffers                       : 50
+#      IBUF                        : 13
 #      OBUF                        : 37
 
 Device utilization summary:
@@ -916,20 +1253,20 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             381  out of  18224     2%  
- Number of Slice LUTs:                  716  out of   9112     7%  
-    Number used as Logic:               716  out of   9112     7%  
+ Number of Slice Registers:             499  out of  18224     2%  
+ Number of Slice LUTs:                  870  out of   9112     9%  
+    Number used as Logic:               870  out of   9112     9%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    718
-   Number with an unused Flip Flop:     337  out of    718    46%  
-   Number with an unused LUT:             2  out of    718     0%  
-   Number of fully used LUT-FF pairs:   379  out of    718    52%  
-   Number of unique control sets:         7
+ Number of LUT Flip Flop pairs used:    875
+   Number with an unused Flip Flop:     376  out of    875    42%  
+   Number with an unused LUT:             5  out of    875     0%  
+   Number of fully used LUT-FF pairs:   494  out of    875    56%  
+   Number of unique control sets:        11
 
 IO Utilization: 
  Number of IOs:                          51
- Number of bonded IOBs:                  43  out of    232    18%  
+ Number of bonded IOBs:                  51  out of    232    21%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
@@ -955,8 +1292,8 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-ClkPort                            | BUFGP                  | 344   |
-uut/oneUSClk                       | BUFG                   | 37    |
+ClkPort                            | BUFGP                  | 461   |
+uut/oneUSClk                       | BUFG                   | 38    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -967,9 +1304,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 6.270ns (Maximum Frequency: 159.492MHz)
-   Minimum input arrival time before clock: 4.852ns
-   Maximum output required time after clock: 10.954ns
+   Minimum period: 6.298ns (Maximum Frequency: 158.789MHz)
+   Minimum input arrival time before clock: 4.857ns
+   Maximum output required time after clock: 10.918ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -978,58 +1315,58 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'ClkPort'
-  Clock period: 4.240ns (frequency: 235.853MHz)
-  Total number of paths / destination ports: 4380 / 374
+  Clock period: 4.718ns (frequency: 211.933MHz)
+  Total number of paths / destination ports: 5404 / 588
 -------------------------------------------------------------------------
-Delay:               4.240ns (Levels of Logic = 2)
+Delay:               4.718ns (Levels of Logic = 2)
   Source:            core_uut/state_FSM_FFd5 (FF)
-  Destination:       core_uut/textOut_217 (FF)
+  Destination:       core_uut/textOut_251 (FF)
   Source Clock:      ClkPort rising
   Destination Clock: ClkPort rising
 
-  Data Path: core_uut/state_FSM_FFd5 to core_uut/textOut_217
+  Data Path: core_uut/state_FSM_FFd5 to core_uut/textOut_251
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              4   0.447   1.048  core_uut/state_FSM_FFd5 (core_uut/state_FSM_FFd5)
-     LUT6:I0->O          143   0.203   2.237  core_uut/state__n01291 (core_uut/_n0129)
-     LUT5:I1->O            1   0.203   0.000  core_uut/state[14]_GND_2_o_select_50_OUT<136>1 (core_uut/state[14]_GND_2_o_select_50_OUT<121>)
-     FDC:D                     0.102          core_uut/textOut_121
+     FDC:C->Q             19   0.447   1.416  core_uut/state_FSM_FFd5 (core_uut/state_FSM_FFd5)
+     LUT5:I0->O          148   0.203   2.347  core_uut/state__n01351 (core_uut/_n0135)
+     LUT6:I1->O            1   0.203   0.000  core_uut/state[14]_GND_2_o_select_53_OUT<224> (core_uut/state[14]_GND_2_o_select_53_OUT<33>)
+     FDC:D                     0.102          core_uut/textOut_33
     ----------------------------------------
-    Total                      4.240ns (0.955ns logic, 3.285ns route)
-                                       (22.5% logic, 77.5% route)
+    Total                      4.718ns (0.955ns logic, 3.763ns route)
+                                       (20.2% logic, 79.8% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'uut/oneUSClk'
-  Clock period: 6.270ns (frequency: 159.492MHz)
-  Total number of paths / destination ports: 3606 / 54
+  Clock period: 6.298ns (frequency: 158.789MHz)
+  Total number of paths / destination ports: 3915 / 55
 -------------------------------------------------------------------------
-Delay:               6.270ns (Levels of Logic = 5)
-  Source:            uut/stCur_0 (FF)
-  Destination:       uut/lcd_cmd_ptr_5 (FF)
+Delay:               6.298ns (Levels of Logic = 5)
+  Source:            uut/stCur_5 (FF)
+  Destination:       uut/lcd_cmd_ptr_1 (FF)
   Source Clock:      uut/oneUSClk rising
   Destination Clock: uut/oneUSClk rising
 
-  Data Path: uut/stCur_0 to uut/lcd_cmd_ptr_5
+  Data Path: uut/stCur_5 to uut/lcd_cmd_ptr_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               9   0.447   1.174  uut/stCur_0 (uut/stCur_0)
-     LUT5:I0->O           12   0.203   0.909  uut/stCur[9]_GND_9_o_equal_52_o<9>11 (uut/stCur[9]_GND_9_o_equal_52_o<9>1)
-     LUT6:I5->O            1   0.205   0.924  uut/stNext<3>2_SW1 (N203)
-     LUT6:I1->O            6   0.203   0.849  uut/stNext<3>3 (uut/stNext<3>)
-     LUT5:I3->O            6   0.203   0.849  uut/_n02833_SW0 (N175)
-     LUT6:I4->O            1   0.203   0.000  uut/lcd_cmd_ptr_5_rstpot (uut/lcd_cmd_ptr_5_rstpot)
-     FD:D                      0.102          uut/lcd_cmd_ptr_5
+     FD:C->Q              13   0.447   1.277  uut/stCur_5 (uut/stCur_5)
+     LUT5:I0->O           10   0.203   0.857  uut/stCur[9]_GND_11_o_equal_48_o<9>11 (uut/stCur[9]_GND_11_o_equal_48_o<9>1)
+     LUT6:I5->O           10   0.205   0.857  uut/stCur[9]_GND_11_o_equal_48_o<9>1 (uut/stCur[9]_GND_11_o_equal_48_o)
+     LUT5:I4->O            9   0.205   0.830  uut/stNext<7>3 (uut/stNext<3>)
+     LUT6:I5->O            8   0.205   0.907  uut/stNext[9]_stNext[9]_OR_186_o1 (uut/stNext[9]_stNext[9]_OR_186_o)
+     LUT6:I4->O            1   0.203   0.000  uut/lcd_cmd_ptr_1_rstpot (uut/lcd_cmd_ptr_1_rstpot)
+     FD:D                      0.102          uut/lcd_cmd_ptr_1
     ----------------------------------------
-    Total                      6.270ns (1.566ns logic, 4.704ns route)
-                                       (25.0% logic, 75.0% route)
+    Total                      6.298ns (1.570ns logic, 4.728ns route)
+                                       (24.9% logic, 75.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'ClkPort'
-  Total number of paths / destination ports: 229 / 225
+  Total number of paths / destination ports: 281 / 277
 -------------------------------------------------------------------------
-Offset:              4.852ns (Levels of Logic = 2)
+Offset:              4.857ns (Levels of Logic = 2)
   Source:            BtnU (PAD)
   Destination:       DIV_CLK_0 (FF)
   Destination Clock: ClkPort rising
@@ -1039,17 +1376,17 @@ Offset:              4.852ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             1   1.222   0.579  BtnU_IBUF (BtnU_IBUF)
-     BUF:I->O            201   0.568   2.053  BUF2 (Reset)
+     BUF:I->O            221   0.568   2.058  BUF2 (Reset)
      FDC:CLR                   0.430          DIV_CLK_0
     ----------------------------------------
-    Total                      4.852ns (2.220ns logic, 2.632ns route)
-                                       (45.8% logic, 54.2% route)
+    Total                      4.857ns (2.220ns logic, 2.637ns route)
+                                       (45.7% logic, 54.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'uut/oneUSClk'
-  Total number of paths / destination ports: 751 / 10
+  Total number of paths / destination ports: 740 / 10
 -------------------------------------------------------------------------
-Offset:              10.954ns (Levels of Logic = 7)
+Offset:              10.918ns (Levels of Logic = 7)
   Source:            uut/lcd_cmd_ptr_1 (FF)
   Destination:       LCD_data<6> (PAD)
   Source Clock:      uut/oneUSClk rising
@@ -1058,21 +1395,21 @@ Offset:              10.954ns (Levels of Logic = 7)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              41   0.447   1.648  uut/lcd_cmd_ptr_1 (uut/lcd_cmd_ptr_1)
-     LUT3:I0->O           20   0.205   1.437  uut/Mmux__n02761141 (uut/Mmux__n0276114)
+     FD:C->Q              40   0.447   1.634  uut/lcd_cmd_ptr_1 (uut/lcd_cmd_ptr_1)
+     LUT3:I0->O           19   0.205   1.416  uut/Mmux__n02761141 (uut/Mmux__n0276114)
      LUT6:I1->O            1   0.203   0.944  uut/Mmux_LCD_CMDS76 (uut/Mmux_LCD_CMDS75)
-     LUT6:I0->O            1   0.203   0.944  uut/Mmux_LCD_CMDS77_SW0 (N229)
+     LUT6:I0->O            1   0.203   0.944  uut/Mmux_LCD_CMDS77_SW0 (N163)
      LUT6:I0->O            1   0.203   0.580  uut/Mmux_LCD_CMDS77 (uut/Mmux_LCD_CMDS76)
      LUT6:I5->O            1   0.205   0.580  uut/Mmux_LCD_CMDS711 (uut/Mmux_LCD_CMDS710)
      LUT4:I3->O            1   0.205   0.579  uut/Mmux_LCD_CMDS717 (LCD_data_6_OBUF)
      OBUF:I->O                 2.571          LCD_data_6_OBUF (LCD_data<6>)
     ----------------------------------------
-    Total                     10.954ns (4.242ns logic, 6.712ns route)
-                                       (38.7% logic, 61.3% route)
+    Total                     10.918ns (4.242ns logic, 6.676ns route)
+                                       (38.9% logic, 61.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'ClkPort'
-  Total number of paths / destination ports: 236 / 21
+  Total number of paths / destination ports: 235 / 21
 -------------------------------------------------------------------------
 Offset:              8.645ns (Levels of Logic = 6)
   Source:            core_uut/textOut_126 (FF)
@@ -1085,7 +1422,7 @@ Offset:              8.645ns (Levels of Logic = 6)
     ----------------------------------------  ------------
      FDP:C->Q              2   0.447   0.981  core_uut/textOut_126 (core_uut/textOut_126)
      LUT6:I0->O            1   0.203   0.944  uut/Mmux_LCD_CMDS76 (uut/Mmux_LCD_CMDS75)
-     LUT6:I0->O            1   0.203   0.944  uut/Mmux_LCD_CMDS77_SW0 (N229)
+     LUT6:I0->O            1   0.203   0.944  uut/Mmux_LCD_CMDS77_SW0 (N163)
      LUT6:I0->O            1   0.203   0.580  uut/Mmux_LCD_CMDS77 (uut/Mmux_LCD_CMDS76)
      LUT6:I5->O            1   0.205   0.580  uut/Mmux_LCD_CMDS711 (uut/Mmux_LCD_CMDS710)
      LUT4:I3->O            1   0.205   0.579  uut/Mmux_LCD_CMDS717 (LCD_data_6_OBUF)
@@ -1104,7 +1441,7 @@ Clock to Setup on destination clock ClkPort
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-ClkPort        |    4.240|         |         |         |
+ClkPort        |    4.718|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock uut/oneUSClk
@@ -1112,20 +1449,20 @@ Clock to Setup on destination clock uut/oneUSClk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-uut/oneUSClk   |    6.270|         |         |         |
+uut/oneUSClk   |    6.298|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 11.00 secs
-Total CPU time to Xst completion: 10.57 secs
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 13.24 secs
  
 --> 
 
-Total memory usage is 267908 kilobytes
+Total memory usage is 270404 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  363 (   0 filtered)
-Number of infos    :   73 (   0 filtered)
+Number of warnings :  584 (   0 filtered)
+Number of infos    :   78 (   0 filtered)
 
