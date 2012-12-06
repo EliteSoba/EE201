@@ -17,6 +17,11 @@
 # Top level modules:
 # 	subtract_module
 # Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+# -- Compiling module sqrt_module
+# 
+# Top level modules:
+# 	sqrt_module
+# Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 # -- Compiling module prime_module
 # 
 # Top level modules:
@@ -26,6 +31,11 @@
 # 
 # Top level modules:
 # 	mult_module
+# Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+# -- Compiling module gcd_module
+# 
+# Top level modules:
+# 	gcd_module
 # Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 # -- Compiling module divide_module
 # 
@@ -54,6 +64,8 @@
 # vsim -L xilinxcorelib_ver -L unisims_ver -L secureip -lib work -voptargs=\"+acc\" -t 1ps work.calc_core_tb glbl 
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # 
+# ** Note: (vopt-143) Recognized 1 FSM in module "sqrt_module(fast)".
+# 
 # Loading work.calc_core_tb(fast)
 # Loading work.main_calc_cu(fast)
 # Loading work.add_module(fast)
@@ -61,13 +73,16 @@
 # Loading work.mult_module(fast)
 # Loading work.divide_module(fast)
 # Loading work.prime_module(fast)
+# Loading work.gcd_module(fast)
+# Loading work.sqrt_module(fast)
 # Loading work.glbl(fast)
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
-# Causality operation skipped due to absense of debug database file
 add wave  \
-sim:/calc_core_tb/uut/div_uut/out
+sim:/calc_core_tb/uut/sqrt_uut/i \
+sim:/calc_core_tb/uut/sqrt_uut/Remainder \
+sim:/calc_core_tb/uut/sqrt_uut/state
 restart -f
 # Loading work.calc_core_tb(fast)
 # Loading work.main_calc_cu(fast)
@@ -76,10 +91,12 @@ restart -f
 # Loading work.mult_module(fast)
 # Loading work.divide_module(fast)
 # Loading work.prime_module(fast)
+# Loading work.gcd_module(fast)
+# Loading work.sqrt_module(fast)
 # Loading work.glbl(fast)
-run 10us
+run 1us
 add wave  \
-sim:/calc_core_tb/uut/div_uut/state
+sim:/calc_core_tb/uut/sqrt_uut/data_out
 restart -f
 # Loading work.calc_core_tb(fast)
 # Loading work.main_calc_cu(fast)
@@ -88,6 +105,7 @@ restart -f
 # Loading work.mult_module(fast)
 # Loading work.divide_module(fast)
 # Loading work.prime_module(fast)
+# Loading work.gcd_module(fast)
+# Loading work.sqrt_module(fast)
 # Loading work.glbl(fast)
-run 5ns
-run 5us
+run 1us

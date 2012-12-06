@@ -60,6 +60,7 @@ module mult_module(Clk, data_in, reset, enable, textOut, next, done);
 							input_A <= 0;
 							input_B <= 0;
 							done <= 0;
+							data_out <= 0;
 							if (next && enable)
 								state <= LOAD_A;
 						end

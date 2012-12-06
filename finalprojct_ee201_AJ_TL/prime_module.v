@@ -64,6 +64,7 @@ module prime_module(Clk, data_in, reset, enable, textOut, next, done);
 							done <= 0;
 							isNotPrime <= 0;
 							Ready <= 0;
+							data_out <= 0;
 							if (next && enable)
 								state <= LOAD_A;
 						end

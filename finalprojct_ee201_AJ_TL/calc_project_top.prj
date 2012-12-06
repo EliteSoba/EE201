@@ -1,4 +1,5 @@
 verilog work "subtract_module.v"
+verilog work "sqrt_module.v"
 verilog work "prime_module.v"
 verilog work "mult_module.v"
 verilog work "gcd_module.v"

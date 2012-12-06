@@ -1,0 +1,256 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Modelsim_projects\ee201\finalproject\project_files\finalprojct_ee201_AJ_TL
+T_opt
+V>l>hR0UGhd@<918JeR4=70
+04 16 4 work calc_project_top fast 0
+Z1 04 4 4 work glbl fast 0
+=1-0090f5bb6133-50b5c9f2-ee-2714
+Z2 o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L secureip +acc
+n@_opt
+Z3 OL;O;10.1;51
+Z4 dC:\Modelsim_projects\ee201\finalproject\project_files\finalprojct_ee201_AJ_TL
+T_opt1
+VS8W@lC=1HcE`AmEIZRLEV3
+04 12 4 work main_calc_cu fast 0
+R1
+=1-0090f5bb6133-50b5ca42-ee-2244
+R2
+n@_opt1
+R3
+R4
+T_opt2
+VgBIz3h?OW[fF2?gnUATF=3
+Z5 04 12 4 work calc_core_tb fast 0
+R1
+=1-0cd29200e6d2-50c04089-c0-2ccc
+R2
+n@_opt2
+Z6 OL;O;10.1c;51
+R4
+T_opt4
+VAMg;Wi>AU49kjPS0JMT`j2
+R5
+R1
+=1-0cd29200e6d2-50c04133-181-2604
+R2
+n@_opt4
+R6
+vadd_module
+!s100 `bf_Y8^c7n:=n17]5[``I0
+IZd:mkGWJSePkEC`eJK=NY3
+VmRJ8Q9O=cigJ2j62J9h1:2
+Z7 dC:\Users\Tobias\Documents\GitHub\EE201\finalprojct_ee201_AJ_TL
+w1354776130
+8../add_module.v
+F../add_module.v
+L0 21
+Z8 OL;L;10.1c;51
+r1
+31
+!s90 -reportprogress|300|../add_module.v|
+Z9 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s108 1354776882.988000
+!s107 ../add_module.v|
+!i10b 1
+!s85 0
+vcalc_core_tb
+!s100 CPRP82cDf6VQjlFZE8kDl0
+IdVDNOLlT`]YfB0oJV3zo70
+VESDeY06oCI]XhfCO0RgH=1
+R7
+w1354776614
+8calc_core_tb.v
+Fcalc_core_tb.v
+L0 25
+R8
+r1
+31
+!s90 -reportprogress|300|calc_core_tb.v|
+R9
+!s108 1354776883.109000
+!s107 calc_core_tb.v|
+!i10b 1
+!s85 0
+vcalc_project_top
+IA9ULf4KRJS8EWP1oa2WYl0
+VC0WHF?P@oM9jYX7Te0BmQ1
+R4
+w1354090635
+8../calc_project_top.v
+F../calc_project_top.v
+L0 8
+Z10 OL;L;10.1;51
+r1
+31
+R9
+!s100 Hgc=SRPk2ECP6O[>G?WUV3
+!s108 1354090992.478000
+!s107 ../calc_project_top.v|
+!s90 -reportprogress|300|../calc_project_top.v|
+!i10b 1
+!s85 0
+vdivide_module
+!s100 `JON7MUlWk[=h95YG_8;`2
+I8m<>85^=ao[NkWJFB]?GU1
+V3Vk[:aE5nVSe7j1GXJRA=2
+R7
+w1354776114
+8divide_module.v
+Fdivide_module.v
+L0 21
+R8
+r1
+31
+!s90 -reportprogress|300|divide_module.v|
+R9
+!s108 1354776882.928000
+!s107 divide_module.v|
+!i10b 1
+!s85 0
+vee201_debouncer
+I`M`HL;j9m<^=be:z;biRL1
+Vbb<4>bX0F:^54mz2lPDA31
+R4
+w1266843840
+8../ee201_debounce_DPB_SCEN_CCEN_MCEN.v
+F../ee201_debounce_DPB_SCEN_CCEN_MCEN.v
+L0 91
+R10
+r1
+31
+R9
+!s100 fX]0n7mLkPNL4W_mGQTfX2
+!s108 1354090992.358000
+!s107 ../ee201_debounce_DPB_SCEN_CCEN_MCEN.v|
+!s90 -reportprogress|300|../ee201_debounce_DPB_SCEN_CCEN_MCEN.v|
+!i10b 1
+!s85 0
+vgcd_module
+!s100 oc^oR<PPdlKRUc^N;em[k0
+Ih[7m=h[3=e:ME:5[kKafg2
+VeU7FI_eJ9S@1?2N9NlWzY3
+R7
+w1354776107
+8gcd_module.v
+Fgcd_module.v
+L0 21
+R8
+r1
+31
+!s90 -reportprogress|300|gcd_module.v|
+R9
+!s108 1354776882.863000
+!s107 gcd_module.v|
+!i10b 1
+!s85 0
+vglbl
+!s100 iU?KY@Vm^ibNkUiOGIChA3
+I_HnChG<D0B6oX2@hOo5Bb0
+VM[9mS]S:KA1i4VeCMX35[3
+R7
+w1308630577
+8C:/Xilinx/13.2/ISE_DS/ISE//verilog/src/glbl.v
+FC:/Xilinx/13.2/ISE_DS/ISE//verilog/src/glbl.v
+L0 5
+R8
+r1
+31
+!s90 -reportprogress|300|C:/Xilinx/13.2/ISE_DS/ISE//verilog/src/glbl.v|
+R9
+!i10b 1
+!s85 0
+!s108 1354776883.176000
+!s107 C:/Xilinx/13.2/ISE_DS/ISE//verilog/src/glbl.v|
+vmain_calc_cu
+!s100 6C:^nPY<TR_NmfWUnJMl31
+IVj`On_FVTdggN=;Gd5WC:1
+V6=lcFo3Z>2RbGD]4eV@ZU1
+R7
+w1354776548
+8../main_calc_cu.v
+F../main_calc_cu.v
+L0 5
+R8
+r1
+31
+!s90 -reportprogress|300|../main_calc_cu.v|
+R9
+!s108 1354776883.046000
+!s107 ../main_calc_cu.v|
+!i10b 1
+!s85 0
+vmult_module
+!s100 J1EnNZNJT7;n:f:YB9CTF2
+IYO^;2HMeE0<D`UER^3dK_2
+V0n1fgbSbadgdG[d5kef_^0
+R7
+w1354776124
+8mult_module.v
+Fmult_module.v
+L0 21
+R8
+r1
+31
+!s90 -reportprogress|300|mult_module.v|
+R9
+!s108 1354776882.803000
+!s107 mult_module.v|
+!i10b 1
+!s85 0
+vprime_module
+!s100 Q;V<JI7lCKLL3Bcjl@jhM0
+Im3noUSoCk4ScTC2zRY@io3
+V6iJ?dVTB3bEGaSjPBMQbA3
+R7
+w1354776120
+8prime_module.v
+Fprime_module.v
+L0 21
+R8
+r1
+31
+!s90 -reportprogress|300|prime_module.v|
+R9
+!s108 1354776882.738000
+!s107 prime_module.v|
+!i10b 1
+!s85 0
+vsqrt_module
+Ib29>kU`A<ckAMCQQMgBMS0
+VJ>SZdCVTZV0YmSa=>gTFP2
+R7
+w1354776870
+8sqrt_module.v
+Fsqrt_module.v
+L0 21
+R8
+r1
+31
+!s90 -reportprogress|300|sqrt_module.v|
+R9
+!s100 3[=57kh^WNfP[lgcnEISC3
+!s108 1354776882.679000
+!s107 sqrt_module.v|
+!i10b 1
+!s85 0
+vsubtract_module
+!s100 CfX^PmJ>G;Y9[50lzZbIa0
+I:_IF9RNPY9?N_W1Oc@2Li2
+V_DUJEZ2o]MzE0nNFzn=oN3
+R7
+w1354776127
+8subtract_module.v
+Fsubtract_module.v
+L0 21
+R8
+r1
+31
+!s90 -reportprogress|300|subtract_module.v|
+R9
+!s108 1354776882.616000
+!s107 subtract_module.v|
+!i10b 1
+!s85 0

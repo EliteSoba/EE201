@@ -67,6 +67,7 @@ module gcd_module(Clk, data_in, reset, enable, textOut, next, done);
 							Ready <= 0;
 							i <= 0;
 							GCD <= 0;
+							data_out <= 0;
 							if (next && enable)
 								state <= LOAD_A;
 						end

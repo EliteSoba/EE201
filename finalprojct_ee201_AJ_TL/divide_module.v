@@ -70,6 +70,7 @@ module divide_module(Clk, data_in, reset, enable, textOut, next, done);
 							Remainder <= 0;
 							i <= 0;
 							out <= 0;
+							data_out <= 0;
 							if (next && enable)
 								state <= LOAD_A;
 						end

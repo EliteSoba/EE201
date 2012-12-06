@@ -37,7 +37,8 @@ wire [8*32:0] textOut_Mult;
 wire [8*32:0] textOut_Div;
 wire [8*32:0] textOut_Prime;
 wire [8*32:0] textOut_GCD;
-wire done_Add, done_Sub, done_Mult, done_Div, done_Prime, done_GCD;
+wire [8*32:0] textOut_Sqrt;
+wire done_Add, done_Sub, done_Mult, done_Div, done_Prime, done_GCD, done_Sqrt;
 
 //assign state outputs to the state register
 assign {sel1, sel2, sel3, sel4, sel5, sel6, sel7, add, sub, div, mult, gcd, isprime, sqrt, done} = state;
@@ -72,6 +73,7 @@ mult_module mult_uut(.Clk(Clk), .data_in(dataInBus), .reset(state==SEL4), .enabl
 divide_module div_uut(.Clk(Clk), .data_in(dataInBus), .reset(state==SEL3), .enable(state==DIV), .textOut(textOut_Div), .next(btc), .done(done_Div));
 prime_module prime_uut(.Clk(Clk), .data_in(dataInBus), .reset(state==SEL6), .enable(state==ISPRIME), .textOut(textOut_Prime), .next(btc), .done(done_Prime));
 gcd_module gcd_uut(.Clk(Clk), .data_in(dataInBus), .reset(state==SEL5), .enable(state==GCD), .textOut(textOut_GCD), .next(btc), .done(done_GCD));
+sqrt_module sqrt_uut(.Clk(Clk), .data_in(dataInBus), .reset(state==SEL7), .enable(state==SQRT), .textOut(textOut_Sqrt), .next(btc), .done(done_Sqrt));
 //assign textOut = {line1, line2};
 
 always @(posedge Clk, posedge Reset) 
@@ -275,7 +277,9 @@ always @(posedge Clk, posedge Reset)
 	          begin
 		         // state transitions in the control unit
 		         // RTL operations in the Data Path 
-
+					textOut = textOut_Sqrt;
+					if (done_Sqrt && btc)
+						state <= SEL7;
 	          end 
 			DONE	: 
 	          begin
