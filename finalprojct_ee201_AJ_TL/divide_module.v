@@ -98,14 +98,17 @@ module divide_module(Clk, data_in, reset, enable, textOut, next, done);
 						begin
 							data_out <= input_A / input_B;
 							Remainder <= modulus(input_A, input_B);
-							textOut = {"Calculating...  ",Ready?"Press Btnc      ":"                "};
+							textOut = {"Calculating...  ",bin2x(data_out[7:4]),bin2x(data_out[3:0]),".",bin2x(Remainder[3:0]),"             "};
+							//textOut = {"Calculating...  ",modulus(input_A, input_B) == 0?"Press Btnc      ":"                "};
+							if (modulus(input_A, input_B) == 0)
+								Ready <= 1;
 							state <= CALCULATE;
 						end
 						CALCULATE:
 						begin
 							textOut = {"Calculating...  ",Ready?"Press Btnc      ":"                "};
 							if (!Ready)
-								begin
+							begin
 								//if (Remainder == 0)
 									//Ready <= 1;
 								Remainder <= Remainder << 1;
@@ -114,13 +117,7 @@ module divide_module(Clk, data_in, reset, enable, textOut, next, done);
 							else if (next)
 								state <= DONE;
 						end
-						SUBTRACT: //TODO: Convert the output after the decimal point to hex.
-						/* Algorithm is:
-							Same Exit statements
-							Left Shift Remainder 4 (<<4)
-							out <= {out, bin2x(Remainder / input_B);
-							Remainder <= Remainder % input_B;
-						*/
+						SUBTRACT: 
 						begin
 							textOut = {"Calculating...  ",Ready?"Press Btnc      ":"                "};
 							if (!Ready)

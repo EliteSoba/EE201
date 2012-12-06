@@ -30,17 +30,21 @@ module sqrt_module(Clk, data_in, reset, enable, textOut, next, done);
 	integer data_out;
 	
 	reg [7:0] input_A;
-	integer i;
+	integer i, k;
 	integer Remainder;
+	reg [15:0] out;
+	reg Ready;
 	
-	reg [4:0] state;
+	reg [5:0] state;
 	
 	localparam
-		START			= 5'b00001,
-		LOAD_A		= 5'b00010,
-		APPROX		= 5'b00100,
-		CALCULATE	= 5'b01000,
-		DONE			= 5'b10000;
+		START			= 7'b0000001,
+		LOAD_A		= 7'b0000010,
+		APPROX		= 7'b0000100,
+		CALCULATE	= 7'b0001000,
+		SUB			= 7'b0010000,
+		OTHER_CALC	= 7'b0100000,
+		DONE			= 7'b1000000;
 		
 	always @(posedge Clk, posedge reset) 
 		begin
@@ -62,8 +66,11 @@ module sqrt_module(Clk, data_in, reset, enable, textOut, next, done);
 							input_A <= 0;
 							done <= 0;
 							i <= 0;
+							k <= 0;
 							Remainder <= 0;
 							data_out <= 0;
+							out <= 0;
+							Ready <= 0;
 							if (next && enable)
 								state <= LOAD_A;
 						end
@@ -79,30 +86,68 @@ module sqrt_module(Clk, data_in, reset, enable, textOut, next, done);
 						end
 						APPROX:
 						begin
-							textOut = "Calculating...                  ";
+							textOut = {"Calculating...  ",Ready?"Press Btnc      ":"                "};
 							i <= i + 1;
-							if ((i+1)*(i+1) > input_A)
+							if (input_A == 1)
+							begin
+								data_out <= 1;
+								state <= DONE;
+							end
+							if ((i+2)*(i+2) > input_A)
 							begin
 								state <= CALCULATE;
 							end
-							else if ((i+1)*(i+1) == input_A)
+							else if ((i+2)*(i+2) == input_A)
 							begin
-								data_out <= i+1;
+								data_out <= i+2;
 								state <= DONE;
 							end
 						end
-						CALCULATE:
+						CALCULATE: //PULL OUT DIVISION LOGIC FOR THIS ONE
 						begin
-							textOut = {"Calculating...  ","Press Btnc      "};
+							textOut = {"Calculating...  ",Ready?"Press Btnc      ":"                "};
 							
 							data_out <= ((i*i*i*i) + (6*i*i*input_A) + (input_A*input_A))/(4*i*i*i + 4*i*input_A);
+							Remainder <= ((i*i*i*i) + (6*i*i*input_A) + (input_A*input_A))-((i*i*i*i) + (6*i*i*input_A) + (input_A*input_A))/(4*i*i*i + 4*i*input_A) * (4*i*i*i + 4*i*input_A);
 							
-							if (next)
+							state <= SUB;
+						end
+						SUB:
+						begin
+							textOut = {"Calculating...  ",Ready?"Press Btnc      ":"                "};
+							if (!Ready)
+							begin
+								Remainder <= Remainder << 1;
+								state <= OTHER_CALC;
+							end
+							else if (next)
+								state <= DONE;
+						end
+						OTHER_CALC:
+						begin
+							textOut = {"Calculating...  ",Ready?"Press Btnc      ":"                "};
+							if (!Ready)
+							begin
+								if (Remainder >= (4*i*i*i + 4*i*input_A))
+								begin
+									out <= (out<<1) + 1;
+									Remainder <= Remainder - (4*i*i*i + 4*i*input_A);
+								end
+								else
+								begin
+									out <= out << 1;
+								end
+								k <= k + 1;
+								if (k >= 15)
+									Ready <= 1;
+								state <= SUB;
+							end
+							else if (next)
 								state <= DONE;
 						end
 						DONE:
 						begin
-							textOut = {"The Product is: ", bin2x(data_out[15:12]), bin2x(data_out[11:8]), bin2x(data_out[7:4]), bin2x(data_out[3:0]), ".           "};
+							textOut = {"The Product is: ", bin2x(data_out[3:0]), ".", bin2x(out[15:12]), bin2x(out[11:8]), bin2x(out[7:4]), bin2x(out[3:0]),"          "};
 							done <= 1;
 						end
 					endcase

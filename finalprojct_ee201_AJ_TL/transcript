@@ -64,8 +64,6 @@
 # vsim -L xilinxcorelib_ver -L unisims_ver -L secureip -lib work -voptargs=\"+acc\" -t 1ps work.calc_core_tb glbl 
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # 
-# ** Note: (vopt-143) Recognized 1 FSM in module "sqrt_module(fast)".
-# 
 # Loading work.calc_core_tb(fast)
 # Loading work.main_calc_cu(fast)
 # Loading work.add_module(fast)
@@ -80,23 +78,12 @@
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
 add wave  \
+sim:/calc_core_tb/uut/sqrt_uut/data_out \
+sim:/calc_core_tb/uut/sqrt_uut/input_A \
 sim:/calc_core_tb/uut/sqrt_uut/i \
+sim:/calc_core_tb/uut/sqrt_uut/k \
 sim:/calc_core_tb/uut/sqrt_uut/Remainder \
 sim:/calc_core_tb/uut/sqrt_uut/state
-restart -f
-# Loading work.calc_core_tb(fast)
-# Loading work.main_calc_cu(fast)
-# Loading work.add_module(fast)
-# Loading work.subtract_module(fast)
-# Loading work.mult_module(fast)
-# Loading work.divide_module(fast)
-# Loading work.prime_module(fast)
-# Loading work.gcd_module(fast)
-# Loading work.sqrt_module(fast)
-# Loading work.glbl(fast)
-run 1us
-add wave  \
-sim:/calc_core_tb/uut/sqrt_uut/data_out
 restart -f
 # Loading work.calc_core_tb(fast)
 # Loading work.main_calc_cu(fast)
