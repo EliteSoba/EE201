@@ -5,7 +5,7 @@
 // 
 // Create Date:    01:01:03 11/28/2012 
 // Design Name: 
-// Module Name:    divide_module 
+// Module Name:    gcd_module 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
@@ -18,7 +18,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module divide_module(Clk, data_in, reset, enable, textOut, next, done);
+module gcd_module(Clk, data_in, reset, enable, textOut, next, done);
 	input Clk;
 	input [7:0] data_in;
 	input reset;
@@ -31,20 +31,18 @@ module divide_module(Clk, data_in, reset, enable, textOut, next, done);
 	
 	reg [7:0] input_A, input_B;
 	
-	reg [6:0] state;
+	reg [5:0] state;
 	reg Ready;
 	integer i;
-	integer Remainder;
-	reg [15:0] out;
+	reg [7:0] GCD;
 	
 	localparam
-		START			= 7'b0000001,
-		LOAD_A		= 7'b0000010,
-		LOAD_B		= 7'b0000100,
-		BEGIN			= 7'b0001000,
-		CALCULATE	= 7'b0010000,
-		SUBTRACT		= 7'b0100000,
-		DONE			= 7'b1000000;
+		START			= 6'b000001,
+		LOAD_A		= 6'b000010,
+		LOAD_B		= 6'b000100,
+		SUBTRACT		= 6'b001000,
+		MULTIPLY		= 6'b010000,
+		DONE			= 6'b100000;
 		
 	always @(posedge Clk, posedge reset) 
 		begin
@@ -62,14 +60,13 @@ module divide_module(Clk, data_in, reset, enable, textOut, next, done);
 					case (state)
 						START:
 						begin
-							textOut = "Division        Divides 2 Nums  ";
+							textOut = "Finds the GCD   Of Two Numbers  ";
 							input_A <= 0;
 							input_B <= 0;
 							done <= 0;
 							Ready <= 0;
-							Remainder <= 0;
 							i <= 0;
-							out <= 0;
+							GCD <= 0;
 							if (next && enable)
 								state <= LOAD_A;
 						end
@@ -90,62 +87,79 @@ module divide_module(Clk, data_in, reset, enable, textOut, next, done);
 							if (next)
 							begin
 								input_B <= data_in;
-								state <= BEGIN;
+								state <= SUBTRACT;
 							end
 						end
-						BEGIN:
-						begin
-							data_out <= input_A / input_B;
-							Remainder <= modulus(input_A, input_B);
-							textOut = {"Calculating...  ",Ready?"Press Btnc      ":"                "};
-							state <= CALCULATE;
-						end
-						CALCULATE:
+						SUBTRACT:
 						begin
 							textOut = {"Calculating...  ",Ready?"Press Btnc      ":"                "};
 							if (!Ready)
 								begin
-								//if (Remainder == 0)
-									//Ready <= 1;
-								Remainder <= Remainder << 1;
-								state <= SUBTRACT;
+								// state transfers
+								if (input_A == input_B)
+								begin
+									if (i == 0)
+									begin
+										Ready <= 1;
+									end
+									else
+										state <= MULTIPLY;
+								end
+								// data transfers
+								if (input_A == input_B)
+									GCD <=  input_A;		
+								else if (input_A < input_B)
+									begin
+										// swap A and B
+										input_B <= input_A;
+										input_A <= input_B;
+		 
+		 
+									end
+								else						// if (A > B)
+									begin	
+										if (input_A[0] && input_B[0])
+											input_A <= input_A-input_B;
+										else if (input_A[0] && !input_B[0])
+										begin
+											input_B <= input_B >> 1;
+										end
+										else if (!input_A[0] && input_B[0])
+										begin
+											input_A <= input_A >> 1;
+										end
+										else if (!input_A[0] && !input_B[0])
+										begin
+											i <= i + 1;
+											input_A <= input_A >> 1;
+											input_B <= input_B >> 1;
+									end
+								end
 							end
 							else if (next)
 								state <= DONE;
 						end
-						SUBTRACT: //TODO: Convert the output after the decimal point to hex.
-						/* Algorithm is:
-							Same Exit statements
-							Left Shift Remainder 4 (<<4)
-							out <= {out, bin2x(Remainder / input_B);
-							Remainder <= Remainder % input_B;
-						*/
+						MULTIPLY:
 						begin
 							textOut = {"Calculating...  ",Ready?"Press Btnc      ":"                "};
 							if (!Ready)
 							begin
-								if (Remainder >= input_B)
-								begin
-									//out <= {out, "1"};
-									//out <= {out[14:0], 1};
-									out <= (out<<1) + 1;
-									Remainder <= Remainder - input_B;
-								end
-								else
-									//out <= {out, "0"};
-									out <= out << 1;
-								i <= i + 1;
-								if (i >= 15)
+								// state transfers
+								if (i == 0)
 									Ready <= 1;
-								state <= CALCULATE;
+								// data transfers
+								if (i != 0)
+								begin
+									GCD <= GCD + GCD; //OR GCD <= GCD << i_count;
+									i <= i - 1; //OR i_count <= 0;
+								end
 							end
 							else if (next)
 								state <= DONE;
-						
 						end
 						DONE:
 						begin
-							textOut = {"The Quotient is:", bin2x(data_out[7:4]), bin2x(data_out[3:0]), ".", bin2x(out[15:12]), bin2x(out[11:8]), bin2x(out[7:4]), bin2x(out[3:0]),"         "};
+							textOut = {"The GCD is:     ", bin2x(GCD[7:4]), bin2x(GCD[3:0]), "              "};
 							done <= 1;
 						end
 					endcase
