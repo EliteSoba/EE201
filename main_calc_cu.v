@@ -73,7 +73,7 @@ mult_module mult_uut(.Clk(Clk), .data_in(dataInBus), .reset(state==SEL4), .enabl
 divide_module div_uut(.Clk(Clk), .data_in(dataInBus), .reset(state==SEL3), .enable(state==DIV), .textOut(textOut_Div), .next(btc), .done(done_Div));
 prime_module prime_uut(.Clk(Clk), .data_in(dataInBus), .reset(state==SEL6), .enable(state==ISPRIME), .textOut(textOut_Prime), .next(btc), .done(done_Prime));
 gcd_module gcd_uut(.Clk(Clk), .data_in(dataInBus), .reset(state==SEL5), .enable(state==GCD), .textOut(textOut_GCD), .next(btc), .done(done_GCD));
-sqrt_module sqrt_uut(.Clk(Clk), .data_in(dataInBus), .reset(state==SEL7), .enable(state==SQRT), .textOut(textOut_Sqrt), .next(btc), .done(done_Sqrt));
+pow_module pow_uut(.Clk(Clk), .data_in(dataInBus), .reset(state==SEL7), .enable(state==SQRT), .textOut(textOut_Sqrt), .next(btc), .done(done_Sqrt));
 //assign textOut = {line1, line2};
 
 always @(posedge Clk, posedge Reset) 
@@ -108,7 +108,7 @@ always @(posedge Clk, posedge Reset)
 				else if (btl)
 					state <= SEL4;	
 				 // RTL operations in the Data Path 
-				 textOut = "*Add Sub Div Mlt GCD isPrme Sqrt";
+				 textOut = "*Add Sub Div Mlt GCD isPrme Pow ";
 				 /*line1 <= "*Add Sub Div Mlt";
 				 line2 <= " GCD isPrme Sqrt";*/
 	          end
@@ -126,7 +126,7 @@ always @(posedge Clk, posedge Reset)
 					
 				
 		         // RTL operations in the Data Path 
-					textOut = " Add*Sub Div Mlt GCD isPrme Sqrt";
+					textOut = " Add*Sub Div Mlt GCD isPrme Pow ";
 				 /*line1 <= " Add*Sub Div Mlt";
 				 line2 <= " GCD isPrme Sqrt";*/
 	          end
@@ -143,7 +143,7 @@ always @(posedge Clk, posedge Reset)
 					state <= SEL4;
 		         
 		         // RTL operations in the Data Path
-					textOut = " Add Sub*Div Mlt GCD isPrme Sqrt";
+					textOut = " Add Sub*Div Mlt GCD isPrme Pow ";
 						/*
 				 line1 <= " Add Sub*Div Mlt";
 				 line2 <= " GCD isPrme Sqrt";*/
@@ -160,7 +160,7 @@ always @(posedge Clk, posedge Reset)
 				else if (btr)
 					state <= SEL1;
 		         // RTL operations in the Data Path
-					textOut = " Add Sub Div*Mlt GCD isPrme Sqrt";
+					textOut = " Add Sub Div*Mlt GCD isPrme Pow ";
 					/*
 				 line1 <= " Add Sub Div*Mlt";
 				 line2 <= " GCD isPrme Sqrt";*/
@@ -178,7 +178,7 @@ always @(posedge Clk, posedge Reset)
 				else if (btr)
 					state <= SEL6;
 		         // RTL operations in the Data Path
-					textOut = " Add Sub Div Mlt*GCD isPrme Sqrt";
+					textOut = " Add Sub Div Mlt*GCD isPrme Pow ";
 					/*
 				 line1 <= " Add Sub Div Mlt";
 				 line2 <= "*GCD isPrme Sqrt";		*/		 
@@ -196,7 +196,7 @@ always @(posedge Clk, posedge Reset)
 				else if (btr)
 					state <= SEL7; 
 		         // RTL operations in the Data Path 
-					textOut = " Add Sub Div Mlt GCD*isPrme Sqrt";
+					textOut = " Add Sub Div Mlt GCD*isPrme Pow ";
 					/*
 				 line1 <= " Add Sub Div Mlt";
 				 line2 <= " GCD*isPrme Sqrt";*/
@@ -213,7 +213,7 @@ always @(posedge Clk, posedge Reset)
 					state <= SEL5;
 		         // state transitions in the control unit
 		         // RTL operations in the Data Path
-					textOut = " Add Sub Div Mlt GCD isPrme*Sqrt";
+					textOut = " Add Sub Div Mlt GCD isPrme*Pow ";
 					/*
 				 line1 <= " Add Sub Div Mlt";
 				 line2 <= " GCD isPrme*Sqrt";*/

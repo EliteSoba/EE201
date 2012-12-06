@@ -8,7 +8,7 @@
 <!-- Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1769" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;C:/Users/Tobias/Documents/GitHub/EE201/finalprojct_ee201_AJ_TL/divide_module.v\&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1769" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;C:/Users/Tobias/Documents/GitHub/EE201/finalprojct_ee201_AJ_TL/sqrt_module.v\&quot; into library work</arg>
 </msg>
 
 </messages>
