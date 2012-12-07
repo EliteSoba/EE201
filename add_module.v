@@ -27,7 +27,7 @@ module add_module(Clk, data_in, reset, enable, textOut, next, done);
 	
 	output reg [8*32:0] textOut;
 	output reg done;
-	reg [7:0] data_out;
+	reg [8:0] data_out;
 	
 	reg [7:0] input_A, input_B;
 	
@@ -93,7 +93,7 @@ module add_module(Clk, data_in, reset, enable, textOut, next, done);
 						end
 						DONE:
 						begin
-							textOut = {"The Sum is:     ", bin2x(data_out[7:4]), bin2x(data_out[3:0]), "              "};
+							textOut = {"The Sum is:     ", bin2x({0,0,0,data_out[8]}), bin2x(data_out[7:4]), bin2x(data_out[3:0]), "             "};
 							done <= 1;
 						end
 					endcase

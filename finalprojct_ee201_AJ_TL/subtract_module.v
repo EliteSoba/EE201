@@ -86,14 +86,17 @@ module subtract_module(Clk, data_in, reset, enable, textOut, next, done);
 						end
 						CALCULATE:
 						begin
-							data_out <= input_A - input_B;
+							if (input_A >= input_B)
+								data_out <= input_A - input_B;
+							else
+								data_out <= input_B - input_A;
 							textOut = "Calculating...                  ";
 							if (next)
 								state <= DONE;
 						end
 						DONE:
 						begin
-							textOut = {"The Diff is:    ", bin2x(data_out[7:4]), bin2x(data_out[3:0]), "              "};
+							textOut = {"The Diff is:    ", (input_B>input_A?"-":" "),bin2x(data_out[7:4]), bin2x(data_out[3:0]), "             "};
 							done <= 1;
 						end
 					endcase
